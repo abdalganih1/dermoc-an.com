@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "name": "Algae Peeling Powder",
+    "name_ar": "بودر التقشير بالطحالب",
+    "category": "Peeling",
+    "description": "100% Natural Formula containing microcrystals of marine algae for deep exfoliation.",
+    "description_ar": "تركيبة طبيعية 100% تحتوي على بلورات صغيرة من الطحالب البحرية للتقشير العميق.",
+    "ingredients": [
+      {"name": "Algae Extract", "benefit": "Deep hydration"},
+      {"name": "Calendula", "benefit": "Soothes irritation"},
+      {"name": "Melissa", "benefit": "Boosts collagen"},
+      {"name": "Chamomile", "benefit": "Reduces redness"}
+    ],
+    "benefits": ["Exfoliates dead skin", "Cleanses pores", "Fades pigmentation", "Treats acne"],
+    "usage": "Mix 2g with Support Solution. Massage for 4-8 mins based on protocol.",
+    "images": {
+      "thumbnail_low": "images/products/peeling-powder.png",
+      "original": "images/products/peeling-powder.png"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Peeling Support Solution",
+    "name_ar": "سائل دعم التقشير",
+    "category": "Activator",
+    "description": "Bioactive liquid to activate the peeling powder. Antiseptic and deeply hydrating.",
+    "description_ar": "سائل حيوي لتنشيط بودر التقشير. مطهر ومرطب عميق.",
+    "ingredients": [
+      {"name": "Hydrogen Peroxide", "benefit": "Purifies skin"},
+      {"name": "Glycerin", "benefit": "Deep hydration"},
+      {"name": "Daisy Flower Extract", "benefit": "Evens skin tone"}
+    ],
+    "benefits": ["Activates peeling", "Antiseptic action", "Hydrates"],
+    "usage": "Combine with Algae Peeling Powder to form paste.",
+    "images": {
+      "thumbnail_low": "images/products/support-solution.png",
+      "original": "images/products/support-solution.png"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Calming Mask",
+    "name_ar": "ماسك التهدئة",
+    "category": "Mask",
+    "description": "Soothing post-peel mask to calm and restore skin after treatment.",
+    "description_ar": "ماسك مهدئ ما بعد التقشير لتهدئة واستعادة نضارة البشرة.",
+    "ingredients": [
+      {"name": "Cucumber Fruit Extract", "benefit": "Cooling effect"},
+      {"name": "Aloe Vera", "benefit": "Soothes skin"},
+      {"name": "Sodium Hyaluronate", "benefit": "Deep moisture"}
+    ],
+    "benefits": ["Reduces redness", "Replenishes moisture", "Post-peel recovery"],
+    "usage": "Apply generously after peeling. Leave for 15 minutes.",
+    "images": {
+      "thumbnail_low": "images/products/calming-mask.png",
+      "original": "images/products/calming-mask.png"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Sunscreen SPF 50+",
+    "name_ar": "واقي الشمس SPF 50+",
+    "category": "Protection",
+    "description": "Water-based, impenetrable UV shield for post-treatment protection.",
+    "description_ar": "واقي شمسي مائي ذو حماية عالية للاستخدام بعد جلسات العناية.",
+    "ingredients": [
+      {"name": "Cassia Alata", "benefit": "Natural UV filter"},
+      {"name": "Tocopherol", "benefit": "Antioxidant"},
+      {"name": "Arbutin", "benefit": "Prevents pigmentation"}
+    ],
+    "benefits": ["UV-A/UV-B protection", "Prevents pigmentation", "Lightweight formula"],
+    "usage": "Apply daily, especially after peeling treatments.",
+    "images": {
+      "thumbnail_low": "images/products/sunscreen.png",
+      "original": "images/products/sunscreen.png"
+    }
+  }
+]

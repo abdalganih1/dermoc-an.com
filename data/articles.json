@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "slug": "algae-peeling-benefits",
+        "title": "5 Benefits of Algae Peeling for Your Skin",
+        "title_ar": "5 فوائد للتقشير بالطحالب لبشرتك",
+        "excerpt": "Discover why marine algae is the secret ingredient for radiant, healthy skin.",
+        "excerpt_ar": "اكتشف لماذا تعتبر الطحالب البحرية السر لبشرة مشرقة وصحية.",
+        "image": "images/hero/natural-ingredients.png",
+        "category": "Skincare Tips",
+        "date": "2025-01-15"
+    },
+    {
+        "id": 2,
+        "slug": "post-treatment-care",
+        "title": "Essential Post-Peeling Care Guide",
+        "title_ar": "دليل العناية الأساسي بعد التقشير",
+        "excerpt": "Learn how to maximize your treatment results with proper aftercare.",
+        "excerpt_ar": "تعلم كيفية تحقيق أقصى استفادة من العلاج مع العناية الصحيحة.",
+        "image": "images/about/clinic-session.png",
+        "category": "Treatment Guide",
+        "date": "2025-01-10"
+    },
+    {
+        "id": 3,
+        "slug": "choosing-right-protocol",
+        "title": "How to Choose the Right Protocol for Each Skin Type",
+        "title_ar": "كيف تختار البروتوكول المناسب لكل نوع بشرة",
+        "excerpt": "A professional guide to matching treatment intensity with skin needs.",
+        "excerpt_ar": "دليل احترافي لمطابقة قوة العلاج مع احتياجات البشرة.",
+        "image": "images/hero/model-skin.png",
+        "category": "Protocols",
+        "date": "2025-01-05"
+    },
+    {
+        "id": 4,
+        "slug": "pigmentation-treatment",
+        "title": "Treating Hyperpigmentation: A Complete Guide",
+        "title_ar": "علاج التصبغات: دليل شامل",
+        "excerpt": "Everything you need to know about fading dark spots and uneven skin tone.",
+        "excerpt_ar": "كل ما تحتاج معرفته عن إزالة البقع الداكنة وتوحيد لون البشرة.",
+        "image": "images/comparison/pigmentation-after.jpeg",
+        "category": "Skin Concerns",
+        "date": "2024-12-28"
+    }
+]

@@ -1,0 +1,20 @@
+# Helper folders - not for deployment
+Assets/
+html-preview/
+Videos/
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencies
+node_modules/
+
+# Logs
+*.log

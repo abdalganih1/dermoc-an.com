@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | DERMOCÉAN</title>
+    <meta name="description"
+        content="Discover Dermocean's story - premium B2B skincare solutions powered by marine algae. Learn about our natural ingredients and professional-grade formulations.">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i> info@dermocéan.com
+            </div>
+            <div class="lang-selector">
+                <a href="#" onclick="changeLanguage('en')" class="active" data-lang="en">EN</a>
+                <a href="#" onclick="changeLanguage('fr')" data-lang="fr">FR</a>
+                <a href="#" onclick="changeLanguage('ar')" data-lang="ar">AR</a>
+                <a href="#" onclick="changeLanguage('tr')" data-lang="tr">TR</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN">
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="home">Home</a></li>
+                <li><a href="about.html" class="active" data-i18n="aboutUs">About Us</a></li>
+                <li><a href="index.html#products" data-i18n="products">Products</a></li>
+                <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
+                <li><a href="videos.html" data-i18n="videos">Videos</a></li>
+                <li><a href="register.html" class="btn btn-outline" data-i18n="register">B2B Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu-sidebar">
+        <div class="mobile-menu-header">
+            <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" class="mobile-logo">
+            <button class="close-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-menu-items">
+            <li><a href="index.html" data-i18n="home">Home</a></li>
+            <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
+            <li><a href="index.html#products" data-i18n="products">Products</a></li>
+            <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
+            <li><a href="videos.html" data-i18n="videos">Videos</a></li>
+            <li><a href="register.html" data-i18n="register">B2B Register</a></li>
+        </ul>
+        <div class="mobile-lang-selector">
+            <a href="#" onclick="changeLanguage('en')" data-lang="en">EN</a>
+            <a href="#" onclick="changeLanguage('fr')" data-lang="fr">FR</a>
+            <a href="#" onclick="changeLanguage('ar')" data-lang="ar">AR</a>
+            <a href="#" onclick="changeLanguage('tr')" data-lang="tr">TR</a>
+        </div>
+    </div>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <h1 data-i18n="aboutHeroTitle">The Science of <span>Natural Beauty</span></h1>
+                <p data-i18n="aboutHeroDesc">Dermocean combines the power of marine algae with advanced dermatological
+                    science to deliver professional-grade skincare solutions.</p>
+            </div>
+            <div class="about-hero-image">
+                <img src="images/hero/natural-ingredients.png" alt="Natural Ingredients">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="about-story">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="ourStory">Our Story</h2>
+            </div>
+            <div class="story-content">
+                <div class="story-text">
+                    <p data-i18n="storyP1">Dermocean was born from a vision to revolutionize professional skincare by
+                        harnessing the untapped potential of marine biology. Our founders, a team of dermatologists and
+                        marine biologists, discovered that specific species of algae contain powerful bioactive
+                        compounds that can transform skin at the cellular level.</p>
+                    <p data-i18n="storyP2">Today, we are proud to serve hundreds of beauty centers and dermatology
+                        clinics across the region, providing them with tools that deliver visible, lasting results for
+                        their clients.</p>
+                </div>
+                <div class="story-image">
+                    <img src="images/about/clinic-session.png" alt="Professional Treatment Session">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Natural Ingredients -->
+    <section class="about-ingredients">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="naturalIngredients">Natural Ingredients</h2>
+                <p data-i18n="ingredientsSubtitle">100% natural formulations powered by science</p>
+            </div>
+            <div class="ingredients-grid">
+                <div class="ingredient-card">
+                    <div class="ingredient-icon"><i class="fas fa-seedling"></i></div>
+                    <h3 data-i18n="marineAlgae">Marine Algae</h3>
+                    <p data-i18n="marineAlgaeDesc">Rich in minerals, vitamins, and antioxidants for deep cellular
+                        renewal.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon"><i class="fas fa-leaf"></i></div>
+                    <h3 data-i18n="calendula">Calendula Extract</h3>
+                    <p data-i18n="calendulaDesc">Soothes irritation and promotes natural healing.</p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon"><i class="fas fa-spa"></i></div>
+                    <h3 data-i18n="chamomile">Chamomile</h3>
+                    <p data-i18n="chamomileDesc">Anti-inflammatory properties to reduce redness and calm sensitive skin.
+                    </p>
+                </div>
+                <div class="ingredient-card">
+                    <div class="ingredient-icon"><i class="fas fa-tint"></i></div>
+                    <h3 data-i18n="hyaluronicAcid">Hyaluronic Acid</h3>
+                    <p data-i18n="hyaluronicAcidDesc">Deep hydration that plumps and rejuvenates from within.</p>
+                </div>
+            </div>
+            <div class="ingredients-image">
+                <img src="images/hero/natural-oils.png" alt="Natural Oils and Extracts">
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="about-certifications">
+        <div class="container">
+            <div class="certifications-content">
+                <div class="certifications-image">
+                    <img src="images/about/certification.png" alt="Professional Certifications">
+                </div>
+                <div class="certifications-text">
+                    <h2 data-i18n="professionalStandards">Professional Standards</h2>
+                    <p data-i18n="certificationsDesc">All Dermocean products are developed in accordance with
+                        international dermatological standards and are tested for safety and efficacy.</p>
+                    <ul class="certifications-list">
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="dermatologistTested">Dermatologist
+                                Tested</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="hypoallergenic">Hypoallergenic
+                                Formulas</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="crueltyFree">Cruelty-Free</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="ecoFriendly">Eco-Friendly
+                                Packaging</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta">
+        <div class="container">
+            <h2 data-i18n="becomePartner">Become a Dermocean Partner</h2>
+            <p data-i18n="partnerDesc">Join our network of professional beauty centers and offer your clients the best
+                in skincare technology.</p>
+            <a href="register.html" class="btn btn-primary" data-i18n="registerNow">Register Now</a>
+        </div>
+    </section>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/905455336663" target="_blank" class="whatsapp-widget">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" class="footer-logo">
+                    <p data-i18n="aboutText">Leading B2B skincare provider for beauty centers.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
+                        <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
+                        <li><a href="videos.html" data-i18n="videos">Videos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="contactUs">Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> info@dermocéan.com</p>
+                    <p><i class="fab fa-whatsapp"></i> +90 545 533 6663</p>
+                </div>
+                <div class="footer-payment">
+                    <h4 data-i18n="paymentMethods">Payment Methods</h4>
+                    <div class="payment-icons">
+                        <span><i class="fas fa-money-bill-wave"></i> <span data-i18n="cashOnDelivery">Cash on
+                                Delivery</span></span>
+                        <span><i class="fas fa-university"></i> <span data-i18n="bankTransfer">Bank
+                                Transfer</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DERMOCÉAN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

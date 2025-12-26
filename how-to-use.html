@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use | DERMOCÉAN</title>
+    <meta name="description"
+        content="Learn how to properly use Dermocean skincare products for optimal results. Step-by-step guide for professional beauty centers.">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i> info@dermocéan.com
+            </div>
+            <div class="lang-selector">
+                <a href="#" onclick="changeLanguage('en')" class="active" data-lang="en">EN</a>
+                <a href="#" onclick="changeLanguage('fr')" data-lang="fr">FR</a>
+                <a href="#" onclick="changeLanguage('ar')" data-lang="ar">AR</a>
+                <a href="#" onclick="changeLanguage('tr')" data-lang="tr">TR</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN">
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="home">Home</a></li>
+                <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
+                <li><a href="index.html#products" data-i18n="products">Products</a></li>
+                <li><a href="how-to-use.html" class="active" data-i18n="howToUse">How to Use</a></li>
+                <li><a href="videos.html" data-i18n="videos">Videos</a></li>
+                <li><a href="register.html" class="btn btn-outline" data-i18n="register">B2B Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu-sidebar">
+        <div class="mobile-menu-header">
+            <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" class="mobile-logo">
+            <button class="close-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-menu-items">
+            <li><a href="index.html" data-i18n="home">Home</a></li>
+            <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
+            <li><a href="index.html#products" data-i18n="products">Products</a></li>
+            <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
+            <li><a href="videos.html" data-i18n="videos">Videos</a></li>
+            <li><a href="register.html" data-i18n="register">B2B Register</a></li>
+        </ul>
+        <div class="mobile-lang-selector">
+            <a href="#" onclick="changeLanguage('en')" data-lang="en">EN</a>
+            <a href="#" onclick="changeLanguage('fr')" data-lang="fr">FR</a>
+            <a href="#" onclick="changeLanguage('ar')" data-lang="ar">AR</a>
+            <a href="#" onclick="changeLanguage('tr')" data-lang="tr">TR</a>
+        </div>
+    </div>
+
+    <!-- Usage Hero -->
+    <section class="usage-hero">
+        <div class="container">
+            <div class="usage-hero-content">
+                <h1 data-i18n="howToUseTitle">Professional <span>Application Guide</span></h1>
+                <p data-i18n="howToUseDesc">Follow our step-by-step protocol for optimal treatment results</p>
+            </div>
+            <div class="usage-hero-image">
+                <img src="images/hero/spa-session.png" alt="Professional Treatment Session">
+            </div>
+        </div>
+    </section>
+
+    <!-- Protocol Selection -->
+    <section class="protocol-selection">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="chooseProtocol">Choose Your Protocol</h2>
+                <p data-i18n="protocolSubtitle">Select based on skin type and desired intensity</p>
+            </div>
+            <div class="protocol-tabs">
+                <button class="protocol-tab active" data-protocol="gentle">
+                    <i class="fas fa-leaf"></i>
+                    <span data-i18n="gentleProtocol">Gentle</span>
+                    <small>4 min</small>
+                </button>
+                <button class="protocol-tab" data-protocol="moderate">
+                    <i class="fas fa-spa"></i>
+                    <span data-i18n="moderateProtocol">Moderate</span>
+                    <small>6 min</small>
+                </button>
+                <button class="protocol-tab" data-protocol="intensive">
+                    <i class="fas fa-fire"></i>
+                    <span data-i18n="intensiveProtocol">Intensive</span>
+                    <small>8 min</small>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step-by-Step Guide -->
+    <section class="usage-steps">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="stepByStep">Step-by-Step Guide</h2>
+            </div>
+
+            <div class="steps-timeline">
+                <!-- Step 1 -->
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step1Title">Cleanse the Skin</h3>
+                        <p data-i18n="step1Desc">Thoroughly cleanse the treatment area using a gentle, pH-balanced
+                            cleanser. Remove all traces of makeup, oil, and impurities.</p>
+                        <div class="step-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-i18n="step1Tip">Pro Tip: Use lukewarm water to open pores before
+                                treatment.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step2Title">Prepare the Mixture</h3>
+                        <p data-i18n="step2Desc">Mix 2g of Algae Peeling Powder with the Support Solution until you
+                            achieve a smooth, even paste consistency.</p>
+                        <div class="step-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-i18n="step2Tip">Pro Tip: Use a ceramic or glass bowl - avoid metal
+                                containers.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step3Title">Apply Evenly</h3>
+                        <p data-i18n="step3Desc">Using clean fingers or a brush, apply the mixture evenly across the
+                            face, avoiding the eye and lip areas.</p>
+                        <div class="step-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-i18n="step3Tip">Pro Tip: Work in sections - forehead, cheeks, nose, chin.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step4Title">Massage</h3>
+                        <p data-i18n="step4Desc">Massage gently in circular motions for the duration specified by your
+                            chosen protocol (4-8 minutes).</p>
+                        <div class="step-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-i18n="step4Tip">Pro Tip: Increase pressure gradually on resistant areas like
+                                T-zone.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-item">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step5Title">Rinse Thoroughly</h3>
+                        <p data-i18n="step5Desc">Rinse the treatment area with lukewarm water until all product residue
+                            is removed.</p>
+                        <div class="step-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-i18n="step5Tip">Pro Tip: Pat dry gently - do not rub.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step-item">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step6Title">Apply Calming Mask</h3>
+                        <p data-i18n="step6Desc">Apply a generous layer of Calming Mask and leave for 15-20 minutes to
+                            soothe and hydrate the skin.</p>
+                        <div class="step-tip">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-i18n="step6Tip">Pro Tip: Cover with a damp towel to enhance absorption.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="step-item">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3 data-i18n="step7Title">Sun Protection</h3>
+                        <p data-i18n="step7Desc">Finish with SPF 50+ sunscreen. This is MANDATORY for the next 7 days
+                            post-treatment.</p>
+                        <div class="step-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span data-i18n="step7Warning">Warning: Skipping sun protection can cause
+                                hyperpigmentation!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tutorial -->
+    <section class="usage-video-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="watchTutorial">Watch the Tutorial</h2>
+                <p data-i18n="tutorialDesc">See the complete application process in action</p>
+            </div>
+            <div class="video-placeholder">
+                <a href="videos.html" class="btn btn-primary">
+                    <i class="fas fa-play-circle"></i> <span data-i18n="viewVideos">View All Videos</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precautions -->
+    <section class="usage-precautions">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="precautions">Precautions</h2>
+            </div>
+            <div class="precautions-grid">
+                <div class="precaution-card warning">
+                    <i class="fas fa-sun"></i>
+                    <h4 data-i18n="sunExposure">Avoid Sun Exposure</h4>
+                    <p data-i18n="sunExposureDesc">Stay out of direct sunlight for 7 days after treatment.</p>
+                </div>
+                <div class="precaution-card warning">
+                    <i class="fas fa-ban"></i>
+                    <h4 data-i18n="noAcids">No Active Acids</h4>
+                    <p data-i18n="noAcidsDesc">Avoid retinol, AHA/BHA for 5 days before and after.</p>
+                </div>
+                <div class="precaution-card info">
+                    <i class="fas fa-tint"></i>
+                    <h4 data-i18n="stayHydrated">Stay Hydrated</h4>
+                    <p data-i18n="stayHydratedDesc">Drink plenty of water and moisturize regularly.</p>
+                </div>
+                <div class="precaution-card info">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4 data-i18n="treatmentInterval">Treatment Interval</h4>
+                    <p data-i18n="treatmentIntervalDesc">Wait 2-4 weeks between sessions based on skin response.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/905455336663" target="_blank" class="whatsapp-widget">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" class="footer-logo">
+                    <p data-i18n="aboutText">Leading B2B skincare provider for beauty centers.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
+                        <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
+                        <li><a href="videos.html" data-i18n="videos">Videos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="contactUs">Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> info@dermocéan.com</p>
+                    <p><i class="fab fa-whatsapp"></i> +90 545 533 6663</p>
+                </div>
+                <div class="footer-payment">
+                    <h4 data-i18n="paymentMethods">Payment Methods</h4>
+                    <div class="payment-icons">
+                        <span><i class="fas fa-money-bill-wave"></i> <span data-i18n="cashOnDelivery">Cash on
+                                Delivery</span></span>
+                        <span><i class="fas fa-university"></i> <span data-i18n="bankTransfer">Bank
+                                Transfer</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DERMOCÉAN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+[
+    {
+        "id": "protocol",
+        "title": "Protocol Video",
+        "description": "Comprehensive guide on Dermocean peeling protocol.",
+        "poster": "images/logo/dermocean-logo.svg",
+        "sources": {
+            "360p": "media/videos/protocol/360p.mp4",
+            "720p": "media/videos/protocol/720p.mp4",
+            "1080p": "media/videos/protocol/1080p.mp4"
+        }
+    },
+    {
+        "id": "session1",
+        "title": "Treatment Session 1",
+        "description": "Live demonstration of the treatment process.",
+        "poster": "images/logo/dermocean-logo.svg",
+        "sources": {
+            "360p": "media/videos/session1/360p.mp4",
+            "720p": "media/videos/session1/720p.mp4",
+            "1080p": "media/videos/session1/1080p.mp4"
+        }
+    },
+    {
+        "id": "session2",
+        "title": "Treatment Session 2",
+        "description": "Client feedback and skin analysis.",
+        "poster": "images/logo/dermocean-logo.svg",
+        "sources": {
+            "360p": "media/videos/session2/360p.mp4",
+            "720p": "media/videos/session2/720p.mp4",
+            "1080p": "media/videos/session2/1080p.mp4"
+        }
+    },
+    {
+        "id": "session3",
+        "title": "Treatment Session 3",
+        "description": "Application techniques and tips.",
+        "poster": "images/logo/dermocean-logo.svg",
+        "sources": {
+            "360p": "media/videos/session3/360p.mp4",
+            "720p": "media/videos/session3/720p.mp4",
+            "1080p": "media/videos/session3/1080p.mp4"
+        }
+    },
+    {
+        "id": "session4",
+        "title": "Treatment Session 4",
+        "description": "Post-treatment care instructions.",
+        "poster": "images/logo/dermocean-logo.svg",
+        "sources": {
+            "360p": "media/videos/session4/360p.mp4",
+            "720p": "media/videos/session4/720p.mp4",
+            "1080p": "media/videos/session4/1080p.mp4"
+        }
+    },
+    {
+        "id": "session5",
+        "title": "Treatment Session 5",
+        "description": "Final results and review.",
+        "poster": "images/logo/dermocean-logo.svg",
+        "sources": {
+            "360p": "media/videos/session5/360p.mp4",
+            "720p": "media/videos/session5/720p.mp4",
+            "1080p": "media/videos/session5/1080p.mp4"
+        }
+    }
+]

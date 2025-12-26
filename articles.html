@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles & Tips | DERMOCÉAN</title>
+    <meta name="description"
+        content="Read expert skincare tips, treatment guides, and professional insights from Dermocean.">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i> info@dermocéan.com
+            </div>
+            <div class="lang-selector">
+                <a href="#" onclick="changeLanguage('en')" class="active" data-lang="en">EN</a>
+                <a href="#" onclick="changeLanguage('fr')" data-lang="fr">FR</a>
+                <a href="#" onclick="changeLanguage('ar')" data-lang="ar">AR</a>
+                <a href="#" onclick="changeLanguage('tr')" data-lang="tr">TR</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN">
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="home">Home</a></li>
+                <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
+                <li><a href="index.html#products" data-i18n="products">Products</a></li>
+                <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
+                <li><a href="articles.html" class="active" data-i18n="articles">Articles</a></li>
+                <li><a href="register.html" class="btn btn-outline" data-i18n="register">B2B Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Mobile Sidebar -->
+    <div class="mobile-overlay"></div>
+    <div class="mobile-menu-sidebar">
+        <div class="mobile-menu-header">
+            <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" class="mobile-logo">
+            <button class="close-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-menu-items">
+            <li><a href="index.html" data-i18n="home">Home</a></li>
+            <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
+            <li><a href="index.html#products" data-i18n="products">Products</a></li>
+            <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
+            <li><a href="articles.html" data-i18n="articles">Articles</a></li>
+            <li><a href="register.html" data-i18n="register">B2B Register</a></li>
+        </ul>
+        <div class="mobile-lang-selector">
+            <a href="#" onclick="changeLanguage('en')" data-lang="en">EN</a>
+            <a href="#" onclick="changeLanguage('fr')" data-lang="fr">FR</a>
+            <a href="#" onclick="changeLanguage('ar')" data-lang="ar">AR</a>
+            <a href="#" onclick="changeLanguage('tr')" data-lang="tr">TR</a>
+        </div>
+    </div>
+
+    <!-- Articles Hero -->
+    <section class="articles-hero">
+        <div class="container">
+            <h1 data-i18n="articlesTitle">Expert <span>Skincare Insights</span></h1>
+            <p data-i18n="articlesDesc">Discover tips, guides, and professional knowledge from our dermatology experts
+            </p>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="articles-grid" id="articles-grid">
+                <!-- Articles loaded dynamically -->
+                <div class="loading-articles">Loading articles...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq1Q">How often can I use the peeling treatment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq1A">We recommend waiting 2-4 weeks between sessions, depending on your skin's
+                            sensitivity and response to treatment.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq2Q">Is the treatment suitable for sensitive skin?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq2A">Yes! Our Gentle Protocol is specifically designed for sensitive skin types.
+                            Start with the lowest intensity and gradually increase.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq3Q">How long until I see results?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq3A">Many clients see immediate improvement in skin texture. For deeper concerns
+                            like pigmentation, 3-6 sessions are typically needed.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq4Q">Can I use the products at home?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq4A">Dermocean products are formulated for professional use in licensed beauty
+                            centers. For home care, we recommend our Sunscreen and Calming Mask.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/905455336663" target="_blank" class="whatsapp-widget">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" class="footer-logo">
+                    <p data-i18n="aboutText">Leading B2B skincare provider for beauty centers.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="quickLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-i18n="home">Home</a></li>
+                        <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
+                        <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
+                        <li><a href="articles.html" data-i18n="articles">Articles</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4 data-i18n="contactUs">Contact Us</h4>
+                    <p><i class="fas fa-envelope"></i> info@dermocéan.com</p>
+                    <p><i class="fab fa-whatsapp"></i> +90 545 533 6663</p>
+                </div>
+                <div class="footer-payment">
+                    <h4 data-i18n="paymentMethods">Payment Methods</h4>
+                    <div class="payment-icons">
+                        <span><i class="fas fa-money-bill-wave"></i> <span data-i18n="cashOnDelivery">Cash on
+                                Delivery</span></span>
+                        <span><i class="fas fa-university"></i> <span data-i18n="bankTransfer">Bank
+                                Transfer</span></span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DERMOCÉAN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/articles.js"></script>
+</body>
+
+</html>
