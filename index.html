@@ -176,15 +176,26 @@
             <!-- PDF Embed Viewer -->
             <div class="pdf-embed-section">
                 <h3 data-i18n="fullGuide">Full Protocol Guide</h3>
-                <div class="pdf-viewer">
-                    <iframe src="Assets/deromcean protocol_compressed.pdf" width="100%" height="600"
-                        style="border: none; border-radius: 10px;">
-                    </iframe>
-                </div>
-                <div class="pdf-actions">
-                    <a href="Assets/deromcean protocol_compressed.pdf" download class="btn btn-outline">
-                        <i class="fas fa-download"></i> <span data-i18n="downloadPDF">Download PDF</span>
-                    </a>
+                <!-- PDF Download & Toggle -->
+                <div class="pdf-embed-section">
+                    <p data-i18n="protocolsDesc">Professional guidelines for optimal results</p>
+
+                    <div class="pdf-actions">
+                        <a href="Assets/Dermocean Catalog_20250101_133917_0000.pdf" class="btn btn-outline" download
+                            data-i18n="downloadCatalog">
+                            <i class="fas fa-download"></i> Download Catalog
+                        </a>
+                        <button class="btn btn-primary" onclick="togglePdfViewer()" id="pdf-toggle-btn">
+                            <i class="fas fa-book-open"></i> <span data-i18n="viewGuide">View Guide</span>
+                        </button>
+                    </div>
+
+                    <!-- Hidden by default PDF Container -->
+                    <div id="pdf-viewer-container" class="pdf-viewer-container">
+                        <div class="pdf-frame-wrapper">
+                            <iframe src="Assets/Protocol.pdf" frameborder="0"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -204,6 +215,40 @@
     <a href="https://wa.me/905455336663" target="_blank" class="whatsapp-widget">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="contactUs">Contact Us</h2>
+                <p data-i18n="contactDesc">Get in touch with our professional support team</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="fullName">Full Name</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="email">Email Address</label>
+                            <input type="email" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="phoneNumber">Phone Number</label>
+                        <input type="tel" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="message">Message</label>
+                        <textarea class="form-input" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-i18n="sendMessage">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
