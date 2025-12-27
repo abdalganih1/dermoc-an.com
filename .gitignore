@@ -22,6 +22,7 @@ node_modules/
 
 # Video Processing
 media/videos/raw/
-convert_videos.ps1
+media/hls/
+convert*.ps1
 *.tar.xz
 *.zip
