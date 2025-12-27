@@ -335,7 +335,8 @@
                             </div>
                             <video id="video-${index}" controls preload="none" 
                                 data-hls="${hlsSrc}" 
-                                data-fallback="${fallbackSrc}">
+                                data-fallback="${fallbackSrc}"
+                                onclick="event.stopPropagation()">
                             </video>
                             <span class="quality-badge" id="quality-badge-${index}">Auto</span>
                         </div>
@@ -389,7 +390,19 @@
             const hlsSrc = video.dataset.hls;
             const fallbackSrc = video.dataset.fallback;
 
-            // Show video, hide poster
+            // If video is already initialized and has a source
+            if (video.src || video.currentSrc) {
+                // Toggle play/pause
+                if (video.paused) {
+                    thumb.classList.add('playing');
+                    video.play();
+                } else {
+                    video.pause();
+                }
+                return;
+            }
+
+            // First time: Show video, hide poster
             thumb.classList.add('playing');
 
             // Try HLS first
