@@ -151,7 +151,35 @@ const translations = {
         faq3Q: "How long until I see results?",
         faq3A: "Many clients see immediate improvement in skin texture. For deeper concerns like pigmentation, 3-6 sessions are typically needed.",
         faq4Q: "Can I use the products at home?",
-        faq4A: "Dermocean products are formulated for professional use in licensed beauty centers. For home care, we recommend our Sunscreen and Calming Mask."
+        faq4A: "Dermocean products are formulated for professional use in licensed beauty centers. For home care, we recommend our Sunscreen and Calming Mask.",
+
+        // Protocol Details
+        prot_duration: "Duration",
+        prot_powder: "Powder Amount",
+        prot_pressure: "Pressure",
+        prot_target: "Target Client",
+        prot_skin: "Skin Type",
+
+        // Gentle Steps
+        gentle_step1: "4 minutes massage",
+        gentle_step2: "Use 2g of peeling powder",
+        gentle_step3: "Light pressure only",
+        gentle_step4: "Ideal for first-time clients",
+        gentle_step5: "Best for sensitive skin types",
+
+        // Moderate Steps
+        moderate_step1: "6 minutes massage",
+        moderate_step2: "Use 2g of peeling powder",
+        moderate_step3: "Medium pressure application",
+        moderate_step4: "For normal skin types",
+        moderate_step5: "Recommended for maintenance sessions",
+
+        // Intensive Steps
+        intensive_step1: "8 minutes massage",
+        intensive_step2: "Use 2g of peeling powder",
+        intensive_step3: "Firm, deep pressure",
+        intensive_step4: "For resistant skin only",
+        intensive_step5: "Maximum results, requires experience"
     },
     ar: {
         // Navigation
@@ -299,7 +327,35 @@ const translations = {
         faq3Q: "متى سأرى النتائج؟",
         faq3A: "يلاحظ العديد من العملاء تحسناً فورياً في ملمس البشرة. للمشاكل العميقة كالتصبغات، عادةً ما تحتاج 3-6 جلسات.",
         faq4Q: "هل يمكنني استخدام المنتجات في المنزل؟",
-        faq4A: "منتجات ديرموشيان مصممة للاستخدام المهني في مراكز التجميل المرخصة. للعناية المنزلية، ننصح بواقي الشمس وماسك التهدئة."
+        faq4A: "منتجات ديرموشيان مصممة للاستخدام المهني في مراكز التجميل المرخصة. للعناية المنزلية، ننصح بواقي الشمس وماسك التهدئة.",
+
+        // Protocol Details
+        prot_duration: "المدة",
+        prot_powder: "كمية البودرة",
+        prot_pressure: "الضغط",
+        prot_target: "العميل المستهدف",
+        prot_skin: "نوع البشرة",
+
+        // Gentle Steps
+        gentle_step1: "تدليك لمدة 4 دقائق",
+        gentle_step2: "استخدام 2 غرام من بودرة التقشير",
+        gentle_step3: "ضغط خفيف فقط",
+        gentle_step4: "مثالي للعملاء لأول مرة",
+        gentle_step5: "الأفضل للبشرة الحساسة",
+
+        // Moderate Steps
+        moderate_step1: "تدليك لمدة 6 دقائق",
+        moderate_step2: "استخدام 2 غرام من بودرة التقشير",
+        moderate_step3: "تطبيق بضغط متوسط",
+        moderate_step4: "لأنواع البشرة العادية",
+        moderate_step5: "موصى به لجلسات الصيانة",
+
+        // Intensive Steps
+        intensive_step1: "تدليك لمدة 8 دقائق",
+        intensive_step2: "استخدام 2 غرام من بودرة التقشير",
+        intensive_step3: "ضغط قوي وعميق",
+        intensive_step4: "للبشرة المقاومة فقط",
+        intensive_step5: "أقصى نتائج، يتطلب خبرة"
     },
     fr: {
         // Navigation
@@ -447,7 +503,35 @@ const translations = {
         faq3Q: "Combien de temps avant de voir les résultats?",
         faq3A: "De nombreux clients voient une amélioration immédiate. Pour les problèmes plus profonds comme la pigmentation, 3-6 séances sont généralement nécessaires.",
         faq4Q: "Puis-je utiliser les produits à la maison?",
-        faq4A: "Les produits Dermocean sont formulés pour un usage professionnel. Pour les soins à domicile, nous recommandons notre écran solaire et masque apaisant."
+        faq4A: "Les produits Dermocean sont formulés pour un usage professionnel. Pour les soins à domicile, nous recommandons notre écran solaire et masque apaisant.",
+
+        // Protocol Details
+        prot_duration: "Durée",
+        prot_powder: "Quantité de Poudre",
+        prot_pressure: "Pression",
+        prot_target: "Client Cible",
+        prot_skin: "Type de Peau",
+
+        // Gentle Steps
+        gentle_step1: "4 minutes de massage",
+        gentle_step2: "Utilisez 2g de poudre",
+        gentle_step3: "Pression légère seulement",
+        gentle_step4: "Idéal pour les premiers clients",
+        gentle_step5: "Meilleur pour les peaux sensibles",
+
+        // Moderate Steps
+        moderate_step1: "6 minutes de massage",
+        moderate_step2: "Utilisez 2g de poudre",
+        moderate_step3: "Pression moyenne",
+        moderate_step4: "Pour les peaux normales",
+        moderate_step5: "Recommandé pour l'entretien",
+
+        // Intensive Steps
+        intensive_step1: "8 minutes de massage",
+        intensive_step2: "Utilisez 2g de poudre",
+        intensive_step3: "Pression ferme et profonde",
+        intensive_step4: "Pour peaux résistantes uniquement",
+        intensive_step5: "Résultats maximaux, nécessite expérience"
     },
     tr: {
         // Navigation
@@ -595,9 +679,74 @@ const translations = {
         faq3Q: "Sonuçları ne zaman göreceğim?",
         faq3A: "Birçok müşteri cilt dokusunda hemen iyileşme görür. Pigmentasyon gibi derin sorunlar için genellikle 3-6 seans gerekir.",
         faq4Q: "Ürünleri evde kullanabilir miyim?",
-        faq4A: "Dermocean ürünleri lisanslı güzellik merkezlerinde profesyonel kullanım için formüle edilmiştir. Evde bakım için güneş kremi ve yatıştırıcı maskemizi öneriyoruz."
+        faq4A: "Dermocean ürünleri lisanslı güzellik merkezlerinde profesyonel kullanım için formüle edilmiştir. Evde bakım için güneş kremi ve yatıştırıcı maskemizi öneriyoruz.",
+
+        // Protocol Details
+        prot_duration: "Süre",
+        prot_powder: "Toz Miktarı",
+        prot_pressure: "Basınç",
+        prot_target: "Hedef Müşteri",
+        prot_skin: "Cilt Tipi",
+
+        // Gentle Steps
+        gentle_step1: "4 dakika masaj",
+        gentle_step2: "2g peeling tozu kullanın",
+        gentle_step3: "Sadece hafif baskı",
+        gentle_step4: "İlk kez gelen müşteriler için ideal",
+        gentle_step5: "Hassas ciltler için en iyisi",
+
+        // Moderate Steps
+        moderate_step1: "6 dakika masaj",
+        moderate_step2: "2g peeling tozu kullanın",
+        moderate_step3: "Orta baskı uygulaması",
+        moderate_step4: "Normal cilt tipleri için",
+        moderate_step5: "Bakım seansları için önerilir",
+
+        // Intensive Steps
+        intensive_step1: "8 dakika masaj",
+        intensive_step2: "2g peeling tozu kullanın",
+        intensive_step3: "Sıkı, derin baskı",
+        intensive_step4: "Sadece dirençli ciltler için",
+        intensive_step5: "Maksimum sonuç, deneyim gerektirir"
     }
 };
+
+// Toast Notification System
+function showToast(message, type = 'info') {
+    let container = document.querySelector('.toast-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'toast-container';
+        document.body.appendChild(container);
+    }
+
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+    toast.innerHTML = `
+        <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+        <span>${message}</span>
+    `;
+
+    container.appendChild(toast);
+
+    // Remove after 3 seconds
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.addEventListener('transitionend', () => toast.remove());
+    }, 3000);
+}
+
+// Global Loader
+window.addEventListener('load', () => {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        document.body.classList.add('loaded');
+        setTimeout(() => loader.remove(), 600); // Remove from DOM
+    }
+});
+
+// Expose to window
+window.showToast = showToast;
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -742,43 +891,79 @@ function openProtocolModal(level) {
     const title = document.getElementById('protocol-title');
     const content = document.getElementById('protocol-content');
 
-    const protocols = {
-        gentle: {
-            title: 'Gentle Protocol',
-            steps: [
-                'Duration: 4 minutes massage',
-                'Use 2g of peeling powder',
-                'Light pressure only',
-                'Ideal for first-time clients',
-                'Best for sensitive skin types'
-            ]
-        },
-        moderate: {
-            title: 'Moderate Protocol',
-            steps: [
-                'Duration: 6 minutes massage',
-                'Use 2g of peeling powder',
-                'Medium pressure application',
-                'For normal skin types',
-                'Recommended for maintenance sessions'
-            ]
-        },
-        intensive: {
-            title: 'Intensive Protocol',
-            steps: [
-                'Duration: 8 minutes massage',
-                'Use 2g of peeling powder',
-                'Firm, deep pressure',
-                'For resistant skin only',
-                'Maximum results, requires experience'
-            ]
-        }
-    };
+    const lang = localStorage.getItem('dermocean_lang') || 'en';
+    const langData = translations[lang];
 
-    const data = protocols[level];
-    if (data) {
-        title.textContent = data.title;
-        content.innerHTML = data.steps.map(s => `<p>✓ ${s}</p>`).join('');
+    const icons = [
+        '<i class="fas fa-clock"></i>',
+        '<i class="fas fa-balance-scale"></i>',
+        '<i class="fas fa-hand-holding-water"></i>',
+        '<i class="fas fa-user-check"></i>',
+        '<i class="fas fa-star"></i>'
+    ];
+
+    const labels = [
+        langData.prot_duration,
+        langData.prot_powder,
+        langData.prot_pressure,
+        langData.prot_target,
+        langData.prot_skin
+    ];
+
+    let protocolTitle = '';
+    let steps = [];
+
+    if (level === 'gentle') {
+        protocolTitle = langData.gentleProtocol || "Gentle Protocol";
+        steps = [
+            langData.gentle_step1,
+            langData.gentle_step2,
+            langData.gentle_step3,
+            langData.gentle_step4,
+            langData.gentle_step5
+        ];
+    } else if (level === 'moderate') {
+        protocolTitle = langData.moderateProtocol || "Moderate Protocol";
+        steps = [
+            langData.moderate_step1,
+            langData.moderate_step2,
+            langData.moderate_step3,
+            langData.moderate_step4,
+            langData.moderate_step5
+        ];
+    } else if (level === 'intensive') {
+        protocolTitle = langData.intensiveProtocol || "Intensive Protocol";
+        steps = [
+            langData.intensive_step1,
+            langData.intensive_step2,
+            langData.intensive_step3,
+            langData.intensive_step4,
+            langData.intensive_step5
+        ];
+    }
+
+    if (protocolTitle) {
+        title.innerHTML = `${protocolTitle}`;
+        title.className = `modal-title-gradient ${level}`; // For CSS styling
+
+        // Inject Image
+        const imgContainer = document.getElementById('protocol-image-container');
+        if (imgContainer) {
+            imgContainer.innerHTML = `<img src="images/protocols/${level}.png" alt="${level}" class="protocol-modal-img">`;
+        }
+
+        content.innerHTML = `<div class="protocol-steps-grid">` +
+            steps.map((s, index) => `
+                <div class="protocol-step-item">
+                    <div class="step-icon ${level}">${icons[index]}</div>
+                    <div class="step-content">
+                        <span class="step-label">${labels[index] || ''}</span>
+                        <p class="step-desc">${s}</p>
+                    </div>
+                </div>
+            `).join('') +
+            `</div>`;
+
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }

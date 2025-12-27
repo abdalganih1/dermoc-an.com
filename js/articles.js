@@ -26,7 +26,7 @@ async function loadArticles() {
                     </span>
                     <h3>${isAr ? article.title_ar : article.title}</h3>
                     <p>${isAr ? article.excerpt_ar : article.excerpt}</p>
-                    <a href="#" class="article-link">
+                    <a href="article.html?slug=${article.slug}" class="article-link">
                         ${isAr ? 'اقرأ المزيد' : 'Read More'} <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>

@@ -89,6 +89,104 @@ img {
     margin-bottom: 3rem;
 }
 
+/* Loading Overlay */
+#page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+body.loaded #page-loader {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Toast Notifications */
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+*[dir="rtl"] .toast-container {
+    right: auto;
+    left: 20px;
+}
+
+.toast {
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-left: 4px solid var(--primary-color);
+    padding: 15px 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: slideIn 0.3s ease;
+    min-width: 250px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+*[dir="rtl"] .toast {
+    border-left: none;
+    border-right: 4px solid var(--primary-color);
+    animation: slideInRTL 0.3s ease;
+}
+
+@keyframes slideInRTL {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
@@ -160,19 +258,31 @@ header {
     gap: 1rem;
 }
 
-.lang-selector a {
-    opacity: 0.7;
-    font-weight: 500;
-}
 
-.lang-selector a:hover,
-.lang-selector a.active {
-    opacity: 1;
-    color: var(--primary-light);
+header {
+    background: var(--white);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
-    padding: 1.2rem 0;
+    padding: 1rem 0;
+}
+
+.lang-selector a {
+    opacity: 0.8;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.lang-selector a span {
+    font-size: 1.2rem;
 }
 
 nav .container {
@@ -1979,4 +2089,161 @@ nav.container {
 
 .step-item:not(:last-child)::after {
     display: none;
+}
+
+/* ===========================================
+   NEW: Improved Protocol Modal Styles
+   =========================================== */
+
+.protocol-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+}
+
+.protocol-modal.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+}
+
+.protocol-modal-content {
+    background: var(--white);
+    width: 90%;
+    max-width: 550px;
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-light);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    transition: all 0.3s;
+}
+
+.modal-close:hover {
+    background: #ffeeee;
+    color: #e74c3c;
+    transform: rotate(90deg);
+}
+
+[dir="rtl"] .modal-close {
+    right: auto;
+    left: 1.5rem;
+}
+
+.modal-title-gradient {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.modal-title-gradient.gentle {
+    background-image: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.modal-title-gradient.moderate {
+    background-image: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.modal-title-gradient.intensive {
+    background-image: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.protocol-steps-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.protocol-step-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: var(--cream);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+.protocol-step-item:hover {
+    transform: translateY(-2px);
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-color: #eee;
+}
+
+[dir="rtl"] .protocol-step-item:hover {
+    transform: translateY(-2px);
+}
+
+.step-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.step-icon.gentle {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.step-icon.moderate {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.step-icon.intensive {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #999;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.2rem;
+}
+
+.step-desc {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin: 0;
 }

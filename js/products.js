@@ -49,10 +49,21 @@ class ProductLoader {
         return btnTexts[this.lang] || btnTexts.en;
     }
 
+    getProductLink(product) {
+        const links = {
+            1: 'peeling-powder.html',
+            2: 'support-solution.html',
+            3: 'calming-mask.html',
+            4: 'sunscreen.html'
+        };
+        return links[product.id] || '#';
+    }
+
     createCard(product) {
         const name = this.getLocalizedText(product, 'name');
         const desc = this.getLocalizedText(product, 'description');
         const btnText = this.getBtnText();
+        const link = this.getProductLink(product);
 
         return `
             <div class="product-card" data-category="${product.category}">
@@ -62,7 +73,7 @@ class ProductLoader {
                 <div class="product-info">
                     <h3>${name}</h3>
                     <p>${desc}</p>
-                    <button class="product-btn">${btnText}</button>
+                    <a href="${link}" class="product-btn" style="display:inline-block; text-align:center;">${btnText}</a>
                 </div>
             </div>
         `;

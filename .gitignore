@@ -16,5 +16,12 @@ desktop.ini
 # Dependencies
 node_modules/
 
+
 # Logs
 *.log
+
+# Video Processing
+media/videos/raw/
+convert_videos.ps1
+*.tar.xz
+*.zip
