@@ -26,11 +26,16 @@ const translations = {
         professionalGrade: "Professional Grade Skincare",
 
         // Protocols
+        treatmentProtocols: "Treatment Protocols",
         chooseProtocol: "Choose Your Protocol",
         protocolSubtitle: "Select based on skin type and desired intensity",
         gentleProtocol: "Gentle",
+        gentleDesc: "For sensitive skin. 2g peeling powder, 4 minutes massage.",
         moderateProtocol: "Moderate",
+        moderateDesc: "For normal skin. 2g peeling powder, 6 minutes massage.",
         intensiveProtocol: "Intensive",
+        intensiveDesc: "For resistant skin. 2g peeling powder, 8 minutes massage.",
+        learnMore: "Learn More",
         downloadCatalog: "Download Catalog",
         viewGuide: "View Guide",
         closeGuide: "Close Guide",
@@ -161,11 +166,16 @@ const translations = {
         professionalGrade: "منتجات احترافية للعناية بالبشرة",
 
         // Protocols
+        treatmentProtocols: "بروتوكولات العلاج",
         chooseProtocol: "اختر البروتوكول",
         protocolSubtitle: "اختر بناءً على نوع البشرة والنتيجة المطلوبة",
         gentleProtocol: "لطيف",
+        gentleDesc: "للبشرة الحساسة. 2 غرام بودر تقشير، 4 دقائق تدليك.",
         moderateProtocol: "معتدل",
+        moderateDesc: "للبشرة العادية. 2 غرام بودر تقشير، 6 دقائق تدليك.",
         intensiveProtocol: "مكثف",
+        intensiveDesc: "للبشرة المقاومة. 2 غرام بودر تقشير، 8 دقائق تدليك.",
+        learnMore: "اعرف المزيد",
         downloadCatalog: "تحميل الكتالوج",
         viewGuide: "عرض الدليل",
         closeGuide: "إغلاق الدليل",
@@ -296,11 +306,16 @@ const translations = {
         professionalGrade: "Soins de Qualité Professionnelle",
 
         // Protocols
+        treatmentProtocols: "Protocoles de Traitement",
         chooseProtocol: "Choisissez Votre Protocole",
         protocolSubtitle: "Sélectionnez selon le type de peau",
         gentleProtocol: "Doux",
+        gentleDesc: "Pour peaux sensibles. 2g de poudre, 4 min de massage.",
         moderateProtocol: "Modéré",
+        moderateDesc: "Pour peaux normales. 2g de poudre, 6 min de massage.",
         intensiveProtocol: "Intensif",
+        intensiveDesc: "Pour peaux résistantes. 2g de poudre, 8 min de massage.",
+        learnMore: "En Savoir Plus",
         downloadCatalog: "Télécharger",
         viewGuide: "Voir le Guide",
         closeGuide: "Fermer le Guide",
@@ -431,11 +446,16 @@ const translations = {
         professionalGrade: "Profesyonel Cilt Bakımı",
 
         // Protocols
+        treatmentProtocols: "Tedavi Protokolleri",
         chooseProtocol: "Protokol Seçin",
         protocolSubtitle: "Cilt tipine göre seçiniz",
         gentleProtocol: "Hafif",
+        gentleDesc: "Hassas ciltler için. 2g toz, 4 dk masaj.",
         moderateProtocol: "Orta",
+        moderateDesc: "Normal ciltler için. 2g toz, 6 dk masaj.",
         intensiveProtocol: "Yoğun",
+        intensiveDesc: "Dirençli ciltler için. 2g toz, 8 dk masaj.",
+        learnMore: "Daha Fazla",
         downloadCatalog: "Kataloğu İndir",
         viewGuide: "Rehberi Gör",
         closeGuide: "Rehberi Kapat",
@@ -744,9 +764,15 @@ function closeProtocolModal() {
 function togglePdfViewer() {
     const container = document.getElementById('pdf-viewer-container');
     const btn = document.getElementById('pdf-toggle-btn');
+    const iframe = document.getElementById('pdf-iframe');
     if (!container || !btn) return;
 
     const isActive = container.classList.contains('active');
+
+    // Lazy load PDF on first open
+    if (!isActive && iframe && !iframe.src) {
+        iframe.src = iframe.dataset.src;
+    }
 
     // Toggle class
     container.classList.toggle('active');

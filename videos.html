@@ -161,12 +161,26 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Fetch videos from JSON
+        // Fetch videos from JSON with language support
         fetch('data/videos.json')
             .then(res => res.json())
             .then(videos => {
                 const grid = document.getElementById('video-grid');
                 if (!grid) return;
+
+                const lang = localStorage.getItem('dermocean_lang') || 'en';
+
+                function getLocalizedField(video, field) {
+                    const fieldAr = field + '_ar';
+                    const fieldFr = field + '_fr';
+                    const fieldTr = field + '_tr';
+
+                    if (lang === 'ar' && video[fieldAr]) return video[fieldAr];
+                    if (lang === 'fr' && video[fieldFr]) return video[fieldFr];
+                    if (lang === 'tr' && video[fieldTr]) return video[fieldTr];
+                    return video[field];
+                }
+
                 grid.innerHTML = videos.map(v => `
                     <div class="product-card">
                          <div class="product-image" style="padding:0; height: auto; aspect-ratio: 16/9; background: #000;">
@@ -175,8 +189,8 @@
                              </video>
                          </div>
                          <div class="product-info">
-                             <h3 class="product-name">${v.title}</h3>
-                             <p class="text-light">${v.description}</p>
+                             <h3 class="product-name">${getLocalizedField(v, 'title')}</h3>
+                             <p class="text-light">${getLocalizedField(v, 'description')}</p>
                          </div>
                      </div>
                 `).join('');

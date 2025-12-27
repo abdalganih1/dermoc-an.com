@@ -193,7 +193,8 @@
                     <!-- Hidden by default PDF Container -->
                     <div id="pdf-viewer-container" class="pdf-viewer-container">
                         <div class="pdf-frame-wrapper">
-                            <iframe src="Assets/deromcean protocol_compressed.pdf" frameborder="0"></iframe>
+                            <iframe id="pdf-iframe" data-src="Assets/deromcean protocol_compressed.pdf"
+                                frameborder="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -325,6 +326,12 @@
     <script src="js/comparison-slider.js"></script>
     <script src="js/products.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // Initialize Comparison Slider
+        document.addEventListener('DOMContentLoaded', () => {
+            new ComparisonSlider('.comparison-container');
+        });
+    </script>
 </body>
 
 </html>

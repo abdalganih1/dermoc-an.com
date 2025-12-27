@@ -2,7 +2,13 @@
     {
         "id": "protocol",
         "title": "Protocol Video",
+        "title_ar": "فيديو البروتوكول",
+        "title_fr": "Vidéo du Protocole",
+        "title_tr": "Protokol Videosu",
         "description": "Comprehensive guide on Dermocean peeling protocol.",
+        "description_ar": "دليل شامل لبروتوكول تقشير ديرموشيان.",
+        "description_fr": "Guide complet sur le protocole de peeling Dermocean.",
+        "description_tr": "Dermocean peeling protokolü hakkında kapsamlı rehber.",
         "poster": "images/logo/dermocean-logo.svg",
         "sources": {
             "360p": "media/videos/protocol/360p.mp4",
@@ -13,7 +19,13 @@
     {
         "id": "session1",
         "title": "Treatment Session 1",
+        "title_ar": "جلسة العلاج 1",
+        "title_fr": "Séance de Traitement 1",
+        "title_tr": "Tedavi Seansı 1",
         "description": "Live demonstration of the treatment process.",
+        "description_ar": "عرض مباشر لعملية العلاج.",
+        "description_fr": "Démonstration en direct du processus de traitement.",
+        "description_tr": "Tedavi sürecinin canlı gösterimi.",
         "poster": "images/logo/dermocean-logo.svg",
         "sources": {
             "360p": "media/videos/session1/360p.mp4",
@@ -24,7 +36,13 @@
     {
         "id": "session2",
         "title": "Treatment Session 2",
+        "title_ar": "جلسة العلاج 2",
+        "title_fr": "Séance de Traitement 2",
+        "title_tr": "Tedavi Seansı 2",
         "description": "Client feedback and skin analysis.",
+        "description_ar": "ملاحظات العميل وتحليل البشرة.",
+        "description_fr": "Retour client et analyse de peau.",
+        "description_tr": "Müşteri geri bildirimi ve cilt analizi.",
         "poster": "images/logo/dermocean-logo.svg",
         "sources": {
             "360p": "media/videos/session2/360p.mp4",
@@ -35,7 +53,13 @@
     {
         "id": "session3",
         "title": "Treatment Session 3",
+        "title_ar": "جلسة العلاج 3",
+        "title_fr": "Séance de Traitement 3",
+        "title_tr": "Tedavi Seansı 3",
         "description": "Application techniques and tips.",
+        "description_ar": "تقنيات ونصائح التطبيق.",
+        "description_fr": "Techniques et conseils d'application.",
+        "description_tr": "Uygulama teknikleri ve ipuçları.",
         "poster": "images/logo/dermocean-logo.svg",
         "sources": {
             "360p": "media/videos/session3/360p.mp4",
@@ -46,7 +70,13 @@
     {
         "id": "session4",
         "title": "Treatment Session 4",
+        "title_ar": "جلسة العلاج 4",
+        "title_fr": "Séance de Traitement 4",
+        "title_tr": "Tedavi Seansı 4",
         "description": "Post-treatment care instructions.",
+        "description_ar": "تعليمات العناية بعد العلاج.",
+        "description_fr": "Instructions de soins post-traitement.",
+        "description_tr": "Tedavi sonrası bakım talimatları.",
         "poster": "images/logo/dermocean-logo.svg",
         "sources": {
             "360p": "media/videos/session4/360p.mp4",
@@ -57,7 +87,13 @@
     {
         "id": "session5",
         "title": "Treatment Session 5",
+        "title_ar": "جلسة العلاج 5",
+        "title_fr": "Séance de Traitement 5",
+        "title_tr": "Tedavi Seansı 5",
         "description": "Final results and review.",
+        "description_ar": "النتائج النهائية والمراجعة.",
+        "description_fr": "Résultats finaux et bilan.",
+        "description_tr": "Final sonuçlar ve değerlendirme.",
         "poster": "images/logo/dermocean-logo.svg",
         "sources": {
             "360p": "media/videos/session5/360p.mp4",

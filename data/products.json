@@ -3,16 +3,37 @@
     "id": 1,
     "name": "Algae Peeling Powder",
     "name_ar": "بودر التقشير بالطحالب",
+    "name_fr": "Poudre de Peeling aux Algues",
+    "name_tr": "Yosun Peeling Tozu",
     "category": "Peeling",
     "description": "100% Natural Formula containing microcrystals of marine algae for deep exfoliation.",
     "description_ar": "تركيبة طبيعية 100% تحتوي على بلورات صغيرة من الطحالب البحرية للتقشير العميق.",
+    "description_fr": "Formule 100% naturelle contenant des microcristaux d'algues marines pour une exfoliation profonde.",
+    "description_tr": "%100 Doğal formül, derin peeling için deniz yosunu mikrokristalleri içerir.",
     "ingredients": [
-      {"name": "Algae Extract", "benefit": "Deep hydration"},
-      {"name": "Calendula", "benefit": "Soothes irritation"},
-      {"name": "Melissa", "benefit": "Boosts collagen"},
-      {"name": "Chamomile", "benefit": "Reduces redness"}
+      {
+        "name": "Algae Extract",
+        "benefit": "Deep hydration"
+      },
+      {
+        "name": "Calendula",
+        "benefit": "Soothes irritation"
+      },
+      {
+        "name": "Melissa",
+        "benefit": "Boosts collagen"
+      },
+      {
+        "name": "Chamomile",
+        "benefit": "Reduces redness"
+      }
     ],
-    "benefits": ["Exfoliates dead skin", "Cleanses pores", "Fades pigmentation", "Treats acne"],
+    "benefits": [
+      "Exfoliates dead skin",
+      "Cleanses pores",
+      "Fades pigmentation",
+      "Treats acne"
+    ],
     "usage": "Mix 2g with Support Solution. Massage for 4-8 mins based on protocol.",
     "images": {
       "thumbnail_low": "images/products/peeling-powder.png",
@@ -23,15 +44,32 @@
     "id": 2,
     "name": "Peeling Support Solution",
     "name_ar": "سائل دعم التقشير",
+    "name_fr": "Solution Support Peeling",
+    "name_tr": "Peeling Destek Solüsyonu",
     "category": "Activator",
     "description": "Bioactive liquid to activate the peeling powder. Antiseptic and deeply hydrating.",
     "description_ar": "سائل حيوي لتنشيط بودر التقشير. مطهر ومرطب عميق.",
+    "description_fr": "Liquide bioactif pour activer la poudre de peeling. Antiseptique et hydratant en profondeur.",
+    "description_tr": "Peeling tozunu aktive eden biyoaktif sıvı. Antiseptik ve derin nemlendirici.",
     "ingredients": [
-      {"name": "Hydrogen Peroxide", "benefit": "Purifies skin"},
-      {"name": "Glycerin", "benefit": "Deep hydration"},
-      {"name": "Daisy Flower Extract", "benefit": "Evens skin tone"}
+      {
+        "name": "Hydrogen Peroxide",
+        "benefit": "Purifies skin"
+      },
+      {
+        "name": "Glycerin",
+        "benefit": "Deep hydration"
+      },
+      {
+        "name": "Daisy Flower Extract",
+        "benefit": "Evens skin tone"
+      }
     ],
-    "benefits": ["Activates peeling", "Antiseptic action", "Hydrates"],
+    "benefits": [
+      "Activates peeling",
+      "Antiseptic action",
+      "Hydrates"
+    ],
     "usage": "Combine with Algae Peeling Powder to form paste.",
     "images": {
       "thumbnail_low": "images/products/support-solution.png",
@@ -42,15 +80,32 @@
     "id": 3,
     "name": "Calming Mask",
     "name_ar": "ماسك التهدئة",
+    "name_fr": "Masque Apaisant",
+    "name_tr": "Yatıştırıcı Maske",
     "category": "Mask",
     "description": "Soothing post-peel mask to calm and restore skin after treatment.",
     "description_ar": "ماسك مهدئ ما بعد التقشير لتهدئة واستعادة نضارة البشرة.",
+    "description_fr": "Masque apaisant post-peeling pour calmer et restaurer la peau après le traitement.",
+    "description_tr": "Tedavi sonrası cildi yatıştırmak ve restore etmek için sakinleştirici maske.",
     "ingredients": [
-      {"name": "Cucumber Fruit Extract", "benefit": "Cooling effect"},
-      {"name": "Aloe Vera", "benefit": "Soothes skin"},
-      {"name": "Sodium Hyaluronate", "benefit": "Deep moisture"}
+      {
+        "name": "Cucumber Fruit Extract",
+        "benefit": "Cooling effect"
+      },
+      {
+        "name": "Aloe Vera",
+        "benefit": "Soothes skin"
+      },
+      {
+        "name": "Sodium Hyaluronate",
+        "benefit": "Deep moisture"
+      }
     ],
-    "benefits": ["Reduces redness", "Replenishes moisture", "Post-peel recovery"],
+    "benefits": [
+      "Reduces redness",
+      "Replenishes moisture",
+      "Post-peel recovery"
+    ],
     "usage": "Apply generously after peeling. Leave for 15 minutes.",
     "images": {
       "thumbnail_low": "images/products/calming-mask.png",
@@ -61,15 +116,32 @@
     "id": 4,
     "name": "Sunscreen SPF 50+",
     "name_ar": "واقي الشمس SPF 50+",
+    "name_fr": "Écran Solaire SPF 50+",
+    "name_tr": "Güneş Koruyucu SPF 50+",
     "category": "Protection",
     "description": "Water-based, impenetrable UV shield for post-treatment protection.",
     "description_ar": "واقي شمسي مائي ذو حماية عالية للاستخدام بعد جلسات العناية.",
+    "description_fr": "Protection UV imperméable à base d'eau pour une protection post-traitement.",
+    "description_tr": "Tedavi sonrası koruma için su bazlı, geçirimsiz UV kalkanı.",
     "ingredients": [
-      {"name": "Cassia Alata", "benefit": "Natural UV filter"},
-      {"name": "Tocopherol", "benefit": "Antioxidant"},
-      {"name": "Arbutin", "benefit": "Prevents pigmentation"}
+      {
+        "name": "Cassia Alata",
+        "benefit": "Natural UV filter"
+      },
+      {
+        "name": "Tocopherol",
+        "benefit": "Antioxidant"
+      },
+      {
+        "name": "Arbutin",
+        "benefit": "Prevents pigmentation"
+      }
     ],
-    "benefits": ["UV-A/UV-B protection", "Prevents pigmentation", "Lightweight formula"],
+    "benefits": [
+      "UV-A/UV-B protection",
+      "Prevents pigmentation",
+      "Lightweight formula"
+    ],
     "usage": "Apply daily, especially after peeling treatments.",
     "images": {
       "thumbnail_low": "images/products/sunscreen.png",

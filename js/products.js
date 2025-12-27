@@ -1,13 +1,14 @@
 /**
  * Dermocean Product Loader
  * Fetches products from JSON and renders cards dynamically
+ * Supports 4 languages: EN, AR, FR, TR
  */
 class ProductLoader {
     constructor(gridSelector, jsonPath) {
         this.grid = document.querySelector(gridSelector);
         this.jsonPath = jsonPath;
-        this.lang = document.documentElement.getAttribute('lang') || 'en';
-        this.isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        this.lang = localStorage.getItem('dermocean_lang') || 'en';
+        this.isRTL = this.lang === 'ar';
     }
 
     async init() {
@@ -27,10 +28,31 @@ class ProductLoader {
         this.grid.innerHTML = products.map(product => this.createCard(product)).join('');
     }
 
+    getLocalizedText(product, field) {
+        const fieldAr = field + '_ar';
+        const fieldFr = field + '_fr';
+        const fieldTr = field + '_tr';
+
+        if (this.lang === 'ar' && product[fieldAr]) return product[fieldAr];
+        if (this.lang === 'fr' && product[fieldFr]) return product[fieldFr];
+        if (this.lang === 'tr' && product[fieldTr]) return product[fieldTr];
+        return product[field];
+    }
+
+    getBtnText() {
+        const btnTexts = {
+            en: 'Details',
+            ar: 'التفاصيل',
+            fr: 'Détails',
+            tr: 'Detaylar'
+        };
+        return btnTexts[this.lang] || btnTexts.en;
+    }
+
     createCard(product) {
-        const name = this.isRTL && product.name_ar ? product.name_ar : product.name;
-        const desc = this.isRTL && product.description_ar ? product.description_ar : product.description;
-        const btnText = this.isRTL ? 'التفاصيل' : 'Details';
+        const name = this.getLocalizedText(product, 'name');
+        const desc = this.getLocalizedText(product, 'description');
+        const btnText = this.getBtnText();
 
         return `
             <div class="product-card" data-category="${product.category}">

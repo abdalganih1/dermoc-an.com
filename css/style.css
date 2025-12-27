@@ -1130,16 +1130,20 @@ nav.container {
     border-color: var(--primary);
 }
 
-/* Language Toggle for Tabs */
-.tab-ar {
+/* Language Toggle for Tab Labels */
+.case-tab .tab-en {
+    display: inline;
+}
+
+.case-tab .tab-ar {
     display: none;
 }
 
-[dir="rtl"] .tab-en {
+[dir="rtl"] .case-tab .tab-en {
     display: none;
 }
 
-[dir="rtl"] .tab-ar {
+[dir="rtl"] .case-tab .tab-ar {
     display: inline;
 }
 
