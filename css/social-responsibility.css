@@ -1,0 +1,68 @@
+/* 
+ * SOCIAL RESPONSIBILITY 
+ */
+.social-responsibility {
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, var(--white), #f4fcf9);
+}
+
+.responsibility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.resp-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #eefbf7;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.resp-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    border-color: var(--secondary);
+}
+
+.resp-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(30, 130, 76, 0.1);
+    /* Soft Green */
+    color: #1E824C;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s;
+}
+
+.resp-card:hover .resp-icon {
+    background: #1E824C;
+    color: var(--white);
+    transform: rotateY(180deg);
+}
+
+.resp-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.resp-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* RTL Adjustments */
+[dir="rtl"] .resp-card:hover .resp-icon {
+    transform: rotateY(-180deg);
+}

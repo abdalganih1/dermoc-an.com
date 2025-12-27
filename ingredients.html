@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ingredients | DERMOCÉAN</title>
+    <meta name="description"
+        content="Discover the powerful natural ingredients in Dermocean products. Marine algae, botanical extracts, and scientifically proven active compounds.">
+    <meta name="keywords"
+        content="algae ingredients, marine algae, botanical extracts, skincare ingredients, natural skincare">
+    <link rel="canonical" href="https://dermocéan.com/ingredients.html">
+
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Ingredients Page Styles */
+        .ingredients-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--cream) 0%, #E8E0E5 100%);
+            text-align: center;
+        }
+
+        .ingredients-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .ingredients-hero h1 span {
+            color: var(--primary);
+        }
+
+        .ingredients-hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .ingredients-section {
+            padding: 4rem 0;
+        }
+
+        .ingredients-section:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        .ingredients-category {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ingredients-category h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .ingredients-category h2 i {
+            color: var(--primary);
+        }
+
+        .ingredients-category p {
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .ingredient-card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .ingredient-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .ingredient-icon {
+            width: 60px;
+            height: 60px;
+            min-width: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ingredient-icon i {
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .ingredient-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .ingredient-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .ingredient-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .ingredient-benefit {
+            background: var(--cream);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .philosophy-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .philosophy-item {
+            padding: 1.5rem;
+        }
+
+        .philosophy-item i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .philosophy-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .philosophy-item p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        /* RTL Support */
+        [dir="rtl"] .ingredient-card {
+            flex-direction: row-reverse;
+            text-align: right;
+        }
+
+        [dir="rtl"] .ingredients-category h2 {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Hero Section -->
+    <section class="ingredients-hero">
+        <div class="container">
+            <h1 data-i18n="ingredientsTitle">The Science of <span>Natural Beauty</span></h1>
+            <p data-i18n="ingredientsDesc">Discover the powerful marine and botanical ingredients that make Dermocean
+                treatments effective</p>
+        </div>
+    </section>
+
+    <!-- Marine Algae Section -->
+    <section class="ingredients-section">
+        <div class="container">
+            <div class="ingredients-category">
+                <h2><i class="fas fa-water"></i> <span data-i18n="catMarineAlgae">Marine Algae Power</span></h2>
+                <p data-i18n="catMarineAlgaeDesc">The core of our peeling powder - 100% natural marine microcrystals</p>
+            </div>
+            <div class="ingredients-grid">
+                <!-- Chlorophyll -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingChlorophyll">Chlorophyll</h3>
+                        <p data-i18n="ingChlorophyllDesc">The green pigment in algae that provides powerful UV
+                            protection and anti-aging benefits while promoting skin cell renewal.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitUV">UV Protection</span>
+                            <span class="ingredient-benefit" data-i18n="benefitAntiAging">Anti-Aging</span>
+                            <span class="ingredient-benefit" data-i18n="benefitRenewal">Cell Renewal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Polysaccharides -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingPolysaccharide">Polysaccharides</h3>
+                        <p data-i18n="ingPolysaccharideDesc">Natural hydrating compounds that lock in moisture and
+                            create a protective barrier on the skin surface.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitHydration">Deep Hydration</span>
+                            <span class="ingredient-benefit" data-i18n="benefitBarrier">Skin Barrier</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amino Acids -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingAminoAcids">Amino Acids</h3>
+                        <p data-i18n="ingAminoAcidsDesc">Essential building blocks that stimulate collagen production
+                            and repair damaged skin tissue.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitCollagen">Collagen Boost</span>
+                            <span class="ingredient-benefit" data-i18n="benefitRepair">Skin Repair</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carotenoids -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingCarotenoids">Carotenoids</h3>
+                        <p data-i18n="ingCarotenoidsDesc">Powerful antioxidants that protect skin from environmental
+                            stress and free radical damage.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitAntioxidant">Antioxidant</span>
+                            <span class="ingredient-benefit" data-i18n="benefitProtection">Protection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botanical Extracts Section -->
+    <section class="ingredients-section">
+        <div class="container">
+            <div class="ingredients-category">
+                <h2><i class="fas fa-seedling"></i> <span data-i18n="catBotanical">Botanical Extracts</span></h2>
+                <p data-i18n="catBotanicalDesc">Soothing and healing plant extracts in our peeling powder</p>
+            </div>
+            <div class="ingredients-grid">
+                <!-- Calendula -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingCalendula">Calendula Extract</h3>
+                        <p data-i18n="ingCalendulaDesc">Known for its powerful healing and anti-inflammatory properties.
+                            Soothes irritated skin and accelerates recovery.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitHealing">Healing</span>
+                            <span class="ingredient-benefit" data-i18n="benefitSoothing">Soothing</span>
+                            <span class="ingredient-benefit" data-i18n="benefitAntiInflam">Anti-Inflammatory</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chamomile -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingChamomile">Chamomile Extract</h3>
+                        <p data-i18n="ingChamomileDesc">A gentle yet effective extract that reduces redness, calms
+                            inflammation, and soothes sensitive skin.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitCalming">Calming</span>
+                            <span class="ingredient-benefit" data-i18n="benefitRedness">Reduces Redness</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Melissa -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingMelissa">Melissa Extract</h3>
+                        <p data-i18n="ingMelissaDesc">Also known as Lemon Balm, this extract boosts collagen production
+                            and helps reduce fine lines and wrinkles.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitCollagen">Collagen Boost</span>
+                            <span class="ingredient-benefit" data-i18n="benefitWrinkles">Anti-Wrinkle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Solution Section -->
+    <section class="ingredients-section">
+        <div class="container">
+            <div class="ingredients-category">
+                <h2><i class="fas fa-flask"></i> <span data-i18n="catSupportSolution">Support Solution Actives</span>
+                </h2>
+                <p data-i18n="catSupportSolutionDesc">Bioactive compounds that activate and enhance the peeling
+                    treatment</p>
+            </div>
+            <div class="ingredients-grid">
+                <!-- Daisy Flower -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingDaisy">Daisy Flower Extract</h3>
+                        <p data-i18n="ingDaisyDesc">Reduces dark spots and evens out skin tone while providing
+                            antiseptic protection and soothing irritation.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitBrightening">Brightening</span>
+                            <span class="ingredient-benefit" data-i18n="benefitEvenTone">Even Tone</span>
+                            <span class="ingredient-benefit" data-i18n="benefitAntiseptic">Antiseptic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Glycerin -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingGlycerin">Glycerin</h3>
+                        <p data-i18n="ingGlycerinDesc">A humectant that deeply hydrates and softens the skin, preparing
+                            it for optimal treatment penetration.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitHydration">Deep Hydration</span>
+                            <span class="ingredient-benefit" data-i18n="benefitSoftening">Softening</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calming Mask Section -->
+    <section class="ingredients-section">
+        <div class="container">
+            <div class="ingredients-category">
+                <h2><i class="fas fa-mask"></i> <span data-i18n="catCalmingMask">Calming Mask Actives</span></h2>
+                <p data-i18n="catCalmingMaskDesc">Soothing and restorative ingredients for post-treatment care</p>
+            </div>
+            <div class="ingredients-grid">
+                <!-- Cucumber -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-lemon"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingCucumber">Cucumber Fruit Extract</h3>
+                        <p data-i18n="ingCucumberDesc">Rich in vitamins (C, B1, B2, B5, B6) and minerals (iron, zinc,
+                            calcium, potassium). Hydrates, refreshes, and reduces puffiness.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitVitamins">Vitamin Rich</span>
+                            <span class="ingredient-benefit" data-i18n="benefitRefreshing">Refreshing</span>
+                            <span class="ingredient-benefit" data-i18n="benefitDePuff">De-Puffing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aloe Vera -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingAloe">Aloe Vera</h3>
+                        <p data-i18n="ingAloeDesc">The ultimate soothing ingredient. Calms inflammation, moisturizes,
+                            and promotes skin healing and regeneration.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitSoothing">Soothing</span>
+                            <span class="ingredient-benefit" data-i18n="benefitHealing">Healing</span>
+                            <span class="ingredient-benefit" data-i18n="benefitRegeneration">Regeneration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sodium Hyaluronate -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingHyaluronate">Sodium Hyaluronate</h3>
+                        <p data-i18n="ingHyaluronateDesc">A form of hyaluronic acid that deeply hydrates, locks in
+                            moisture, enhances elasticity, and plumps fine lines.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitHydration">Deep Hydration</span>
+                            <span class="ingredient-benefit" data-i18n="benefitPlumping">Plumping</span>
+                            <span class="ingredient-benefit" data-i18n="benefitElasticity">Elasticity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sunscreen Section -->
+    <section class="ingredients-section">
+        <div class="container">
+            <div class="ingredients-category">
+                <h2><i class="fas fa-sun"></i> <span data-i18n="catSunscreen">Sunscreen Actives</span></h2>
+                <p data-i18n="catSunscreenDesc">Protection and brightening for post-treatment skin</p>
+            </div>
+            <div class="ingredients-grid">
+                <!-- Arbutin -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingArbutin">Arbutin</h3>
+                        <p data-i18n="ingArbutinDesc">A natural skin brightener that inhibits melanin production,
+                            reducing dark spots and evening out skin tone safely.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitBrightening">Brightening</span>
+                            <span class="ingredient-benefit" data-i18n="benefitSpots">Fades Spots</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vitamin E -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-capsules"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingVitaminE">Tocopherol (Vitamin E)</h3>
+                        <p data-i18n="ingVitaminEDesc">A powerful antioxidant that protects from free radicals,
+                            nourishes the skin, and supports the healing process.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitAntioxidant">Antioxidant</span>
+                            <span class="ingredient-benefit" data-i18n="benefitNourishing">Nourishing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cassia Alata -->
+                <div class="ingredient-card">
+                    <div class="ingredient-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="ingredient-content">
+                        <h3 data-i18n="ingCassia">Cassia Alata Extract</h3>
+                        <p data-i18n="ingCassiaDesc">A tropical plant extract that soothes skin, defends against
+                            environmental damage, and supports healing.</p>
+                        <div class="ingredient-benefits">
+                            <span class="ingredient-benefit" data-i18n="benefitSoothing">Soothing</span>
+                            <span class="ingredient-benefit" data-i18n="benefitDefense">Defense</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="ingredients-category" style="color: var(--white);">
+                <h2 style="color: var(--white);"><i class="fas fa-heart"></i> <span data-i18n="philosophyTitle">Our
+                        Natural Philosophy</span></h2>
+            </div>
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <i class="fas fa-leaf"></i>
+                    <h3 data-i18n="phil100Natural">100% Botanical</h3>
+                    <p data-i18n="phil100NaturalDesc">All ingredients from algae, herbs, and flowers</p>
+                </div>
+                <div class="philosophy-item">
+                    <i class="fas fa-shield-virus"></i>
+                    <h3 data-i18n="philMicrobiome">Microbiome Safe</h3>
+                    <p data-i18n="philMicrobiomeDesc">Preserves skin barrier and natural flora</p>
+                </div>
+                <div class="philosophy-item">
+                    <i class="fas fa-flask"></i>
+                    <h3 data-i18n="philNoChemicals">No Harsh Chemicals</h3>
+                    <p data-i18n="philNoChemicalsDesc">No synthetic acids or harmful additives</p>
+                </div>
+                <div class="philosophy-item">
+                    <i class="fas fa-clock"></i>
+                    <h3 data-i18n="philFastHealing">Fast Recovery</h3>
+                    <p data-i18n="philFastHealingDesc">Healing time reduced to just 5 days</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
+</body>
+
+</html>

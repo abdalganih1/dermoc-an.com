@@ -4,8 +4,13 @@
  * RTL Support included
  */
 class ComparisonSlider {
-    constructor(selector) {
-        this.container = document.querySelector(selector);
+    constructor(elementOrSelector) {
+        if (typeof elementOrSelector === 'string') {
+            this.container = document.querySelector(elementOrSelector);
+        } else {
+            this.container = elementOrSelector;
+        }
+
         if (!this.container) return;
 
         this.overlay = this.container.querySelector('.img-comp-overlay');
@@ -26,7 +31,7 @@ class ComparisonSlider {
         this.updateDimensions();
 
         // Check RTL
-        this.isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        this.updateRTLState();
 
         // Set initial width to 50%
         this.slide(this.w / 2);
@@ -49,15 +54,27 @@ class ComparisonSlider {
 
         // Watch for language changes (RTL toggle)
         const observer = new MutationObserver(() => {
-            this.isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            this.updateRTLState();
             this.updateDimensions();
-            this.slide(this.w / 2);
+            // Reset to center position when direction changes
+            setTimeout(() => this.slide(this.w / 2), 100);
         });
 
         observer.observe(document.documentElement, {
             attributes: true,
             attributeFilter: ['dir']
         });
+    }
+
+    updateRTLState() {
+        this.isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        // Reset overlay styles when switching direction
+        this.overlay.style.width = '';
+        this.overlay.style.left = '';
+        this.overlay.style.right = '';
+        this.overlay.style.clipPath = '';
+        this.handle.style.left = '';
+        this.handle.style.right = '';
     }
 
     updateDimensions() {
@@ -124,10 +141,10 @@ class ComparisonSlider {
     slide(x) {
         if (this.isRTL) {
             // RTL: overlay starts from right
-            this.overlay.style.width = "auto";
+            this.overlay.style.width = x + "px"; // Use width based on calculated position from right
             this.overlay.style.right = "0";
             this.overlay.style.left = "auto";
-            this.overlay.style.clipPath = `inset(0 0 0 ${this.w - x}px)`;
+            this.overlay.style.clipPath = "none"; // Remove clip-path as it hides the border
             this.handle.style.left = "auto";
             this.handle.style.right = (x - 20) + "px"; // 20 = half of handle width
         } else {

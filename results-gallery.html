@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Results Gallery | DERMOCÉAN Professional</title>
+    <meta name="description"
+        content="See real results achieved with Dermocéan Algae Peeling. Before and after photos of acne, pigmentation, aging, and scarring treatments.">
+    <meta name="keywords"
+        content="dermocean results, before after photos, algae peeling results, acne treatment results, pigmentation removal">
+    <link rel="canonical" href="https://dermocéan.com/results-gallery.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dermocéan.com/results-gallery.html">
+    <meta property="og:title" content="Results Gallery | DERMOCÉAN Professional">
+    <meta property="og:description"
+        content="See real results achieved with Dermocéan Algae Peeling. Before and after photos of varied skin concerns.">
+    <meta property="og:image" content="https://dermocéan.com/images/comparison/pigmentation-after.jpeg">
+
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Gallery Page Specific Styles */
+        .gallery-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #fdfbf7 0%, #fff0f5 100%);
+            text-align: center;
+        }
+
+        .gallery-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-hero h1 span {
+            color: var(--primary);
+        }
+
+        .gallery-hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Filter Section */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            padding: 0 1rem;
+        }
+
+        .filter-btn {
+            background: var(--white);
+            border: 2px solid #eee;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--text-light);
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            opacity: 1;
+            /* For filtering animation */
+        }
+
+        .gallery-item.hidden {
+            display: none;
+            opacity: 0;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .comparison-wrapper {
+            position: relative;
+            background: #f0f0f0;
+            /* Container styling from style.css might need override if specific dimensions required */
+            height: 300px;
+            /* Fixed height for consistency */
+        }
+
+        .comparison-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .item-details {
+            padding: 1.5rem;
+        }
+
+        .concern-tag {
+            display: inline-block;
+            background: rgba(143, 112, 128, 0.1);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .item-details h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-details p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+
+        .treatment-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .info-point i {
+            color: var(--secondary);
+            margin-right: 0.4rem;
+        }
+
+        /* CTA Section */
+        .gallery-cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 4rem 0;
+            text-align: center;
+            color: var(--white);
+            border-radius: 20px;
+            margin-bottom: 4rem;
+        }
+
+        .gallery-cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* RTL Support */
+        [dir="rtl"] .info-point i {
+            margin-right: 0;
+            margin-left: 0.4rem;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-wrapper {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Hero Section -->
+    <section class="gallery-hero">
+        <div class="container">
+            <h1 data-i18n="galleryTitle">Real Results, <span>Real Confidence</span></h1>
+            <p data-i18n="galleryDesc">Explore the transformative power of the Dermocéan Algae Peeling system through
+                our verified case studies.</p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-content">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all" data-i18n="filterAll">All Results</button>
+                <button class="filter-btn" data-filter="acne" data-i18n="filterAcne">Acne & Scars</button>
+                <button class="filter-btn" data-filter="pigmentation"
+                    data-i18n="filterPigmentation">Pigmentation</button>
+                <button class="filter-btn" data-filter="aging" data-i18n="filterAging">Anti-Aging</button>
+                <button class="filter-btn" data-filter="texture" data-i18n="filterTexture">Pores & Texture</button>
+            </div>
+
+            <!-- Results Grid -->
+            <div class="gallery-grid">
+                <!-- Item 1: Acne Scars -->
+                <div class="gallery-item" data-category="acne texture">
+                    <div class="comparison-wrapper">
+                        <div class="comparison-container">
+                            <div class="comparison-image">
+                                <img src="images/comparison/scars-after.jpeg" alt="After Scars Treatment">
+                            </div>
+                            <div class="img-comp-overlay">
+                                <img src="images/comparison/scars-before.jpeg" alt="Before Scars Treatment">
+                            </div>
+                            <div class="comparison-slider-handle"></div>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <span class="concern-tag" data-i18n="tagAcneScars">Acne Scars</span>
+                        <h3 data-i18n="resultTitle1">Deep Scar Revision</h3>
+                        <p data-i18n="resultDesc1">Significant improvement in rolling and boxcar scars texture.</p>
+                        <div class="treatment-info">
+                            <span class="info-point"><i class="fas fa-clock"></i> 3 Sessions</span>
+                            <span class="info-point"><i class="fas fa-magic"></i> Intensive Protocol</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Pigmentation -->
+                <div class="gallery-item" data-category="pigmentation">
+                    <div class="comparison-wrapper">
+                        <div class="comparison-container">
+                            <div class="comparison-image">
+                                <img src="images/comparison/pigmentation-after.jpeg" alt="After Pigmentation Treatment">
+                            </div>
+                            <div class="img-comp-overlay">
+                                <img src="images/comparison/pigmentation-before.jpeg"
+                                    alt="Before Pigmentation Treatment">
+                            </div>
+                            <div class="comparison-slider-handle"></div>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <span class="concern-tag" data-i18n="tagPigmentation">Hyperpigmentation</span>
+                        <h3 data-i18n="resultTitle2">Melasma Reduction</h3>
+                        <p data-i18n="resultDesc2">Clear reduction in hormonal pigmentation and sun spots.</p>
+                        <div class="treatment-info">
+                            <span class="info-point"><i class="fas fa-clock"></i> 2 Sessions</span>
+                            <span class="info-point"><i class="fas fa-magic"></i> Moderate Protocol</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Anti-Aging -->
+                <div class="gallery-item" data-category="aging">
+                    <div class="comparison-wrapper">
+                        <div class="comparison-container">
+                            <div class="comparison-image">
+                                <img src="images/comparison/lines-after.jpeg" alt="After Anti-Aging Treatment">
+                            </div>
+                            <div class="img-comp-overlay">
+                                <img src="images/comparison/lines-before.jpeg" alt="Before Anti-Aging Treatment">
+                            </div>
+                            <div class="comparison-slider-handle"></div>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <span class="concern-tag" data-i18n="tagAging">Fine Lines</span>
+                        <h3 data-i18n="resultTitle3">Skin Tightening</h3>
+                        <p data-i18n="resultDesc3">Reduced fine lines around eyes and improved skin elasticity.</p>
+                        <div class="treatment-info">
+                            <span class="info-point"><i class="fas fa-clock"></i> 1 Session</span>
+                            <span class="info-point"><i class="fas fa-magic"></i> Moderate Protocol</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Active Acne -->
+                <div class="gallery-item" data-category="acne">
+                    <div class="comparison-wrapper">
+                        <div class="comparison-container">
+                            <div class="comparison-image">
+                                <img src="images/comparison/acne-after.jpeg" alt="After Acne Treatment">
+                            </div>
+                            <div class="img-comp-overlay">
+                                <img src="images/comparison/acne-before.jpeg" alt="Before Acne Treatment">
+                            </div>
+                            <div class="comparison-slider-handle"></div>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <span class="concern-tag" data-i18n="tagAcne">Active Acne</span>
+                        <h3 data-i18n="resultTitle4">Acne Clearance</h3>
+                        <p data-i18n="resultDesc4">Rapid drying of active inflammation and post-acne mark reduction.</p>
+                        <div class="treatment-info">
+                            <span class="info-point"><i class="fas fa-clock"></i> 2 Sessions</span>
+                            <span class="info-point"><i class="fas fa-magic"></i> Moderate Protocol</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5: Pores -->
+                <div class="gallery-item" data-category="texture">
+                    <div class="comparison-wrapper">
+                        <div class="comparison-container">
+                            <div class="comparison-image">
+                                <img src="images/comparison/pores-after.jpeg" alt="After Pores Treatment">
+                            </div>
+                            <div class="img-comp-overlay">
+                                <img src="images/comparison/pores-before.jpeg" alt="Before Pores Treatment">
+                            </div>
+                            <div class="comparison-slider-handle"></div>
+                        </div>
+                    </div>
+                    <div class="item-details">
+                        <span class="concern-tag" data-i18n="tagTexture">Enlarged Pores</span>
+                        <h3 data-i18n="resultTitle5">Pore Minimizing</h3>
+                        <p data-i18n="resultDesc5">Refined skin texture and minimized pore visibility.</p>
+                        <div class="treatment-info">
+                            <span class="info-point"><i class="fas fa-clock"></i> 1 Session</span>
+                            <span class="info-point"><i class="fas fa-magic"></i> Gentle Protocol</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="gallery-cta">
+                <div class="container">
+                    <h2 data-i18n="galleryCtaTitle">Ready to Achieve These Results?</h2>
+                    <p data-i18n="galleryCtaDesc">Join thousands of professionals offering Dermocéan treatments.</p>
+                    <a href="register.html" class="btn btn-outline" style="border-color: white; color: white;"
+                        data-i18n="registerNow">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
+    <script src="js/comparison-slider.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Store slider instances for re-initialization
+            let sliderInstances = [];
+
+            // Initialize all sliders on the page
+            function initializeSliders() {
+                sliderInstances = [];
+                const sliderContainers = document.querySelectorAll('.gallery-item:not(.hidden) .comparison-container');
+                sliderContainers.forEach(container => {
+                    sliderInstances.push(new ComparisonSlider(container));
+                });
+            }
+
+            // Initial load
+            initializeSliders();
+
+            // Filter functionality
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active state
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+                        if (filterValue === 'all' || itemCategory.includes(filterValue)) {
+                            item.classList.remove('hidden');
+                        } else {
+                            item.classList.add('hidden');
+                        }
+                    });
+
+                    // Re-initialize sliders after filtering (wait for CSS transition)
+                    setTimeout(() => {
+                        initializeSliders();
+                    }, 100);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -46,8 +46,10 @@
             margin-bottom: 0.5rem;
         }
 
-        .article-image {
+        #article-image {
             width: 100%;
+            height: 400px;
+            object-fit: cover;
             border-radius: 20px;
             margin-bottom: 2rem;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
@@ -98,8 +100,8 @@
     <div id="footer-component"></div>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
-    <script src="js/components.js"></script>
+    <script src="js/main.js?v=1.1"></script>
+    <script src="js/components.js?v=1.1"></script>
     <script>
         // Load article based on query param
         document.addEventListener('DOMContentLoaded', async () => {
@@ -119,35 +121,46 @@
                 const article = articles.find(a => a.slug === slug);
 
                 if (article) {
-                    const lang = localStorage.getItem('dermocean_lang') || 'en';
+                    // Function to render article content based on language
+                    const renderArticle = (lang) => {
+                        // Get localized content
+                        let title = article.title;
+                        let content = article.content;
+                        let category = article.category;
 
-                    // Get localized content
-                    let title = article.title;
-                    let content = article.content;
-                    let category = article.category;
+                        // Localized titles
+                        if (lang === 'ar' && article.title_ar) title = article.title_ar;
+                        if (lang === 'fr' && article.title_fr) title = article.title_fr;
+                        if (lang === 'tr' && article.title_tr) title = article.title_tr;
 
-                    // Localized titles
-                    if (lang === 'ar' && article.title_ar) title = article.title_ar;
-                    if (lang === 'fr' && article.title_fr) title = article.title_fr;
-                    if (lang === 'tr' && article.title_tr) title = article.title_tr;
+                        // Localized content
+                        if (lang === 'ar' && article.content_ar) content = article.content_ar;
+                        if (lang === 'fr' && article.content_fr) content = article.content_fr;
+                        if (lang === 'tr' && article.content_tr) content = article.content_tr;
 
-                    // Localized content
-                    if (lang === 'ar' && article.content_ar) content = article.content_ar;
-                    if (lang === 'fr' && article.content_fr) content = article.content_fr;
-                    if (lang === 'tr' && article.content_tr) content = article.content_tr;
+                        document.getElementById('article-title').textContent = title;
+                        document.getElementById('article-category').textContent = category;
+                        document.getElementById('article-date').textContent = new Date(article.date).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang);
+                        document.getElementById('article-image').src = article.image;
+                        document.getElementById('article-image').alt = title;
+                        document.getElementById('article-body').innerHTML = content;
 
-                    document.getElementById('article-title').textContent = title;
-                    document.getElementById('article-category').textContent = category;
-                    document.getElementById('article-date').textContent = new Date(article.date).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang);
-                    document.getElementById('article-image').src = article.image;
-                    document.getElementById('article-image').alt = title;
-                    document.getElementById('article-body').innerHTML = content;
+                        // Update Page Title
+                        document.title = `${title} | DERMOCÉAN`;
+                    };
 
-                    // Update Page Title
-                    document.title = `${title} | DERMOCÉAN`;
+                    // Initial Render
+                    const currentLang = localStorage.getItem('dermocean_lang') || 'en';
+                    renderArticle(currentLang);
 
                     loader.style.display = 'none';
                     container.style.display = 'block';
+
+                    // Listen for language changes
+                    document.addEventListener('languageChanged', (e) => {
+                        renderArticle(e.detail.lang);
+                    });
+
                 } else {
                     loader.innerHTML = '<p style="color: #666;">Article not found.</p>';
                 }

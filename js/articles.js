@@ -83,4 +83,12 @@ function toggleFaq(element) {
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', loadArticles);
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadArticles();
+
+    // Reload on language change
+    document.addEventListener('languageChanged', () => {
+        loadArticles();
+    });
+});

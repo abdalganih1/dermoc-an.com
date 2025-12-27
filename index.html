@@ -64,54 +64,8 @@
 
 <body>
 
-    <!-- Sticky Header Wrapper -->
-    <div class="site-header-wrapper">
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div class="container">
-                <div class="contact-info">
-                    <i class="fas fa-envelope"></i> <a href="mailto:info@dermocéan.com"
-                        style="color: inherit; text-decoration: none;">info@dermocéan.com</a>
-                </div>
-                <div class="lang-selector">
-                    <a href="#" onclick="changeLanguage('en')" class="active" data-lang="en"><span
-                            class="flag-icon flag-icon-us"></span> EN</a>
-                    <a href="#" onclick="changeLanguage('fr')" data-lang="fr"><span
-                            class="flag-icon flag-icon-fr"></span>
-                        FR</a>
-                    <a href="#" onclick="changeLanguage('ar')" data-lang="ar"><span
-                            class="flag-icon flag-icon-sa"></span>
-                        AR</a>
-                    <a href="#" onclick="changeLanguage('tr')" data-lang="tr"><span
-                            class="flag-icon flag-icon-tr"></span>
-                        TR</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Header -->
-        <header>
-            <nav class="container">
-                <a href="index.html" class="logo">
-                    <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN">
-                </a>
-
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-
-                <ul class="nav-links">
-                    <li><a href="index.html" data-i18n="home">Home</a></li>
-                    <li><a href="about.html" data-i18n="aboutUs">About</a></li>
-                    <li><a href="#products" data-i18n="products">Products</a></li>
-                    <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
-                    <li><a href="articles.html" data-i18n="articles">Articles</a></li>
-                    <li><a href="videos.html" data-i18n="videos">Videos</a></li>
-                    <li><a href="register.html" class="btn btn-outline" data-i18n="register">B2B Register</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div>
+    <!-- Header Component -->
+    <div id="header-component"></div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -124,41 +78,46 @@
                     <a href="#products" class="btn btn-primary" data-i18n="discoverProducts">Discover Products</a>
                 </div>
 
-                <!-- Case Tabs -->
-                <div class="case-tabs-container">
-                    <div class="case-tabs">
-                        <button class="case-tab active" data-case="pigmentation" onclick="switchCase('pigmentation')">
-                            <span class="tab-en">Pigmentation</span>
-                            <span class="tab-ar">تصبغات</span>
-                        </button>
-                        <button class="case-tab" data-case="acne" onclick="switchCase('acne')">
-                            <span class="tab-en">Acne</span>
-                            <span class="tab-ar">حب الشباب</span>
-                        </button>
-                        <button class="case-tab" data-case="scars" onclick="switchCase('scars')">
-                            <span class="tab-en">Acne Scars</span>
-                            <span class="tab-ar">آثار الحبوب</span>
-                        </button>
-                        <button class="case-tab" data-case="lines" onclick="switchCase('lines')">
-                            <span class="tab-en">Fine Lines</span>
-                            <span class="tab-ar">تجاعيد</span>
-                        </button>
-                        <button class="case-tab" data-case="pores" onclick="switchCase('pores')">
-                            <span class="tab-en">Pores</span>
-                            <span class="tab-ar">مسام</span>
-                        </button>
+                <!-- Hero Visuals Group (Tabs + Slider) -->
+                <div class="hero-visuals">
+                    <!-- Case Tabs -->
+                    <div class="case-tabs-container">
+                        <div class="case-tabs">
+                            <button class="case-tab active" data-case="pigmentation"
+                                onclick="switchCase('pigmentation')">
+                                <span class="tab-en">Pigmentation</span>
+                                <span class="tab-ar">تصبغات</span>
+                            </button>
+                            <button class="case-tab" data-case="acne" onclick="switchCase('acne')">
+                                <span class="tab-en">Acne</span>
+                                <span class="tab-ar">حب الشباب</span>
+                            </button>
+                            <button class="case-tab" data-case="scars" onclick="switchCase('scars')">
+                                <span class="tab-en">Acne Scars</span>
+                                <span class="tab-ar">آثار الحبوب</span>
+                            </button>
+                            <button class="case-tab" data-case="lines" onclick="switchCase('lines')">
+                                <span class="tab-en">Fine Lines</span>
+                                <span class="tab-ar">تجاعيد</span>
+                            </button>
+                            <button class="case-tab" data-case="pores" onclick="switchCase('pores')">
+                                <span class="tab-en">Pores</span>
+                                <span class="tab-ar">مسام</span>
+                            </button>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Before/After Slider Component -->
-                <div class="comparison-container">
-                    <div class="comparison-image">
-                        <img id="after-img" src="images/comparison/pigmentation-after.jpeg" alt="After Treatment">
+                    <!-- Before/After Slider Component -->
+                    <div class="comparison-container">
+                        <div class="comparison-image">
+                            <img id="after-img" src="images/comparison/pigmentation-after.jpeg" alt="After Treatment">
+                        </div>
+                        <div class="img-comp-overlay">
+                            <img id="before-img" src="images/comparison/pigmentation-before.jpeg"
+                                alt="Before Treatment">
+                        </div>
+                        <div class="comparison-slider-handle"></div>
                     </div>
-                    <div class="img-comp-overlay">
-                        <img id="before-img" src="images/comparison/pigmentation-before.jpeg" alt="Before Treatment">
-                    </div>
-                    <div class="comparison-slider-handle"></div>
                 </div>
             </div>
         </div>
@@ -175,6 +134,35 @@
             <!-- Dynamic Grid -->
             <div class="products-grid">
                 <div class="text-center" style="grid-column: 1/-1;">Loading Products...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skin Concerns Preview Section -->
+    <section class="skin-concerns-preview">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-i18n="skinConcernsTitle">Skin Concerns <span>We Treat</span></h2>
+                <p data-i18n="skinConcernsDesc">Discover how algae peeling can address your specific skin issues
+                    naturally and effectively</p>
+            </div>
+            <div class="concerns-preview-grid">
+                <a href="skin-concerns.html#pigmentation" class="concern-preview-card">
+                    <div class="concern-preview-icon"><i class="fas fa-sun"></i></div>
+                    <h3 data-i18n="catPigmentation">Pigmentation & Damage</h3>
+                </a>
+                <a href="skin-concerns.html#aging" class="concern-preview-card">
+                    <div class="concern-preview-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <h3 data-i18n="catAging">Aging & Texture</h3>
+                </a>
+                <a href="skin-concerns.html#texture" class="concern-preview-card">
+                    <div class="concern-preview-icon"><i class="fas fa-hand-sparkles"></i></div>
+                    <h3 data-i18n="catTexture">Texture & Impurities</h3>
+                </a>
+            </div>
+            <div class="text-center mt-3">
+                <a href="skin-concerns.html" class="btn btn-outline" data-i18n="viewAllConcerns">View All Skin
+                    Concerns</a>
             </div>
         </div>
     </section>
@@ -229,31 +217,7 @@
             </div>
 
             <!-- PDF Embed Viewer -->
-            <div class="pdf-embed-section">
-                <h3 data-i18n="fullGuide">Full Protocol Guide</h3>
-                <!-- PDF Download & Toggle -->
-                <div class="pdf-embed-section">
-                    <p data-i18n="protocolsDesc">Professional guidelines for optimal results</p>
 
-                    <div class="pdf-actions">
-                        <a href="Assets/DERMOCEAN CATALOG_compressed.pdf" class="btn btn-outline" download
-                            data-i18n="downloadCatalog">
-                            <i class="fas fa-download"></i> Download Catalog
-                        </a>
-                        <button class="btn btn-primary" onclick="togglePdfViewer()" id="pdf-toggle-btn">
-                            <i class="fas fa-book-open"></i> <span data-i18n="viewGuide">View Guide</span>
-                        </button>
-                    </div>
-
-                    <!-- Hidden by default PDF Container -->
-                    <div id="pdf-viewer-container" class="pdf-viewer-container">
-                        <div class="pdf-frame-wrapper">
-                            <iframe id="pdf-iframe" data-src="Assets/deromcean protocol_compressed.pdf"
-                                frameborder="0"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -308,87 +272,16 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4 data-i18n="aboutDermocean">About Dermocean</h4>
-                    <p style="color: #aaa; font-size: 0.9rem;" data-i18n="aboutText">
-                        Leading B2B skincare provider for beauty centers.
-                        Combining nature's finest ingredients with scientific innovation.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4 data-i18n="quickLinks">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html" data-i18n="home">Home</a></li>
-                        <li><a href="#products" data-i18n="products">Products</a></li>
-                        <li><a href="register.html" data-i18n="registerCenter">Register Center</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 data-i18n="contactUs">Contact Us</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@dermocéan.com">info@dermocéan.com</a>
-                        </li>
-                        <li><i class="fas fa-phone"></i> +90 545 533 6663</li>
-                        <li><i class="fab fa-instagram"></i> @dermoceanofficial</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 DERMOCÉAN. All Rights Reserved.</p>
 
-                <div class="payment-methods" style="justify-content: center; margin-top: 1rem;">
-                    <div class="payment-method">
-                        <i class="fas fa-money-bill-wave icon"></i>
-                        <span data-i18n="cashOnDelivery">Cash on Delivery</span>
-                    </div>
-                    <div class="payment-method">
-                        <i class="fas fa-university icon"></i>
-                        <span data-i18n="bankTransfer">Bank Transfer</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-overlay"></div>
-
-    <!-- Mobile Sidebar -->
-    <div class="mobile-menu-sidebar">
-        <div class="mobile-menu-header">
-            <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" style="height: 40px;">
-            <button class="close-menu"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="mobile-menu-items">
-            <a href="index.html" data-i18n="home">Home</a>
-            <a href="about.html" data-i18n="aboutUs">About</a>
-            <a href="#products" data-i18n="products">Products</a>
-            <a href="how-to-use.html" data-i18n="howToUse">How to Use</a>
-            <a href="articles.html" data-i18n="articles">Articles</a>
-            <a href="videos.html" data-i18n="videos">Videos</a>
-            <a href="register.html" data-i18n="register">B2B Register</a>
-        </div>
-        <div class="mobile-lang-selector">
-            <a href="#" onclick="changeLanguage('en')" data-lang="en"><span class="flag-icon flag-icon-us"></span>
-                EN</a>
-            <a href="#" onclick="changeLanguage('fr')" data-lang="fr"><span class="flag-icon flag-icon-fr"></span>
-                FR</a>
-            <a href="#" onclick="changeLanguage('ar')" data-lang="ar"><span class="flag-icon flag-icon-sa"></span>
-                AR</a>
-            <a href="#" onclick="changeLanguage('tr')" data-lang="tr"><span class="flag-icon flag-icon-tr"></span>
-                TR</a>
-        </div>
-    </div>
 
     <!-- Scripts -->
-    <script src="js/comparison-slider.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/comparison-slider.js?v=1.1"></script>
+    <script src="js/products.js?v=1.1"></script>
+    <script src="js/main.js?v=1.1"></script>
+    <script src="js/components.js?v=1.1"></script>
     <script>
         // Initialize Comparison Slider
         document.addEventListener('DOMContentLoaded', () => {

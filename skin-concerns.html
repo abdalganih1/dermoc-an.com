@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Skin Concerns | DERMOCÉAN</title>
+    <meta name="description"
+        content="Discover which skin concerns can be treated with Dermocean algae peeling. Effective solutions for pigmentation, acne, wrinkles, and more.">
+    <meta name="keywords"
+        content="skin concerns, pigmentation treatment, acne treatment, wrinkles, algae peeling, skincare solutions">
+    <link rel="canonical" href="https://dermocéan.com/skin-concerns.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dermocéan.com/skin-concerns.html">
+    <meta property="og:title" content="Skin Concerns We Treat | DERMOCÉAN">
+    <meta property="og:description"
+        content="Effective natural solutions for pigmentation, acne, scars, wrinkles, and more with marine algae peeling.">
+    <meta property="og:image" content="https://dermocéan.com/images/logo/dermocean-logo.svg">
+
+    <!-- Fonts & Icons -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Skin Concerns Page Specific Styles */
+        .concerns-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, var(--cream) 0%, #E8E0E5 100%);
+            text-align: center;
+        }
+
+        .concerns-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .concerns-hero h1 span {
+            color: var(--primary);
+        }
+
+        .concerns-hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .concerns-section {
+            padding: 4rem 0;
+        }
+
+        .concerns-section:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        .concerns-category-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .concerns-category-title h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .concerns-category-title h2 i {
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+
+        .concerns-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .concern-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .concern-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .concern-card-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .concern-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .concern-card-image i {
+            font-size: 4rem;
+            color: var(--white);
+            opacity: 0.9;
+        }
+
+        .concern-card-content {
+            padding: 1.5rem;
+        }
+
+        .concern-card-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .concern-card-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .concern-protocol {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--cream);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .concern-protocol i {
+            font-size: 0.9rem;
+        }
+
+        .concerns-cta {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            text-align: center;
+            color: var(--white);
+        }
+
+        .concerns-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .concerns-cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .concerns-cta .btn {
+            background: var(--white);
+            color: var(--primary);
+        }
+
+        .concerns-cta .btn:hover {
+            background: var(--cream);
+        }
+
+        /* RTL Support */
+        [dir="rtl"] .concerns-category-title h2 i {
+            margin-right: 0;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Hero Section -->
+    <section class="concerns-hero">
+        <div class="container">
+            <h1 data-i18n="skinConcernsTitle">Skin Concerns <span>We Treat</span></h1>
+            <p data-i18n="skinConcernsDesc">Discover how algae peeling can address your specific skin issues naturally
+                and effectively</p>
+        </div>
+    </section>
+
+    <!-- Pigmentation & Damage Category -->
+    <section class="concerns-section">
+        <div class="container">
+            <div class="concerns-category-title">
+                <h2><i class="fas fa-sun"></i> <span data-i18n="catPigmentation">Pigmentation & Damage</span></h2>
+            </div>
+            <div class="concerns-grid">
+                <!-- Sun Damage -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/sun-damaged.jpeg" alt="Sun-Damaged Skin Treatment">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernSunDamage">Sun-Damaged Skin</h3>
+                        <p data-i18n="concernSunDamageDesc">Repair UV damage and restore skin's natural radiance with
+                            deep exfoliation and cell renewal.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-leaf"></i>
+                            <span data-i18n="protocolModerate">Moderate Protocol</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Hyperpigmentation -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/hyperpigmentation.jpeg" alt="Hyperpigmentation Treatment">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernHyperpigmentation">Hyperpigmentation</h3>
+                        <p data-i18n="concernHyperpigmentationDesc">Fade dark spots and even out skin tone through
+                            accelerated cell turnover and brightening agents.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-spa"></i>
+                            <span data-i18n="protocolModerate">Moderate Protocol</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Scars -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/scars.jpeg" alt="Scars Treatment Result">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernScars">Scars</h3>
+                        <p data-i18n="concernScarsDesc">Minimize the appearance of acne scars and post-inflammatory
+                            marks with deep tissue renewal.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-fire"></i>
+                            <span data-i18n="protocolIntensive">Intensive Protocol</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Post-Inflammatory -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/pih.jpeg" alt="Post-Inflammatory Marks Treatment">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernPIH">Post-Inflammatory Marks</h3>
+                        <p data-i18n="concernPIHDesc">Address discoloration left behind after acne or skin injuries with
+                            targeted exfoliation.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-leaf"></i>
+                            <span data-i18n="protocolGentle">Gentle Protocol</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aging & Texture Category -->
+    <section class="concerns-section">
+        <div class="container">
+            <div class="concerns-category-title">
+                <h2><i class="fas fa-clock"></i> <span data-i18n="catAging">Aging & Texture</span></h2>
+            </div>
+            <div class="concerns-grid">
+                <!-- Wrinkles -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/fine-lines-wrinkles.jpeg" alt="Wrinkles Treatment Result">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernWrinkles">Fine Lines & Wrinkles</h3>
+                        <p data-i18n="concernWrinklesDesc">Stimulate collagen production and reduce the appearance of
+                            early aging signs naturally.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-spa"></i>
+                            <span data-i18n="protocolModerate">Moderate Protocol</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Loss of Elasticity -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/loss-of-elasticity.jpeg" alt="Loss of Elasticity Treatment">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernElasticity">Loss of Elasticity</h3>
+                        <p data-i18n="concernElasticityDesc">Boost skin firmness and resilience through deep cell
+                            regeneration and collagen stimulation.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-fire"></i>
+                            <span data-i18n="protocolIntensive">Intensive Protocol</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Sagging -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/sagging-skin.jpeg" alt="Sagging Skin Treatment">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernSagging">Sagging Skin</h3>
+                        <p data-i18n="concernSaggingDesc">Tighten and lift skin through intensive treatments that
+                            promote structural protein renewal.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-fire"></i>
+                            <span data-i18n="protocolIntensive">Intensive Protocol</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Dull Complexion -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/dull-tired.jpeg" alt="Dull Complexion Treatment">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernDull">Tired & Dull Complexion</h3>
+                        <p data-i18n="concernDullDesc">Revive radiance and brightness by removing dead cells and
+                            boosting circulation.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-leaf"></i>
+                            <span data-i18n="protocolGentle">Gentle Protocol</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Stretch Marks -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/stretch-marks.jpeg" alt="Stretch Marks Treatment">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernStretch">Stretch Marks</h3>
+                        <p data-i18n="concernStretchDesc">Improve the appearance of stretch marks through deep
+                            exfoliation and collagen stimulation.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-fire"></i>
+                            <span data-i18n="protocolIntensive">Intensive Protocol</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Texture & Impurities Category -->
+    <section class="concerns-section">
+        <div class="container">
+            <div class="concerns-category-title">
+                <h2><i class="fas fa-layer-group"></i> <span data-i18n="catTexture">Texture & Impurities</span></h2>
+            </div>
+            <div class="concerns-grid">
+                <!-- Large Pores -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/texture-impurities.jpeg" alt="Large Pores Treatment">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernPores">Enlarged Pores</h3>
+                        <p data-i18n="concernPoresDesc">Deep cleanse and refine pores while improving overall skin
+                            texture and smoothness.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-spa"></i>
+                            <span data-i18n="protocolModerate">Moderate Protocol</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Keratosis -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/keratosis-pilaris.jpeg" alt="Keratosis Pilaris Treatment">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernKeratosis">Keratosis Pilaris</h3>
+                        <p data-i18n="concernKeratosisDesc">Smooth rough, bumpy texture caused by keratin buildup with
+                            deep physical exfoliation.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-spa"></i>
+                            <span data-i18n="protocolModerate">Moderate Protocol</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Acne -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/acne-prone.jpeg" alt="Acne Treatment Result">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernAcne">Acne-Prone Skin</h3>
+                        <p data-i18n="concernAcneDesc">Clear congested skin and reduce breakouts with antiseptic
+                            properties and pore cleansing.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-leaf"></i>
+                            <span data-i18n="protocolGentle">Gentle Protocol</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Impure Skin -->
+                <div class="concern-card">
+                    <div class="concern-card-image">
+                        <img src="images/skin-concerns/oily-impure.jpeg" alt="Impure Skin Treatment">
+                    </div>
+                    <div class="concern-card-content">
+                        <h3 data-i18n="concernImpure">Impure & Oily Skin</h3>
+                        <p data-i18n="concernImpureDesc">Balance oil production and remove impurities for clearer,
+                            healthier-looking skin.</p>
+                        <span class="concern-protocol">
+                            <i class="fas fa-spa"></i>
+                            <span data-i18n="protocolModerate">Moderate Protocol</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="concerns-cta">
+        <div class="container">
+            <h2 data-i18n="concernsCtaTitle">Ready to Transform Your Skin?</h2>
+            <p data-i18n="concernsCtaDesc">Find a certified Dermocean professional near you and start your journey to
+                healthier skin</p>
+            <a href="register.html" class="btn" data-i18n="findProfessional">Find a Professional</a>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
+</body>
+
+</html>

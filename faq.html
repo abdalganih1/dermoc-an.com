@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FAQ | DERMOCÉAN - Frequently Asked Questions</title>
+    <meta name="description"
+        content="Find answers to frequently asked questions about Dermocean algae peeling treatments, protocols, and skincare procedures.">
+    <meta name="keywords"
+        content="dermocean faq, algae peeling questions, skincare treatment faq, professional skincare help">
+    <meta name="author" content="Dermocean">
+    <link rel="canonical" href="https://dermocéan.com/faq">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dermocéan.com/faq">
+    <meta property="og:title" content="FAQ | DERMOCÉAN">
+    <meta property="og:description" content="Find answers to frequently asked questions about Dermocean treatments.">
+    <meta property="og:image" content="https://dermocéan.com/images/logo/dermocean-logo.svg">
+
+    <!-- Schema.org FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can I wash my face after the treatment?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. According to the protocol, water should be strictly avoided for 48 to 72 hours after the treatment. This allows the marine microcrystals to remain active."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will I experience pain or discomfort?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most clients report only a mild tingling or warm sensation. The procedure is generally well-tolerated without the need for numbing creams."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "When will I start seeing results?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Many clients see immediate improvement in skin texture. For deeper concerns like pigmentation, 3-6 sessions are typically needed."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+
+    <style>
+        /* FAQ Page Styles */
+        .faq-hero {
+            padding: 6rem 0 3rem;
+            background: linear-gradient(135deg, var(--cream) 0%, #E8E0E5 100%);
+            text-align: center;
+        }
+
+        .faq-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-hero h1 span {
+            color: var(--primary);
+        }
+
+        .faq-hero p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .faq-section {
+            padding: 4rem 0;
+        }
+
+        .faq-categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .faq-category-btn {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--border);
+            border-radius: 50px;
+            background: var(--white);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .faq-category-btn:hover,
+        .faq-category-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: var(--shadow-soft);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+
+        .faq-question i {
+            color: var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .faq-answer-content ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .faq-answer-content li {
+            margin-bottom: 0.5rem;
+            list-style: disc;
+        }
+
+        /* RTL Support */
+        [dir="rtl"] .faq-answer-content ul {
+            padding-left: 0;
+            padding-right: 1.5rem;
+        }
+
+        /* Warning Box */
+        .faq-warning {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0 10px 10px 0;
+        }
+
+        [dir="rtl"] .faq-warning {
+            border-left: none;
+            border-right: 4px solid #ffc107;
+            border-radius: 10px 0 0 10px;
+        }
+
+        .faq-warning i {
+            color: #ffc107;
+            margin-right: 0.5rem;
+        }
+
+        [dir="rtl"] .faq-warning i {
+            margin-right: 0;
+            margin-left: 0.5rem;
+        }
+
+        /* CTA Section */
+        .faq-cta {
+            background: var(--cream);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .faq-cta h2 {
+            margin-bottom: 1rem;
+        }
+
+        .faq-cta p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .faq-hero h1 {
+                font-size: 2rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- FAQ Hero -->
+    <section class="faq-hero">
+        <div class="container">
+            <h1 data-i18n="faqPageTitle">Frequently Asked <span>Questions</span></h1>
+            <p data-i18n="faqPageDesc">Find answers to common questions about our treatments, protocols, and products
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <!-- Category Filters -->
+            <div class="faq-categories">
+                <button class="faq-category-btn active" data-category="all" data-i18n="faqCatAll">All Questions</button>
+                <button class="faq-category-btn" data-category="treatment"
+                    data-i18n="faqCatTreatment">Treatment</button>
+                <button class="faq-category-btn" data-category="aftercare"
+                    data-i18n="faqCatAftercare">Aftercare</button>
+                <button class="faq-category-btn" data-category="results" data-i18n="faqCatResults">Results</button>
+                <button class="faq-category-btn" data-category="safety" data-i18n="faqCatSafety">Safety</button>
+            </div>
+
+            <!-- FAQ List -->
+            <div class="faq-list">
+                <!-- FAQ 1: Water Contact -->
+                <div class="faq-item" data-category="aftercare">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q1">Can I wash my face after the treatment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p data-i18n="faq_a1">No. According to the protocol, water should be strictly avoided for 48
+                                to 72 hours after the treatment. This allows the marine microcrystals to remain active
+                                and achieve optimal results.</p>
+                            <div class="faq-warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span data-i18n="faq_a1_warning">Water contact duration varies by protocol: Gentle (2
+                                    days), Moderate (4 days), Intensive (5 days).</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2: Pain -->
+                <div class="faq-item" data-category="treatment">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q2">Will I experience pain or discomfort?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p data-i18n="faq_a2">Most clients report only a mild tingling or warm sensation within the
+                                first 24 hours. This is due to the presence of micro-crystals (natural algae-based
+                                particles) embedded in the stratum corneum. The procedure is generally well-tolerated
+                                without the need for numbing creams.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3: Results Timeline -->
+                <div class="faq-item" data-category="results">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q3">When will I start seeing results?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p data-i18n="faq_a3">Many clients see immediate improvement in skin texture and glow. For
+                                deeper concerns like pigmentation, scars, or wrinkles, 3-6 sessions are typically
+                                needed, with visible improvement after each session.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4: Home Use -->
+                <div class="faq-item" data-category="treatment">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q4">Can I use the products at home?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p data-i18n="faq_a4">Dermocean Peel is for professional use by doctors, cosmetologists, and
+                                beauty salons only. For home care, we recommend our Sunscreen SPF 50+ and Calming Mask
+                                for post-treatment maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5: Sun Protection -->
+                <div class="faq-item" data-category="aftercare">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q5">How important is sun protection after peeling?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p data-i18n="faq_a5">It's crucial. Following a peeling session, the skin enters a highly
+                                sensitive and vulnerable state. The integrity of the skin barrier is temporarily
+                                compromised. Clients must avoid direct sunlight, wear a hat, and reapply a UVA/UVB SPF
+                                50+ sunscreen every 3 hours.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6: Session Frequency -->
+                <div class="faq-item" data-category="treatment">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q6">How many sessions do I need?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p data-i18n="faq_a6">Clients may require 1 to 4 sessions, based on skin condition and
+                                treatment goals. Sessions must be spaced no less than 4 weeks apart, depending on the
+                                skin's healing capacity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 7: Suitable for all skin types -->
+                <div class="faq-item" data-category="safety">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q7">Is the treatment suitable for all skin types?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p data-i18n="faq_a7">The treatment is suitable for most skin types, but there are important
+                                contraindications. The treatment is NOT suitable for:</p>
+                            <ul>
+                                <li data-i18n="contra1">Use of Isotretinoin in the past 6 months</li>
+                                <li data-i18n="contra2">Pregnancy</li>
+                                <li data-i18n="contra3">Seafood/Shellfish allergy</li>
+                                <li data-i18n="contra4">Wounded skin or open wounds</li>
+                                <li data-i18n="contra5">Keloid or hypertrophic scarring tendency</li>
+                                <li data-i18n="contra6">Excessive sun exposure or tanning habits</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 8: Peeling Skin -->
+                <div class="faq-item" data-category="aftercare">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q8">What should I do about the peeling skin?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p data-i18n="faq_a8">Never pick or pull off peeling skin. You may trim loose skin with
+                                sanitized eyebrow or manicure scissors. Avoid friction from pillows, towels, or hands.
+                                Dry skin is part of the peeling process and helps achieve optimal results.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 9: What to Avoid -->
+                <div class="faq-item" data-category="aftercare">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q9">What should I avoid after the treatment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p data-i18n="faq_a9_intro">After the treatment, you should avoid:</p>
+                            <ul>
+                                <li data-i18n="avoid1">Rubbing, scratching, or manually exfoliating the skin</li>
+                                <li data-i18n="avoid2">Water contact for 48-72 hours (based on protocol)</li>
+                                <li data-i18n="avoid3">Applying any makeup</li>
+                                <li data-i18n="avoid4">Sun exposure, heat, and steam</li>
+                                <li data-i18n="avoid5">Swimming pools, saunas, or steam rooms for 7 days</li>
+                                <li data-i18n="avoid6">Heavy moisturizing (dry skin is part of the process)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 10: Pre-treatment -->
+                <div class="faq-item" data-category="treatment">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span data-i18n="faq_q10">How should I prepare for the treatment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p data-i18n="faq_a10_intro">Before the treatment:</p>
+                            <ul>
+                                <li data-i18n="prep1">Avoid direct sun exposure for 5-7 days prior</li>
+                                <li data-i18n="prep2">Discontinue retinol, AHA/BHA, and other active acids 5 days before
+                                </li>
+                                <li data-i18n="prep3">Do not undergo other cosmetic procedures (Botox, fillers, laser,
+                                    microneedling) within the recommended timeframes</li>
+                                <li data-i18n="prep4">Inform your specialist about any medications you're taking</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="faq-cta">
+        <div class="container">
+            <h2 data-i18n="faqCtaTitle">Still Have Questions?</h2>
+            <p data-i18n="faqCtaDesc">Our team is here to help you with any additional questions</p>
+            <a href="index.html#contact" class="btn btn-primary" data-i18n="contactUs">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/905455336663" target="_blank" class="whatsapp-widget">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
+    <script>
+        // FAQ Toggle Function
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Toggle current FAQ
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Category Filter
+        document.querySelectorAll('.faq-category-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Update active button
+                document.querySelectorAll('.faq-category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const category = this.dataset.category;
+
+                // Filter FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

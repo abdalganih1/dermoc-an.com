@@ -307,3 +307,134 @@
 *[dir="rtl"] .detail-card h3 {
     flex-direction: row-reverse;
 }
+
+/* Product Concerns Section */
+.product-concerns {
+    padding: 4rem 0;
+    background: var(--cream);
+    text-align: center;
+}
+
+.product-concerns h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.product-concerns h3 i {
+    color: var(--primary-color);
+}
+
+.concerns-chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.concern-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--white);
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    color: var(--dark);
+    font-size: 0.95rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.concern-chip:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.concern-chip i {
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.concern-chip:hover i {
+    color: var(--white);
+}
+
+/* Scientific Section */
+.scientific-section {
+    padding: 4rem 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.scientific-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.scientific-section h3 i {
+    color: var(--primary-color);
+}
+
+.scientific-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.scientific-item {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    transition: all 0.3s;
+}
+
+.scientific-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.sci-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.sci-icon i {
+    font-size: 1.25rem;
+    color: var(--white);
+}
+
+.scientific-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.scientific-item p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* RTL Support for new sections */
+*[dir="rtl"] .product-concerns h3,
+*[dir="rtl"] .scientific-section h3 {
+    flex-direction: row-reverse;
+}

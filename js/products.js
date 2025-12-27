@@ -16,8 +16,8 @@ class ProductLoader {
 
         try {
             const response = await fetch(this.jsonPath);
-            const products = await response.json();
-            this.render(products);
+            this.products = await response.json();
+            this.render(this.products);
         } catch (error) {
             console.error('Error loading products:', error);
             this.grid.innerHTML = '<p class="text-center">Failed to load products.</p>';
@@ -73,10 +73,19 @@ class ProductLoader {
                 <div class="product-info">
                     <h3>${name}</h3>
                     <p>${desc}</p>
-                    <a href="${link}" class="product-btn" style="display:inline-block; text-align:center;">${btnText}</a>
+                    <a href="${link}" class="product-btn" style="display:inline-block; text-align:center;">${this.getBtnText()}</a>
                 </div>
             </div>
         `;
+    }
+    updateLanguage(lang) {
+        this.lang = lang;
+        this.isRTL = lang === 'ar';
+        if (this.products) {
+            this.render(this.products);
+        } else {
+            this.init();
+        }
     }
 }
 
@@ -84,4 +93,9 @@ class ProductLoader {
 document.addEventListener('DOMContentLoaded', () => {
     const loader = new ProductLoader('.products-grid', 'data/products.json');
     loader.init();
+
+    // Listen for language changes
+    document.addEventListener('languageChanged', (e) => {
+        loader.updateLanguage(e.detail.lang);
+    });
 });
