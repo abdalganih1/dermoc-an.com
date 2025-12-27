@@ -15,73 +15,15 @@
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <i class="fas fa-envelope"></i> <a href="mailto:info@dermocéan.com"
-                    style="color: inherit; text-decoration: none;">info@dermocéan.com</a>
-            </div>
-            <div class="lang-selector">
-                <a href="#" onclick="changeLanguage('en')" class="active" data-lang="en"><span>🇺🇸</span> EN</a>
-                <a href="#" onclick="changeLanguage('fr')" data-lang="fr"><span>🇫🇷</span> FR</a>
-                <a href="#" onclick="changeLanguage('ar')" data-lang="ar"><span>🇸🇦</span> AR</a>
-                <a href="#" onclick="changeLanguage('tr')" data-lang="tr"><span>🇹🇷</span> TR</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN">
-            </a>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="home">Home</a></li>
-                <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
-                <li><a href="index.html#products" data-i18n="products">Products</a></li>
-                <li><a href="how-to-use.html" class="active" data-i18n="howToUse">How to Use</a></li>
-                <li><a href="articles.html" data-i18n="articles">Articles</a></li>
-                <li><a href="videos.html" data-i18n="videos">Videos</a></li>
-                <li><a href="register.html" class="btn btn-outline" data-i18n="register">B2B Register</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Mobile Sidebar -->
-    <div class="mobile-overlay"></div>
-    <div class="mobile-menu-sidebar">
-        <div class="mobile-menu-header">
-            <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" class="mobile-logo">
-            <button class="close-menu"><i class="fas fa-times"></i></button>
-        </div>
-        <ul class="mobile-menu-items">
-            <li><a href="index.html" data-i18n="home">Home</a></li>
-            <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
-            <li><a href="index.html#products" data-i18n="products">Products</a></li>
-            <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
-            <li><a href="articles.html" data-i18n="articles">Articles</a></li>
-            <li><a href="videos.html" data-i18n="videos">Videos</a></li>
-            <li><a href="register.html" data-i18n="register">B2B Register</a></li>
-        </ul>
-        <div class="mobile-lang-selector">
-            <a href="#" onclick="changeLanguage('en')" data-lang="en"><span>🇺🇸</span> EN</a>
-            <a href="#" onclick="changeLanguage('fr')" data-lang="fr"><span>🇫🇷</span> FR</a>
-            <a href="#" onclick="changeLanguage('ar')" data-lang="ar"><span>🇸🇦</span> AR</a>
-            <a href="#" onclick="changeLanguage('tr')" data-lang="tr"><span>🇹🇷</span> TR</a>
-        </div>
-    </div>
+    <!-- Header Component -->
+    <div id="header-component"></div>
 
     <!-- Usage Hero -->
     <section class="usage-hero">
@@ -282,50 +224,12 @@
         </div>
     </section>
 
-    <!-- WhatsApp Widget -->
-    <a href="https://wa.me/905455336663" target="_blank" class="whatsapp-widget">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" class="footer-logo">
-                    <p data-i18n="aboutText">Leading B2B skincare provider for beauty centers.</p>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="quickLinks">Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html" data-i18n="home">Home</a></li>
-                        <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
-                        <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
-                        <li><a href="videos.html" data-i18n="videos">Videos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4 data-i18n="contactUs">Contact Us</h4>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@dermocéan.com">info@dermocéan.com</a></p>
-                    <p><i class="fab fa-whatsapp"></i> +90 545 533 6663</p>
-                </div>
-                <div class="footer-payment">
-                    <h4 data-i18n="paymentMethods">Payment Methods</h4>
-                    <div class="payment-icons">
-                        <span><i class="fas fa-money-bill-wave"></i> <span data-i18n="cashOnDelivery">Cash on
-                                Delivery</span></span>
-                        <span><i class="fas fa-university"></i> <span data-i18n="bankTransfer">Bank
-                                Transfer</span></span>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 DERMOCÉAN. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
 </body>
 
 </html>
