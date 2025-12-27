@@ -5,7 +5,22 @@
 
 async function loadArticles() {
     const lang = localStorage.getItem('dermocean_lang') || 'en';
-    const isAr = lang === 'ar';
+
+    // Get localized field based on language
+    function getField(article, field) {
+        if (lang === 'ar' && article[field + '_ar']) return article[field + '_ar'];
+        if (lang === 'fr' && article[field + '_fr']) return article[field + '_fr'];
+        if (lang === 'tr' && article[field + '_tr']) return article[field + '_tr'];
+        return article[field];
+    }
+
+    // Localized "Read More" text
+    const readMoreText = {
+        'en': 'Read More',
+        'ar': 'اقرأ المزيد',
+        'fr': 'Lire Plus',
+        'tr': 'Devamını Oku'
+    };
 
     try {
         const res = await fetch('data/articles.json');
@@ -17,17 +32,17 @@ async function loadArticles() {
         grid.innerHTML = articles.map(article => `
             <article class="article-card">
                 <div class="article-image">
-                    <img src="${article.image}" alt="${isAr ? article.title_ar : article.title}">
+                    <img src="${article.image}" alt="${getField(article, 'title')}">
                     <span class="article-category">${article.category}</span>
                 </div>
                 <div class="article-content">
                     <span class="article-date">
-                        <i class="far fa-calendar-alt"></i> ${formatDate(article.date)}
+                        <i class="far fa-calendar-alt"></i> ${formatDate(article.date, lang)}
                     </span>
-                    <h3>${isAr ? article.title_ar : article.title}</h3>
-                    <p>${isAr ? article.excerpt_ar : article.excerpt}</p>
+                    <h3>${getField(article, 'title')}</h3>
+                    <p>${getField(article, 'excerpt')}</p>
                     <a href="article.html?slug=${article.slug}" class="article-link">
-                        ${isAr ? 'اقرأ المزيد' : 'Read More'} <i class="fas fa-arrow-right"></i>
+                        ${readMoreText[lang] || 'Read More'} <i class="fas fa-arrow-${lang === 'ar' ? 'left' : 'right'}"></i>
                     </a>
                 </div>
             </article>

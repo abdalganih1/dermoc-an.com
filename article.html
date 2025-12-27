@@ -11,76 +11,66 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .article-reader-section {
+            padding: 2rem 0 5rem;
+        }
+
+        .article-body {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #444;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body h2,
+        .article-body h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-image {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-nav {
+            margin-top: 3rem;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <i class="fas fa-envelope"></i> <a href="mailto:info@dermocéan.com"
-                    style="color: inherit; text-decoration: none;">info@dermocéan.com</a>
-            </div>
-            <div class="lang-selector">
-                <a href="#" onclick="changeLanguage('en')" class="active" data-lang="en"><span>🇺🇸</span> EN</a>
-                <a href="#" onclick="changeLanguage('fr')" data-lang="fr"><span>🇫🇷</span> FR</a>
-                <a href="#" onclick="changeLanguage('ar')" data-lang="ar"><span>🇸🇦</span> AR</a>
-                <a href="#" onclick="changeLanguage('tr')" data-lang="tr"><span>🇹🇷</span> TR</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN">
-            </a>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="home">Home</a></li>
-                <li><a href="about.html" data-i18n="aboutUs">About Use</a></li>
-                <li><a href="index.html#products" data-i18n="products">Products</a></li>
-                <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
-                <li><a href="articles.html" class="active" data-i18n="articles">Articles</a></li>
-                <li><a href="videos.html" data-i18n="videos">Videos</a></li>
-                <li><a href="register.html" class="btn btn-outline" data-i18n="register">B2B Register</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Mobile Sidebar -->
-    <div class="mobile-overlay"></div>
-    <div class="mobile-menu-sidebar">
-        <div class="mobile-menu-header">
-            <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" class="mobile-logo">
-            <button class="close-menu"><i class="fas fa-times"></i></button>
-        </div>
-        <ul class="mobile-menu-items">
-            <li><a href="index.html" data-i18n="home">Home</a></li>
-            <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
-            <li><a href="index.html#products" data-i18n="products">Products</a></li>
-            <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
-            <li><a href="articles.html" data-i18n="articles">Articles</a></li>
-            <li><a href="videos.html" data-i18n="videos">Videos</a></li>
-            <li><a href="register.html" data-i18n="register">B2B Register</a></li>
-        </ul>
-        <div class="mobile-lang-selector">
-            <a href="#" onclick="changeLanguage('en')" data-lang="en"><span>🇺🇸</span> EN</a>
-            <a href="#" onclick="changeLanguage('fr')" data-lang="fr"><span>🇫🇷</span> FR</a>
-            <a href="#" onclick="changeLanguage('ar')" data-lang="ar"><span>🇸🇦</span> AR</a>
-            <a href="#" onclick="changeLanguage('tr')" data-lang="tr"><span>🇹🇷</span> TR</a>
-        </div>
-    </div>
+    <!-- Header Component -->
+    <div id="header-component"></div>
 
     <!-- Article Content -->
-    <section class="article-reader-section" style="padding: 15vh 0 5rem;">
+    <section class="article-reader-section">
         <div class="container" style="max-width: 800px;">
-            <div id="article-loader" style="text-align: center;">Loading...</div>
+            <div id="article-loader" style="text-align: center; padding: 5rem 0;">
+                <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--primary-color);"></i>
+                <p style="margin-top: 1rem;" data-i18n="loading">Loading...</p>
+            </div>
 
             <article id="article-container" style="display: none;">
                 <span id="article-category" class="article-category"
@@ -90,56 +80,28 @@
                     <i class="far fa-calendar-alt"></i> <span id="article-date"></span>
                 </div>
 
-                <img id="article-image" src="" alt="" style="width: 100%; border-radius: 15px; margin-bottom: 2rem;">
+                <img id="article-image" src="" alt="" class="article-image">
 
-                <div id="article-body" class="article-body" style="font-size: 1.1rem; line-height: 1.8; color: #444;">
+                <div id="article-body" class="article-body">
                 </div>
             </article>
 
-            <div class="article-nav" style="margin-top: 3rem; text-align: center;">
-                <a href="articles.html" class="btn btn-outline">Back to Articles</a>
+            <div class="article-nav">
+                <a href="articles.html" class="btn btn-outline" data-i18n="backToArticles">
+                    <i class="fas fa-arrow-left"></i> Back to Articles
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4 data-i18n="aboutDermocean">About Dermocean</h4>
-                    <p style="color: #aaa; font-size: 0.9rem;" data-i18n="aboutText">
-                        Leading B2B skincare provider for beauty centers.
-                        Combining nature's finest ingredients with scientific innovation.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4 data-i18n="quickLinks">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html" data-i18n="home">Home</a></li>
-                        <li><a href="index.html#products" data-i18n="products">Products</a></li>
-                        <li><a href="register.html" data-i18n="registerCenter">Register Center</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 data-i18n="contactUs">Contact Us</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@dermocéan.com">info@dermocéan.com</a>
-                        </li>
-                        <li><i class="fas fa-phone"></i> +90 545 533 6663</li>
-                        <li><i class="fab fa-instagram"></i> @dermoceanofficial</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 DERMOCÉAN. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
     <script>
-        // Inline script to load article based on query param
+        // Load article based on query param
         document.addEventListener('DOMContentLoaded', async () => {
             const urlParams = new URLSearchParams(window.location.search);
             const slug = urlParams.get('slug');
@@ -147,7 +109,7 @@
             const loader = document.getElementById('article-loader');
 
             if (!slug) {
-                loader.textContent = 'Article not found.';
+                loader.innerHTML = '<p style="color: #666;">Article not found.</p>';
                 return;
             }
 
@@ -158,32 +120,40 @@
 
                 if (article) {
                     const lang = localStorage.getItem('dermocean_lang') || 'en';
+
+                    // Get localized content
                     let title = article.title;
-                    let content = article.content; // In real setup, content might be localized too
+                    let content = article.content;
                     let category = article.category;
 
-                    // Basic localization check for title
+                    // Localized titles
                     if (lang === 'ar' && article.title_ar) title = article.title_ar;
                     if (lang === 'fr' && article.title_fr) title = article.title_fr;
                     if (lang === 'tr' && article.title_tr) title = article.title_tr;
 
+                    // Localized content
+                    if (lang === 'ar' && article.content_ar) content = article.content_ar;
+                    if (lang === 'fr' && article.content_fr) content = article.content_fr;
+                    if (lang === 'tr' && article.content_tr) content = article.content_tr;
+
                     document.getElementById('article-title').textContent = title;
                     document.getElementById('article-category').textContent = category;
-                    document.getElementById('article-date').textContent = new Date(article.date).toLocaleDateString();
+                    document.getElementById('article-date').textContent = new Date(article.date).toLocaleDateString(lang === 'ar' ? 'ar-SA' : lang);
                     document.getElementById('article-image').src = article.image;
-                    document.getElementById('article-body').innerHTML = content; // Using innerHTML for formatting
+                    document.getElementById('article-image').alt = title;
+                    document.getElementById('article-body').innerHTML = content;
 
                     // Update Page Title
-                    document.title = `${title} | DERMOCÉAN Article`;
+                    document.title = `${title} | DERMOCÉAN`;
 
                     loader.style.display = 'none';
                     container.style.display = 'block';
                 } else {
-                    loader.textContent = 'Article not found.';
+                    loader.innerHTML = '<p style="color: #666;">Article not found.</p>';
                 }
             } catch (error) {
                 console.error(error);
-                loader.textContent = 'Error loading article.';
+                loader.innerHTML = '<p style="color: #666;">Error loading article.</p>';
             }
         });
     </script>
