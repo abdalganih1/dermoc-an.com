@@ -143,7 +143,15 @@ const translations = {
         // Articles Page
         faqTitle: "Frequently Asked Questions",
         articlesTitle: "Expert Skincare Insights",
-        articlesDesc: "Discover tips, guides, and professional knowledge"
+        articlesDesc: "Discover tips, guides, and professional knowledge",
+        faq1Q: "How often can I use the peeling treatment?",
+        faq1A: "We recommend waiting 2-4 weeks between sessions, depending on your skin's sensitivity and response to treatment.",
+        faq2Q: "Is the treatment suitable for sensitive skin?",
+        faq2A: "Yes! Our Gentle Protocol is specifically designed for sensitive skin types. Start with the lowest intensity and gradually increase.",
+        faq3Q: "How long until I see results?",
+        faq3A: "Many clients see immediate improvement in skin texture. For deeper concerns like pigmentation, 3-6 sessions are typically needed.",
+        faq4Q: "Can I use the products at home?",
+        faq4A: "Dermocean products are formulated for professional use in licensed beauty centers. For home care, we recommend our Sunscreen and Calming Mask."
     },
     ar: {
         // Navigation
@@ -283,7 +291,15 @@ const translations = {
         // Articles Page
         faqTitle: "الأسئلة الشائعة",
         articlesTitle: "رؤى خبراء البشرة",
-        articlesDesc: "اكتشف النصائح والأدلة والمعرفة المهنية"
+        articlesDesc: "اكتشف النصائح والأدلة والمعرفة المهنية",
+        faq1Q: "كم مرة يمكنني استخدام علاج التقشير؟",
+        faq1A: "نوصي بالانتظار 2-4 أسابيع بين الجلسات، حسب حساسية بشرتك واستجابتها للعلاج.",
+        faq2Q: "هل العلاج مناسب للبشرة الحساسة؟",
+        faq2A: "نعم! البروتوكول اللطيف مصمم خصيصاً للبشرة الحساسة. ابدأ بأقل شدة وزدها تدريجياً.",
+        faq3Q: "متى سأرى النتائج؟",
+        faq3A: "يلاحظ العديد من العملاء تحسناً فورياً في ملمس البشرة. للمشاكل العميقة كالتصبغات، عادةً ما تحتاج 3-6 جلسات.",
+        faq4Q: "هل يمكنني استخدام المنتجات في المنزل؟",
+        faq4A: "منتجات ديرموشيان مصممة للاستخدام المهني في مراكز التجميل المرخصة. للعناية المنزلية، ننصح بواقي الشمس وماسك التهدئة."
     },
     fr: {
         // Navigation
@@ -423,7 +439,15 @@ const translations = {
         // Articles Page
         faqTitle: "FAQ",
         articlesTitle: "Conseils d'Experts",
-        articlesDesc: "Découvrez nos conseils professionnels"
+        articlesDesc: "Découvrez nos conseils professionnels",
+        faq1Q: "À quelle fréquence puis-je utiliser le traitement de peeling?",
+        faq1A: "Nous recommandons d'attendre 2-4 semaines entre les séances, selon la sensibilité de votre peau.",
+        faq2Q: "Le traitement convient-il aux peaux sensibles?",
+        faq2A: "Oui! Notre Protocole Doux est spécialement conçu pour les peaux sensibles. Commencez par l'intensité la plus faible.",
+        faq3Q: "Combien de temps avant de voir les résultats?",
+        faq3A: "De nombreux clients voient une amélioration immédiate. Pour les problèmes plus profonds comme la pigmentation, 3-6 séances sont généralement nécessaires.",
+        faq4Q: "Puis-je utiliser les produits à la maison?",
+        faq4A: "Les produits Dermocean sont formulés pour un usage professionnel. Pour les soins à domicile, nous recommandons notre écran solaire et masque apaisant."
     },
     tr: {
         // Navigation
@@ -563,7 +587,15 @@ const translations = {
         // Articles Page
         faqTitle: "Sıkça Sorulan Sorular",
         articlesTitle: "Uzman Görüşleri",
-        articlesDesc: "İpuçları ve profesyonel bilgileri keşfedin"
+        articlesDesc: "İpuçları ve profesyonel bilgileri keşfedin",
+        faq1Q: "Peeling tedavisini ne sıklıkla kullanabilirim?",
+        faq1A: "Cildinizin hassasiyetine göre seanslar arasında 2-4 hafta beklemenizi öneririz.",
+        faq2Q: "Tedavi hassas ciltler için uygun mu?",
+        faq2A: "Evet! Hafif Protokolümüz hassas cilt tipleri için özel olarak tasarlanmıştır. En düşük yoğunlukla başlayın.",
+        faq3Q: "Sonuçları ne zaman göreceğim?",
+        faq3A: "Birçok müşteri cilt dokusunda hemen iyileşme görür. Pigmentasyon gibi derin sorunlar için genellikle 3-6 seans gerekir.",
+        faq4Q: "Ürünleri evde kullanabilir miyim?",
+        faq4A: "Dermocean ürünleri lisanslı güzellik merkezlerinde profesyonel kullanım için formüle edilmiştir. Evde bakım için güneş kremi ve yatıştırıcı maskemizi öneriyoruz."
     }
 };
 

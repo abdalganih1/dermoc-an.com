@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/jt30e3li9al4/public_html/xn--dermocan-g1a.com/
+    - /bin/cp -R * $DEPLOYPATH
