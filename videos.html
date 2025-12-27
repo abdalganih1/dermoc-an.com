@@ -5,230 +5,308 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videos | DERMOCÉAN</title>
+    <meta name="description" content="Watch educational videos about Dermocean treatment protocols and sessions.">
+    <link rel="canonical" href="https://dermocéan.com/videos.html">
+
+    <!-- Fonts & Icons -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Video Carousel Styles */
+        .video-section {
+            padding: 4rem 0;
+            background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+        }
+
+        .video-carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            padding: 1rem 0;
+        }
+
+        .video-carousel {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 1rem 0.5rem;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .video-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .video-card {
+            flex: 0 0 400px;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            aspect-ratio: 16/9;
+            background: #000;
+        }
+
+        .video-thumbnail video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .quality-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            backdrop-filter: blur(4px);
+        }
+
+        .video-info {
+            padding: 1.25rem;
+        }
+
+        .video-info h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .video-info p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .video-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quality-selector {
+            padding: 6px 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            background: #f8f9fa;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .quality-selector:hover {
+            border-color: var(--primary-color);
+        }
+
+        .auto-quality-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: #28a745;
+        }
+
+        .auto-quality-indicator i {
+            font-size: 0.7rem;
+        }
+
+        /* Carousel Navigation */
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .carousel-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            background: #fff;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        /* RTL Support */
+        *[dir="rtl"] .video-carousel {
+            flex-direction: row-reverse;
+        }
+
+        *[dir="rtl"] .quality-badge {
+            right: auto;
+            left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .video-card {
+                flex: 0 0 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
 
-    <!-- Top Bar (Same as index) -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <i class="fas fa-envelope"></i> <a href="mailto:info@dermocéan.com"
-                    style="color: inherit; text-decoration: none;">info@dermocéan.com</a>
-            </div>
-            <div class="lang-selector">
-                <a href="#" onclick="changeLanguage('en')" class="active" data-lang="en"><span>🇺🇸</span> EN</a>
-                <a href="#" onclick="changeLanguage('fr')" data-lang="fr"><span>🇫🇷</span> FR</a>
-                <a href="#" onclick="changeLanguage('ar')" data-lang="ar"><span>🇸🇦</span> AR</a>
-                <a href="#" onclick="changeLanguage('tr')" data-lang="tr"><span>🇹🇷</span> TR</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN">
-            </a>
-
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="home">Home</a></li>
-                <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
-                <li><a href="index.html#products" data-i18n="products">Products</a></li>
-                <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
-                <li><a href="articles.html" data-i18n="articles">Articles</a></li>
-                <li><a href="videos.html" class="active" data-i18n="videos">Videos</a></li>
-                <li><a href="register.html" class="btn btn-outline" data-i18n="register">B2B Register</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="products-section">
+    <!-- Video Section -->
+    <section class="video-section">
         <div class="container">
             <div class="section-title">
                 <h2 data-i18n="educationalVideos">Educational Videos</h2>
                 <p class="text-center mt-2" data-i18n="protocolsSessions">Protocols & Treatment Sessions</p>
             </div>
 
-            <div class="products-grid" id="video-grid">
-                <!-- Example Video Card -->
-                <div class="product-card">
-                    <div class="product-image" style="padding:0; height: auto; aspect-ratio: 16/9; background: #000;">
-                        <video controls style="width:100%; height:100%;" poster="images/logo/dermocean-logo.svg">
-                            <source src="media/videos/protocol/720p.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">Protocol Video</h3>
-                        <p class="text-light">Step-by-step usage guide</p>
+            <div class="video-carousel-wrapper">
+                <div class="video-carousel" id="video-carousel">
+                    <!-- Videos loaded dynamically -->
+                    <div class="text-center" style="width: 100%; padding: 2rem;">
+                        <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--primary-color);"></i>
+                        <p style="margin-top: 1rem;" data-i18n="loading">Loading...</p>
                     </div>
                 </div>
             </div>
 
-            <!-- YouTube Alternative (Commented) -->
-            <!--
-            <div class="youtube-grid">
-                <div class="youtube-card">
-                    <iframe 
-                        src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
-                        title="Dermocean Protocol"
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
+            <div class="carousel-nav">
+                <button class="carousel-btn" onclick="scrollCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn" onclick="scrollCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-            -->
         </div>
     </section>
 
-    <!-- WhatsApp Widget -->
-    <a href="https://wa.me/905455336663" target="_blank" class="whatsapp-widget">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4 data-i18n="aboutDermocean">About Dermocean</h4>
-                    <p style="color: #aaa; font-size: 0.9rem;" data-i18n="aboutText">
-                        Leading B2B skincare provider for beauty centers.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4 data-i18n="quickLinks">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html" data-i18n="home">Home</a></li>
-                        <li><a href="index.html#products" data-i18n="products">Products</a></li>
-                        <li><a href="register.html" data-i18n="registerCenter">Register Center</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 data-i18n="contactUs">Contact Us</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@dermocéan.com">info@dermocéan.com</a>
-                        </li>
-                        <li><i class="fas fa-phone"></i> +90 545 533 6663</li>
-                        <li><i class="fab fa-instagram"></i> @dermoceanofficial</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 DERMOCÉAN. All Rights Reserved.</p>
-                <div class="payment-methods" style="justify-content: center; margin-top: 1rem;">
-                    <div class="payment-method">
-                        <i class="fas fa-money-bill-wave icon"></i>
-                        <span data-i18n="cashOnDelivery">Cash on Delivery</span>
-                    </div>
-                    <div class="payment-method">
-                        <i class="fas fa-university icon"></i>
-                        <span data-i18n="bankTransfer">Bank Transfer</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-overlay"></div>
-
-    <!-- Mobile Sidebar -->
-    <div class="mobile-menu-sidebar">
-        <div class="mobile-menu-header">
-            <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" style="height: 40px;">
-            <button class="close-menu"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="mobile-menu-items">
-            <a href="index.html" data-i18n="home">Home</a>
-            <a href="index.html#products" data-i18n="products">Products</a>
-            <a href="index.html#protocols" data-i18n="protocols">Protocols</a>
-            <a href="videos.html" data-i18n="videos">Videos</a>
-            <a href="register.html" data-i18n="register">B2B Register</a>
-        </div>
-    </div>
-
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
     <script>
-        // Fetch videos from JSON with language support
-        fetch('data/videos.json')
-            .then(res => res.json())
-            .then(videos => {
-                const grid = document.getElementById('video-grid');
-                if (!grid) return;
+        // Detect optimal quality based on network
+        async function detectOptimalQuality() {
+            const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            if (connection) {
+                const type = connection.effectiveType;
+                if (type === '4g') return '1080p';
+                if (type === '3g') return '720p';
+                return '360p';
+            }
+            // Fallback: measure download speed
+            return '720p';
+        }
 
+        // Scroll carousel
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('video-carousel');
+            const scrollAmount = 420; // card width + gap
+            carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+
+        // Load videos
+        async function loadVideos() {
+            try {
+                const response = await fetch('data/videos.json');
+                const videos = await response.json();
+                const carousel = document.getElementById('video-carousel');
                 const lang = localStorage.getItem('dermocean_lang') || 'en';
+                const optimalQuality = await detectOptimalQuality();
 
                 function getLocalizedField(video, field) {
-                    const fieldAr = field + '_ar';
-                    const fieldFr = field + '_fr';
-                    const fieldTr = field + '_tr';
-
-                    if (lang === 'ar' && video[fieldAr]) return video[fieldAr];
-                    if (lang === 'fr' && video[fieldFr]) return video[fieldFr];
-                    if (lang === 'tr' && video[fieldTr]) return video[fieldTr];
+                    if (lang === 'ar' && video[field + '_ar']) return video[field + '_ar'];
+                    if (lang === 'fr' && video[field + '_fr']) return video[field + '_fr'];
+                    if (lang === 'tr' && video[field + '_tr']) return video[field + '_tr'];
                     return video[field];
                 }
 
-                grid.innerHTML = videos.map((v, index) => {
+                carousel.innerHTML = videos.map((v, index) => {
                     const title = getLocalizedField(v, 'title');
                     const desc = getLocalizedField(v, 'description');
-                    // const defaultQuality = '720p'; // Unused variable removed
+                    const videoSrc = v.sources[optimalQuality] || v.sources['720p'];
 
                     return `
-                    <div class="product-card" id="video-card-${index}">
-                         <div class="product-image" style="padding:0; height: auto; aspect-ratio: 16/9; background: #000; position: relative;">
-                             <video id="video-${index}" controls preload="none" style="width:100%; height:100%;" poster="${v.poster}">
-                                 <source src="${v.sources['720p']}" type="video/mp4">
-                                 Your browser does not support the video tag.
-                             </video>
-                         </div>
-                         <div class="product-info">
-                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                                <h3 class="product-name" style="margin:0;">${title}</h3>
-                                <select class="quality-selector" onchange="changeQuality(${index}, this.value)" style="padding: 2px 5px; border-radius: 4px; border: 1px solid #ddd; font-size: 0.8rem;">
-                                    <option value="360p">360p</option>
-                                    <option value="720p" selected>720p</option>
-                                    <option value="1080p">1080p</option>
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <video id="video-${index}" controls preload="none" poster="${v.poster}">
+                                <source src="${videoSrc}" type="video/mp4">
+                            </video>
+                            <span class="quality-badge" id="quality-badge-${index}">${optimalQuality}</span>
+                        </div>
+                        <div class="video-info">
+                            <h3>${title}</h3>
+                            <p>${desc}</p>
+                            <div class="video-controls">
+                                <select class="quality-selector" onchange="changeQuality(${index}, this.value)">
+                                    <option value="360p" ${optimalQuality === '360p' ? 'selected' : ''}>360p</option>
+                                    <option value="720p" ${optimalQuality === '720p' ? 'selected' : ''}>720p HD</option>
+                                    <option value="1080p" ${optimalQuality === '1080p' ? 'selected' : ''}>1080p Full HD</option>
                                 </select>
-                             </div>
-                             <p class="text-light">${desc}</p>
-                         </div>
-                     </div>
+                                <span class="auto-quality-indicator">
+                                    <i class="fas fa-circle"></i> Auto
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                     `;
                 }).join('');
 
-                // Store video data globally for access
                 window.videoData = videos;
-            })
-            .catch(e => console.error(e));
+            } catch (e) {
+                console.error('Error loading videos:', e);
+            }
+        }
 
-        // Global function to change quality
+        // Change video quality
         window.changeQuality = function (index, quality) {
             const video = document.getElementById(`video-${index}`);
+            const badge = document.getElementById(`quality-badge-${index}`);
             const data = window.videoData[index];
             const currentTime = video.currentTime;
             const isPlaying = !video.paused;
 
             if (data && data.sources[quality]) {
                 video.src = data.sources[quality];
-                video.currentTime = currentTime; // Resume from same time
+                video.currentTime = currentTime;
+                badge.textContent = quality;
                 if (isPlaying) video.play();
             }
         };
+
+        // Initialize
+        loadVideos();
     </script>
 </body>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Calming Mask | Post-Peel Soothing Mask | DERMOCÉAN</title>
+    <title>Calming Mask | DERMOCÉAN</title>
     <meta name="description"
         content="Professional post-peel calming mask. Instantly reduces redness and restores moisture after algae peeling treatments.">
     <meta name="keywords" content="calming mask, soothing mask, post-peel mask, redness reduction, beauty center mask">
@@ -49,181 +49,91 @@
     }
     </script>
 
+    <!-- Fonts & Icons -->
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
 </head>
 
 <body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
 
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="contact-info">
-                <i class="fas fa-envelope"></i> <a href="mailto:info@dermocéan.com"
-                    style="color: inherit; text-decoration: none;">info@dermocéan.com</a>
-            </div>
-            <div class="lang-selector">
-                <a href="#" onclick="changeLanguage('en')" class="active" data-lang="en"><span>🇺🇸</span> EN</a>
-                <a href="#" onclick="changeLanguage('fr')" data-lang="fr"><span>🇫🇷</span> FR</a>
-                <a href="#" onclick="changeLanguage('ar')" data-lang="ar"><span>🇸🇦</span> AR</a>
-                <a href="#" onclick="changeLanguage('tr')" data-lang="tr"><span>🇹🇷</span> TR</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">
-                <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN">
-            </a>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html" data-i18n="home">Home</a></li>
-                <li><a href="about.html" data-i18n="aboutUs">About Use</a></li>
-                <li><a href="index.html#products" class="active" data-i18n="products">Products</a></li>
-                <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
-                <li><a href="articles.html" data-i18n="articles">Articles</a></li>
-                <li><a href="videos.html" data-i18n="videos">Videos</a></li>
-                <li><a href="register.html" class="btn btn-outline" data-i18n="register">B2B Register</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Mobile Sidebar -->
-    <div class="mobile-overlay"></div>
-    <div class="mobile-menu-sidebar">
-        <div class="mobile-menu-header">
-            <img src="images/logo/dermocean-logo.svg" alt="DERMOCÉAN" class="mobile-logo">
-            <button class="close-menu"><i class="fas fa-times"></i></button>
-        </div>
-        <ul class="mobile-menu-items">
-            <li><a href="index.html" data-i18n="home">Home</a></li>
-            <li><a href="about.html" data-i18n="aboutUs">About Us</a></li>
-            <li><a href="index.html#products" data-i18n="products">Products</a></li>
-            <li><a href="how-to-use.html" data-i18n="howToUse">How to Use</a></li>
-            <li><a href="articles.html" data-i18n="articles">Articles</a></li>
-            <li><a href="videos.html" data-i18n="videos">Videos</a></li>
-            <li><a href="register.html" data-i18n="register">B2B Register</a></li>
-        </ul>
-        <div class="mobile-lang-selector">
-            <a href="#" onclick="changeLanguage('en')" data-lang="en"><span>🇺🇸</span> EN</a>
-            <a href="#" onclick="changeLanguage('fr')" data-lang="fr"><span>🇫🇷</span> FR</a>
-            <a href="#" onclick="changeLanguage('ar')" data-lang="ar"><span>🇸🇦</span> AR</a>
-            <a href="#" onclick="changeLanguage('tr')" data-lang="tr"><span>🇹🇷</span> TR</a>
-        </div>
-    </div>
-
-    <!-- Product Detail Section -->
-    <section class="product-detail-hero">
+    <!-- Product Hero -->
+    <section class="product-hero">
         <div class="container">
             <div class="product-hero-grid">
-                <div class="product-gallery">
-                    <img src="images/products/calming-mask.png" alt="Calming Mask" class="main-product-img">
+                <div class="product-image-wrapper">
+                    <img src="images/products/calming-mask.png" alt="Calming Mask" class="product-main-image">
                 </div>
-                <div class="product-info-col">
+                <div class="product-info-wrapper">
                     <span class="product-category" data-i18n="cat_mask">Mask</span>
                     <h1 class="product-title" data-i18n="prod_mask_name">Calming Mask</h1>
-                    <p class="product-desc" data-i18n="prod_mask_desc">Soothing post-peel mask to calm and restore skin
-                        after treatment.</p>
+                    <p class="product-description" data-i18n="prod_mask_desc">
+                        Soothing post-peel mask to calm and restore skin after treatment.
+                    </p>
 
-                    <div class="product-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-snowflake"></i>
-                            <span data-i18n="cooling">Cooling</span>
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <i class="fas fa-heart"></i>
+                            <span data-i18n="soothing">Soothing</span>
                         </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-spa"></i>
+                        <div class="feature-item">
+                            <i class="fas fa-sync-alt"></i>
                             <span data-i18n="restorative">Restorative</span>
                         </div>
                     </div>
 
-                    <a href="register.html" class="btn btn-primary" data-i18n="orderNow">Order Now</a>
+                    <button class="btn btn-primary order-btn disabled" disabled data-i18n="orderNow">Order Now</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Ingredients & Benefits -->
-    <section class="product-detail-content">
+    <!-- Product Details -->
+    <section class="product-details">
         <div class="container">
             <div class="details-grid">
-                <div class="detail-block">
-                    <h3 data-i18n="keyIngredients">Key Ingredients</h3>
+                <div class="detail-card">
+                    <h3><i class="fas fa-leaf"></i> <span data-i18n="keyIngredients">Key Ingredients</span></h3>
                     <ul class="ingredient-list">
-                        <li>
-                            <strong>Cucumber Fruit Extract</strong>: <span data-i18n="ing_cucumber">Cooling
-                                effect</span>
-                        </li>
-                        <li>
-                            <strong>Aloe Vera</strong>: <span data-i18n="ing_aloe">Soothes skin</span>
-                        </li>
-                        <li>
-                            <strong>Sodium Hyaluronate</strong>: <span data-i18n="ing_hyaluronate">Deep moisture</span>
-                        </li>
+                        <li><strong>Aloe Vera:</strong> <span data-i18n="benefit_soothe">Soothes skin</span></li>
+                        <li><strong>Chamomile:</strong> <span data-i18n="ing_chamomile">Reduces redness</span></li>
+                        <li><strong>Glycerin:</strong> <span data-i18n="ing_glycerin">Deep hydration</span></li>
                     </ul>
                 </div>
-                <div class="detail-block">
-                    <h3 data-i18n="benefits">Benefits</h3>
+                <div class="detail-card">
+                    <h3><i class="fas fa-check-circle"></i> <span data-i18n="benefits">Benefits</span></h3>
                     <ul class="benefits-list">
+                        <li data-i18n="benefit_soothe">Soothes skin</li>
                         <li data-i18n="benefit_redness">Reduces redness</li>
-                        <li data-i18n="benefit_moisture">Replenishes moisture</li>
-                        <li data-i18n="benefit_recovery">Post-peel recovery</li>
+                        <li data-i18n="benefit_hydrate">Hydrates</li>
                     </ul>
                 </div>
-            </div>
-
-            <!-- Usage -->
-            <div class="usage-block">
-                <h3 data-i18n="howToUse">How to Use</h3>
-                <p data-i18n="usage_mask">Apply generously after peeling. Leave for 15 minutes.</p>
-                <a href="how-to-use.html" class="link-arrow" data-i18n="viewFullProtocol">View Full Protocol <i
-                        class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Usage Section -->
+    <section class="usage-section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h4 data-i18n="aboutDermocean">About Dermocean</h4>
-                    <p style="color: #aaa; font-size: 0.9rem;" data-i18n="aboutText">
-                        Leading B2B skincare provider for beauty centers.
-                        Combining nature's finest ingredients with scientific innovation.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h4 data-i18n="quickLinks">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html" data-i18n="home">Home</a></li>
-                        <li><a href="index.html#products" data-i18n="products">Products</a></li>
-                        <li><a href="register.html" data-i18n="registerCenter">Register Center</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 data-i18n="contactUs">Contact Us</h4>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@dermocéan.com">info@dermocéan.com</a>
-                        </li>
-                        <li><i class="fas fa-phone"></i> +90 545 533 6663</li>
-                        <li><i class="fab fa-instagram"></i> @dermoceanofficial</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 DERMOCÉAN. All Rights Reserved.</p>
-            </div>
+            <h3 data-i18n="howToUse">How to Use</h3>
+            <p data-i18n="usage_mask">Apply after peeling treatment. Leave for 15-20 minutes.</p>
+            <a href="how-to-use.html" class="btn" data-i18n="viewFullProtocol">View Full Protocol <i
+                    class="fas fa-arrow-right"></i></a>
         </div>
-    </footer>
+    </section>
 
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
+    <script src="js/components.js"></script>
 </body>
 
 </html>

@@ -179,7 +179,70 @@ const translations = {
         intensive_step2: "Use 2g of peeling powder",
         intensive_step3: "Firm, deep pressure",
         intensive_step4: "For resistant skin only",
-        intensive_step5: "Maximum results, requires experience"
+        intensive_step5: "Maximum results, requires experience",
+
+        // Product Pages
+        cat_peeling: "Peeling",
+        cat_activator: "Activator",
+        cat_mask: "Mask",
+        cat_sunscreen: "Protection",
+
+        // Algae Peeling Powder
+        prod_peeling_name: "Algae Peeling Powder",
+        prod_peeling_desc: "100% Natural Formula containing microcrystals of marine algae for deep exfoliation.",
+        natural100: "100% Natural",
+        professionalUse: "Professional Use",
+        orderNow: "Order Now",
+        keyIngredients: "Key Ingredients",
+        benefits: "Benefits",
+        viewFullProtocol: "View Full Protocol",
+
+        // Ingredients
+        ing_algae: "Deep hydration",
+        ing_calendula: "Soothes irritation",
+        ing_melissa: "Boosts collagen",
+        ing_chamomile: "Reduces redness",
+        ing_h2o2: "Purifies skin",
+        ing_glycerin: "Deep hydration",
+        ing_daisy: "Evens skin tone",
+
+        // Benefits
+        benefit_exfoliate: "Exfoliates dead skin",
+        benefit_pores: "Cleanses pores",
+        benefit_pigmentation: "Fades pigmentation",
+        benefit_acne: "Treats acne",
+        benefit_activate: "Activates peeling",
+        benefit_antiseptic: "Antiseptic action",
+        benefit_hydrate: "Hydrates",
+        benefit_soothe: "Soothes skin",
+        benefit_redness: "Reduces redness",
+        benefit_protect: "UV Protection",
+
+        // Usage
+        usage_peeling: "Mix 2g with Support Solution. Massage for 4-8 mins based on protocol.",
+        usage_support: "Combine with Algae Peeling Powder to form paste.",
+        usage_mask: "Apply after peeling treatment. Leave for 15-20 minutes.",
+        usage_sunscreen: "Apply generously 15 minutes before sun exposure.",
+
+        // Support Solution
+        prod_support_name: "Peeling Support Solution",
+        prod_support_desc: "Bioactive liquid to activate the peeling powder. Antiseptic and deeply hydrating.",
+        hydrating: "Hydrating",
+        antiseptic: "Antiseptic",
+
+        // Calming Mask
+        prod_mask_name: "Calming Mask",
+        prod_mask_desc: "Soothing post-peel mask to calm and restore skin after treatment.",
+        soothing: "Soothing",
+        restorative: "Restorative",
+
+        // Sunscreen
+        prod_sunscreen_name: "SPF 50+ Sunscreen",
+        prod_sunscreen_desc: "Essential protection after peeling treatments. Lightweight, non-greasy formula.",
+        spf50: "SPF 50+",
+        lightweight: "Lightweight",
+
+        loading: "Loading..."
     },
     ar: {
         // Navigation
@@ -355,7 +418,63 @@ const translations = {
         intensive_step2: "استخدام 2 غرام من بودرة التقشير",
         intensive_step3: "ضغط قوي وعميق",
         intensive_step4: "للبشرة المقاومة فقط",
-        intensive_step5: "أقصى نتائج، يتطلب خبرة"
+        intensive_step5: "أقصى نتائج، يتطلب خبرة",
+
+        // صفحات المنتجات
+        cat_peeling: "تقشير",
+        cat_activator: "محفز",
+        cat_mask: "ماسك",
+        cat_sunscreen: "حماية",
+
+        prod_peeling_name: "بودرة التقشير بالطحالب",
+        prod_peeling_desc: "تركيبة طبيعية 100% تحتوي على بلورات دقيقة من الطحالب البحرية للتقشير العميق.",
+        natural100: "طبيعي 100%",
+        professionalUse: "للاستخدام المهني",
+        orderNow: "اطلب الآن",
+        keyIngredients: "المكونات الرئيسية",
+        benefits: "الفوائد",
+        viewFullProtocol: "عرض البروتوكول الكامل",
+
+        ing_algae: "ترطيب عميق",
+        ing_calendula: "يهدئ التهيج",
+        ing_melissa: "يعزز الكولاجين",
+        ing_chamomile: "يقلل الاحمرار",
+        ing_h2o2: "ينقي البشرة",
+        ing_glycerin: "ترطيب عميق",
+        ing_daisy: "يوحد لون البشرة",
+
+        benefit_exfoliate: "يقشر الجلد الميت",
+        benefit_pores: "ينظف المسام",
+        benefit_pigmentation: "يخفف التصبغات",
+        benefit_acne: "يعالج حب الشباب",
+        benefit_activate: "ينشط التقشير",
+        benefit_antiseptic: "مفعول مطهر",
+        benefit_hydrate: "يرطب",
+        benefit_soothe: "يهدئ البشرة",
+        benefit_redness: "يقلل الاحمرار",
+        benefit_protect: "حماية من الأشعة",
+
+        usage_peeling: "امزج 2 غرام مع محلول الدعم. دلك لمدة 4-8 دقائق حسب البروتوكول.",
+        usage_support: "امزج مع بودرة التقشير لتشكيل عجينة.",
+        usage_mask: "ضع بعد علاج التقشير. اتركه لمدة 15-20 دقيقة.",
+        usage_sunscreen: "ضع بسخاء قبل 15 دقيقة من التعرض للشمس.",
+
+        prod_support_name: "محلول دعم التقشير",
+        prod_support_desc: "سائل بيولوجي لتنشيط بودرة التقشير. مطهر ومرطب بعمق.",
+        hydrating: "مرطب",
+        antiseptic: "مطهر",
+
+        prod_mask_name: "ماسك التهدئة",
+        prod_mask_desc: "ماسك مهدئ بعد التقشير لتهدئة واستعادة البشرة.",
+        soothing: "مهدئ",
+        restorative: "مجدد",
+
+        prod_sunscreen_name: "واقي شمس SPF 50+",
+        prod_sunscreen_desc: "حماية أساسية بعد علاجات التقشير. تركيبة خفيفة وغير دهنية.",
+        spf50: "SPF 50+",
+        lightweight: "خفيف",
+
+        loading: "جاري التحميل..."
     },
     fr: {
         // Navigation
@@ -531,7 +650,63 @@ const translations = {
         intensive_step2: "Utilisez 2g de poudre",
         intensive_step3: "Pression ferme et profonde",
         intensive_step4: "Pour peaux résistantes uniquement",
-        intensive_step5: "Résultats maximaux, nécessite expérience"
+        intensive_step5: "Résultats maximaux, nécessite expérience",
+
+        // Pages Produits
+        cat_peeling: "Peeling",
+        cat_activator: "Activateur",
+        cat_mask: "Masque",
+        cat_sunscreen: "Protection",
+
+        prod_peeling_name: "Poudre de Peeling aux Algues",
+        prod_peeling_desc: "Formule 100% naturelle contenant des microcristaux d'algues marines pour une exfoliation profonde.",
+        natural100: "100% Naturel",
+        professionalUse: "Usage Professionnel",
+        orderNow: "Commander",
+        keyIngredients: "Ingrédients Clés",
+        benefits: "Avantages",
+        viewFullProtocol: "Voir le Protocole Complet",
+
+        ing_algae: "Hydratation profonde",
+        ing_calendula: "Apaise les irritations",
+        ing_melissa: "Stimule le collagène",
+        ing_chamomile: "Réduit les rougeurs",
+        ing_h2o2: "Purifie la peau",
+        ing_glycerin: "Hydratation profonde",
+        ing_daisy: "Unifie le teint",
+
+        benefit_exfoliate: "Exfolie les peaux mortes",
+        benefit_pores: "Nettoie les pores",
+        benefit_pigmentation: "Atténue les taches",
+        benefit_acne: "Traite l'acné",
+        benefit_activate: "Active le peeling",
+        benefit_antiseptic: "Action antiseptique",
+        benefit_hydrate: "Hydrate",
+        benefit_soothe: "Apaise la peau",
+        benefit_redness: "Réduit les rougeurs",
+        benefit_protect: "Protection UV",
+
+        usage_peeling: "Mélangez 2g avec la Solution Support. Massez 4-8 min selon le protocole.",
+        usage_support: "Combinez avec la Poudre de Peeling pour former une pâte.",
+        usage_mask: "Appliquez après le traitement. Laissez 15-20 minutes.",
+        usage_sunscreen: "Appliquez généreusement 15 min avant l'exposition au soleil.",
+
+        prod_support_name: "Solution Support Peeling",
+        prod_support_desc: "Liquide bioactif pour activer la poudre de peeling. Antiseptique et profondément hydratant.",
+        hydrating: "Hydratant",
+        antiseptic: "Antiseptique",
+
+        prod_mask_name: "Masque Apaisant",
+        prod_mask_desc: "Masque post-peeling pour calmer et restaurer la peau.",
+        soothing: "Apaisant",
+        restorative: "Réparateur",
+
+        prod_sunscreen_name: "Écran Solaire SPF 50+",
+        prod_sunscreen_desc: "Protection essentielle après les traitements. Formule légère et non grasse.",
+        spf50: "SPF 50+",
+        lightweight: "Légère",
+
+        loading: "Chargement..."
     },
     tr: {
         // Navigation
@@ -707,7 +882,63 @@ const translations = {
         intensive_step2: "2g peeling tozu kullanın",
         intensive_step3: "Sıkı, derin baskı",
         intensive_step4: "Sadece dirençli ciltler için",
-        intensive_step5: "Maksimum sonuç, deneyim gerektirir"
+        intensive_step5: "Maksimum sonuç, deneyim gerektirir",
+
+        // Ürün Sayfaları
+        cat_peeling: "Peeling",
+        cat_activator: "Aktivatör",
+        cat_mask: "Maske",
+        cat_sunscreen: "Koruma",
+
+        prod_peeling_name: "Yosun Peeling Tozu",
+        prod_peeling_desc: "Derin eksfoliasyon için deniz yosunu mikrokristallerinden oluşan %100 doğal formül.",
+        natural100: "%100 Doğal",
+        professionalUse: "Profesyonel Kullanım",
+        orderNow: "Sipariş Ver",
+        keyIngredients: "Temel İçerikler",
+        benefits: "Faydalar",
+        viewFullProtocol: "Tam Protokole Bak",
+
+        ing_algae: "Derin nemlendirme",
+        ing_calendula: "Tahrişi yatıştırır",
+        ing_melissa: "Kolajen üretimini artırır",
+        ing_chamomile: "Kızarıklığı azaltır",
+        ing_h2o2: "Cildi arındırır",
+        ing_glycerin: "Derin nemlendirme",
+        ing_daisy: "Cilt tonunu eşitler",
+
+        benefit_exfoliate: "Ölü deriyi eksfoliye eder",
+        benefit_pores: "Gözenekleri temizler",
+        benefit_pigmentation: "Lekeleri giderir",
+        benefit_acne: "Akneyi tedavi eder",
+        benefit_activate: "Peeling'i aktive eder",
+        benefit_antiseptic: "Antiseptik etki",
+        benefit_hydrate: "Nemlendirir",
+        benefit_soothe: "Cildi yatıştırır",
+        benefit_redness: "Kızarıklığı azaltır",
+        benefit_protect: "UV Koruması",
+
+        usage_peeling: "2g'ı Destek Solüsyonu ile karıştırın. Protokole göre 4-8 dk masaj yapın.",
+        usage_support: "Peeling Tozu ile karıştırarak macun oluşturun.",
+        usage_mask: "Tedaviden sonra uygulayın. 15-20 dakika bekletin.",
+        usage_sunscreen: "Güneşe çıkmadan 15 dk önce bol miktarda uygulayın.",
+
+        prod_support_name: "Peeling Destek Solüsyonu",
+        prod_support_desc: "Peeling tozunu aktive eden biyoaktif sıvı. Antiseptik ve derin nemlendirici.",
+        hydrating: "Nemlendirici",
+        antiseptic: "Antiseptik",
+
+        prod_mask_name: "Yatıştırıcı Maske",
+        prod_mask_desc: "Peeling sonrası cildi yatıştırmak ve onarmak için maske.",
+        soothing: "Yatıştırıcı",
+        restorative: "Onarıcı",
+
+        prod_sunscreen_name: "SPF 50+ Güneş Kremi",
+        prod_sunscreen_desc: "Peeling tedavileri sonrası temel koruma. Hafif ve yağsız formül.",
+        spf50: "SPF 50+",
+        lightweight: "Hafif",
+
+        loading: "Yükleniyor..."
     }
 };
 
