@@ -6,10 +6,11 @@
         "title_fr": "Vidéo du Protocole",
         "title_tr": "Protokol Videosu",
         "description": "Comprehensive guide on Dermocean peeling protocol.",
-        "description_ar": "دليل شامل لبروتوكول تقشير ديرموسيان.",
+        "description_ar": "دليل شامل لبروتوكول تقشير ديرموشيان.",
         "description_fr": "Guide complet sur le protocole de peeling Dermocean.",
         "description_tr": "Dermocean peeling protokolü hakkında kapsamlı rehber.",
-        "poster": "images/logo/dermocean-logo.svg",
+        "poster": "images/thumbnails/protocol.jpg",
+        "hls": "media/hls/protocol/index.m3u8",
         "sources": {
             "360p": "media/videos/protocol/360p.mp4",
             "720p": "media/videos/protocol/720p.mp4",
@@ -26,7 +27,8 @@
         "description_ar": "عرض مباشر لعملية العلاج.",
         "description_fr": "Démonstration en direct du processus de traitement.",
         "description_tr": "Tedavi sürecinin canlı gösterimi.",
-        "poster": "images/logo/dermocean-logo.svg",
+        "poster": "images/thumbnails/session1.jpg",
+        "hls": "media/hls/session1/index.m3u8",
         "sources": {
             "360p": "media/videos/session1/360p.mp4",
             "720p": "media/videos/session1/720p.mp4",
@@ -43,7 +45,8 @@
         "description_ar": "ملاحظات العميل وتحليل البشرة.",
         "description_fr": "Retour client et analyse de peau.",
         "description_tr": "Müşteri geri bildirimi ve cilt analizi.",
-        "poster": "images/logo/dermocean-logo.svg",
+        "poster": "images/thumbnails/session2.jpg",
+        "hls": "media/hls/session2/index.m3u8",
         "sources": {
             "360p": "media/videos/session2/360p.mp4",
             "720p": "media/videos/session2/720p.mp4",
@@ -60,7 +63,8 @@
         "description_ar": "تقنيات ونصائح التطبيق.",
         "description_fr": "Techniques et conseils d'application.",
         "description_tr": "Uygulama teknikleri ve ipuçları.",
-        "poster": "images/logo/dermocean-logo.svg",
+        "poster": "images/thumbnails/session3.jpg",
+        "hls": "media/hls/session3/index.m3u8",
         "sources": {
             "360p": "media/videos/session3/360p.mp4",
             "720p": "media/videos/session3/720p.mp4",
@@ -77,7 +81,8 @@
         "description_ar": "تعليمات العناية بعد العلاج.",
         "description_fr": "Instructions de soins post-traitement.",
         "description_tr": "Tedavi sonrası bakım talimatları.",
-        "poster": "images/logo/dermocean-logo.svg",
+        "poster": "images/thumbnails/session4.jpg",
+        "hls": "media/hls/session4/index.m3u8",
         "sources": {
             "360p": "media/videos/session4/360p.mp4",
             "720p": "media/videos/session4/720p.mp4",
@@ -94,7 +99,8 @@
         "description_ar": "النتائج النهائية والمراجعة.",
         "description_fr": "Résultats finaux et bilan.",
         "description_tr": "Final sonuçlar ve değerlendirme.",
-        "poster": "images/logo/dermocean-logo.svg",
+        "poster": "images/thumbnails/session5.jpg",
+        "hls": "media/hls/session5/index.m3u8",
         "sources": {
             "360p": "media/videos/session5/360p.mp4",
             "720p": "media/videos/session5/720p.mp4",

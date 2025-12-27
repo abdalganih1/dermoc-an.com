@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- HLS.js for adaptive streaming -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
     <style>
         /* Video Carousel Styles */
         .video-section {
@@ -318,7 +321,8 @@
                 carousel.innerHTML = videos.map((v, index) => {
                     const title = getLocalizedField(v, 'title');
                     const desc = getLocalizedField(v, 'description');
-                    const videoSrc = v.sources[optimalQuality] || v.sources['720p'];
+                    const hlsSrc = v.hls || '';
+                    const fallbackSrc = v.sources['720p'] || v.sources['360p'];
 
                     return `
                     <div class="video-card">
@@ -329,10 +333,11 @@
                                     <i class="fas fa-play"></i>
                                 </div>
                             </div>
-                            <video id="video-${index}" controls preload="none">
-                                <source src="${videoSrc}" type="video/mp4">
+                            <video id="video-${index}" controls preload="none" 
+                                data-hls="${hlsSrc}" 
+                                data-fallback="${fallbackSrc}">
                             </video>
-                            <span class="quality-badge" id="quality-badge-${index}">${optimalQuality}</span>
+                            <span class="quality-badge" id="quality-badge-${index}">Auto</span>
                         </div>
                         <div class="video-info">
                             <h3>${title}</h3>
@@ -374,14 +379,49 @@
             }
         };
 
-        // Play video on thumbnail click
+        // Play video with HLS support
+        window.hlsInstances = {};
+
         window.playVideo = function (index) {
             const thumb = document.getElementById(`thumb-${index}`);
             const video = document.getElementById(`video-${index}`);
+            const badge = document.getElementById(`quality-badge-${index}`);
+            const hlsSrc = video.dataset.hls;
+            const fallbackSrc = video.dataset.fallback;
 
-            // Hide poster and show video
+            // Show video, hide poster
             thumb.classList.add('playing');
-            video.play();
+
+            // Try HLS first
+            if (hlsSrc && Hls.isSupported()) {
+                const hls = new Hls({
+                    capLevelToPlayerSize: true,
+                    startLevel: -1 // Auto quality
+                });
+
+                hls.loadSource(hlsSrc);
+                hls.attachMedia(video);
+
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    video.play();
+                });
+
+                hls.on(Hls.Events.LEVEL_SWITCHED, (event, data) => {
+                    const levels = ['360p', '720p', '1080p'];
+                    badge.textContent = levels[data.level] || 'Auto';
+                });
+
+                window.hlsInstances[index] = hls;
+            } else if (hlsSrc && video.canPlayType('application/vnd.apple.mpegurl')) {
+                // Safari native HLS
+                video.src = hlsSrc;
+                video.play();
+            } else {
+                // Fallback to MP4
+                video.src = fallbackSrc;
+                video.play();
+                badge.textContent = '720p';
+            }
         };
 
         // Initialize
