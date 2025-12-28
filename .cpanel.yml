@@ -1,10 +1,9 @@
----
 deployment:
   tasks:
     - export DEPLOYPATH=/home/jt30e3li9al4/public_html/xn--dermocan-g1a.com/
-    # Copy all files
+    # Copy files from the repo folder to the public folder
+    # -R preserves structure, -u updates only newer files (safer)
     - /bin/cp -R * $DEPLOYPATH
-    # Fix Directory Permissions (755)
+    # Fix Permissions
     - /bin/chmod -R 755 $DEPLOYPATH
-    # Fix File Permissions (644) - vital for .htaccess
     - /bin/find $DEPLOYPATH -type f -exec chmod 644 {} \;
