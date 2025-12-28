@@ -457,19 +457,7 @@
     text-decoration: none;
 }
 
-.concern-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: var(--white);
-    padding: 0.75rem 1.25rem;
-    border-radius: 50px;
-    color: var(--dark);
-    font-size: 0.95rem;
-    box-shadow: var(--shadow);
-    transition: all 0.3s;
-    text-decoration: none;
-}
+
 
 .concern-chip i {
     color: var(--primary-color);
