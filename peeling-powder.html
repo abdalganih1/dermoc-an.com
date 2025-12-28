@@ -89,7 +89,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary order-btn disabled" disabled data-i18n="orderNow">Order Now</button>
+                    <!-- Order button hidden as ordering is not available -->
                 </div>
             </div>
         </div>
@@ -121,11 +121,44 @@
         </div>
     </section>
 
-    <!-- Usage Section -->
+    <!-- Usage Section - Enhanced -->
     <section class="usage-section">
         <div class="container">
             <h3 data-i18n="howToUse">How to Use</h3>
-            <p data-i18n="usage_peeling">Mix 2g with Support Solution. Massage for 4-8 mins based on protocol.</p>
+            <div class="usage-steps">
+                <div class="usage-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4 data-i18n="step1Title">Prepare</h4>
+                        <p data-i18n="step1Desc">Mix 2g of powder with Support Solution in a bowl until smooth paste
+                            forms.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4 data-i18n="step2Title">Apply</h4>
+                        <p data-i18n="step2Desc">Apply evenly on cleansed skin, avoiding eye area. Use gloves for
+                            protection.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4 data-i18n="step3Title">Massage</h4>
+                        <p data-i18n="step3Desc">Massage gently for 4-8 minutes based on protocol intensity and skin
+                            sensitivity.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4 data-i18n="step4Title">Finish</h4>
+                        <p data-i18n="step4Desc">Remove with warm water. Apply Calming Mask, then SPF sunscreen
+                            protection.</p>
+                    </div>
+                </div>
+            </div>
             <a href="how-to-use.html" class="btn" data-i18n="viewFullProtocol">View Full Protocol <i
                     class="fas fa-arrow-right"></i></a>
         </div>
@@ -165,33 +198,71 @@
         </div>
     </section>
 
-    <!-- Scientific Ingredients -->
-    <section class="scientific-section">
+    <!-- Scientific Ingredients - Premium Design -->
+    <section class="scientific-section premium">
         <div class="container">
-            <h3><i class="fas fa-flask"></i> <span data-i18n="scientificFormula">Scientific Formula</span></h3>
-            <div class="scientific-grid">
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-leaf"></i></div>
-                    <h4 data-i18n="ingChlorophyll">Chlorophyll</h4>
-                    <p data-i18n="chlorophyllBrief">UV protection & anti-aging</p>
+            <div class="section-header-premium">
+                <span class="section-badge" data-i18n="powerfulActives">Powerful Actives</span>
+                <h2 data-i18n="scientificFormula">Scientific Formula</h2>
+                <p data-i18n="scientificDesc">Discover the marine-derived active compounds that make our peeling powder
+                    uniquely effective</p>
+            </div>
+            <div class="scientific-grid-premium">
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/chlorophyll.png" alt="Chlorophyll">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingChlorophyll">Chlorophyll</h4>
+                        <p data-i18n="chlorophyllBrief">UV protection & anti-aging</p>
+                        <div class="card-tags">
+                            <span class="tag">UV Shield</span>
+                            <span class="tag">Cell Renewal</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-tint"></i></div>
-                    <h4 data-i18n="ingPolysaccharide">Polysaccharides</h4>
-                    <p data-i18n="polysaccharideBrief">Deep hydration & barrier</p>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/polysaccharides.png" alt="Polysaccharides">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingPolysaccharide">Polysaccharides</h4>
+                        <p data-i18n="polysaccharideBrief">Deep hydration & barrier</p>
+                        <div class="card-tags">
+                            <span class="tag">Hydration</span>
+                            <span class="tag">Barrier</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-dna"></i></div>
-                    <h4 data-i18n="ingAminoAcids">Amino Acids</h4>
-                    <p data-i18n="aminoAcidsBrief">Collagen boost & repair</p>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/amino-acids.png" alt="Amino Acids">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingAminoAcids">Amino Acids</h4>
+                        <p data-i18n="aminoAcidsBrief">Collagen boost & repair</p>
+                        <div class="card-tags">
+                            <span class="tag">Collagen</span>
+                            <span class="tag">Repair</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h4 data-i18n="ingCarotenoids">Carotenoids</h4>
-                    <p data-i18n="carotenoidsBrief">Antioxidant protection</p>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/carotenoids.png" alt="Carotenoids">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingCarotenoids">Carotenoids</h4>
+                        <p data-i18n="carotenoidsBrief">Antioxidant protection</p>
+                        <div class="card-tags">
+                            <span class="tag">Antioxidant</span>
+                            <span class="tag">Defense</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a href="ingredients.html" class="btn btn-outline" data-i18n="viewAllIngredients">View All Ingredients</a>
+            <a href="ingredients.html" class="btn btn-primary" data-i18n="viewAllIngredients">Explore All Ingredients <i
+                    class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 

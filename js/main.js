@@ -468,6 +468,8 @@ const translations = {
         // Product Pages New Content
         concernsTreated: "Skin Concerns Treated",
         scientificFormula: "Scientific Formula",
+        scientificDesc: "Discover the marine-derived active compounds that make our peeling powder uniquely effective",
+        powerfulActives: "Powerful Actives",
         viewAllConcerns: "View All Skin Concerns",
         viewAllIngredients: "View All Ingredients",
         featuredIngredient: "Featured Ingredient",
@@ -775,6 +777,9 @@ const translations = {
         ing_h2o2: "ينقي البشرة",
         ing_glycerin: "ترطيب عميق",
         ing_daisy: "يوحد لون البشرة",
+
+        scientificDesc: "اكتشفي المركبات البحرية النشطة التي تجعل بودرة التقشير فعالة بشكل فريد",
+        powerfulActives: "مكونات فعالة قوية",
 
         benefit_exfoliate: "يقشر الجلد الميت",
         benefit_pores: "ينظف المسام",
