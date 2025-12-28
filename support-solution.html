@@ -90,7 +90,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary order-btn disabled" disabled data-i18n="orderNow">Order Now</button>
+                    <!-- Order button hidden as ordering is not available -->
                 </div>
             </div>
         </div>
@@ -121,34 +121,126 @@
         </div>
     </section>
 
-    <!-- Usage Section -->
+    <!-- Usage Section - Enhanced -->
     <section class="usage-section">
         <div class="container">
             <h3 data-i18n="howToUse">How to Use</h3>
-            <p data-i18n="usage_support">Combine with Algae Peeling Powder to form paste.</p>
+            <div class="usage-steps">
+                <div class="usage-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4 data-i18n="support_step1Title">Measure</h4>
+                        <p data-i18n="support_step1Desc">Pour the appropriate amount of Support Solution into a mixing
+                            bowl.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4 data-i18n="support_step2Title">Mix</h4>
+                        <p data-i18n="support_step2Desc">Gradually add Algae Peeling Powder while stirring until a
+                            smooth paste forms.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4 data-i18n="support_step3Title">Consistency</h4>
+                        <p data-i18n="support_step3Desc">Adjust the ratio for desired consistency - thicker for body,
+                            thinner for face.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4 data-i18n="support_step4Title">Apply</h4>
+                        <p data-i18n="support_step4Desc">Use immediately after mixing for optimal activation and
+                            results.</p>
+                    </div>
+                </div>
+            </div>
             <a href="how-to-use.html" class="btn" data-i18n="viewFullProtocol">View Full Protocol <i
                     class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
-    <!-- Featured Ingredient: Daisy Flower -->
-    <section class="scientific-section">
+    <!-- Product Role in Treatment -->
+    <section class="product-concerns">
         <div class="container">
-            <h3><i class="fas fa-star"></i> <span data-i18n="featuredIngredient">Featured Ingredient</span></h3>
-            <div class="scientific-grid">
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-star"></i></div>
-                    <h4 data-i18n="ingDaisy">Daisy Flower Extract</h4>
-                    <p data-i18n="ingDaisyDesc">Reduces dark spots and evens out skin tone while providing antiseptic
-                        protection.</p>
+            <h3><i class="fas fa-cogs"></i> <span data-i18n="roleInTreatment">Role in Treatment</span></h3>
+            <div class="concerns-chips">
+                <div class="concern-chip" style="cursor: default;">
+                    <i class="fas fa-flask"></i>
+                    <span data-i18n="activatesPowder">Activates Powder</span>
                 </div>
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-droplet"></i></div>
-                    <h4 data-i18n="ingGlycerin">Glycerin</h4>
-                    <p data-i18n="ingGlycerinDesc">A humectant that deeply hydrates and softens the skin.</p>
+                <div class="concern-chip" style="cursor: default;">
+                    <i class="fas fa-shield-alt"></i>
+                    <span data-i18n="antisepticAction">Antiseptic Action</span>
+                </div>
+                <div class="concern-chip" style="cursor: default;">
+                    <i class="fas fa-tint"></i>
+                    <span data-i18n="maintainsMoisture">Maintains Moisture</span>
+                </div>
+                <div class="concern-chip" style="cursor: default;">
+                    <i class="fas fa-star"></i>
+                    <span data-i18n="brighteningEffect">Brightening Effect</span>
                 </div>
             </div>
-            <a href="ingredients.html" class="btn btn-outline" data-i18n="viewAllIngredients">View All Ingredients</a>
+        </div>
+    </section>
+
+    <!-- Scientific Ingredients - Premium Design -->
+    <section class="scientific-section premium">
+        <div class="container">
+            <div class="section-header-premium">
+                <span class="section-badge" data-i18n="activeIngredients">Active Ingredients</span>
+                <h2 data-i18n="supportFormula">Support Formula</h2>
+                <p data-i18n="supportFormulaDesc">Carefully selected bioactive compounds that activate and enhance the
+                    peeling treatment</p>
+            </div>
+            <div class="scientific-grid-premium">
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/daisy-flower.png" alt="Daisy Flower">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingDaisy">Daisy Flower Extract</h4>
+                        <p data-i18n="daisyBrief">Brightens & evens tone</p>
+                        <div class="card-tags">
+                            <span class="tag">Brightening</span>
+                            <span class="tag">Tone</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/glycerin.png" alt="Glycerin">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingGlycerinTitle">Glycerin</h4>
+                        <p data-i18n="glycerinBrief">Deep hydration & softening</p>
+                        <div class="card-tags">
+                            <span class="tag">Hydration</span>
+                            <span class="tag">Softening</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/hydrogen-peroxide.png" alt="Hydrogen Peroxide">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingH2O2">Hydrogen Peroxide</h4>
+                        <p data-i18n="h2o2Brief">Purification & activation</p>
+                        <div class="card-tags">
+                            <span class="tag">Antiseptic</span>
+                            <span class="tag">Activator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="ingredients.html" class="btn btn-primary" data-i18n="viewAllIngredients">Explore All Ingredients <i
+                    class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 

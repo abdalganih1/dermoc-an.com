@@ -88,7 +88,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary order-btn disabled" disabled data-i18n="orderNow">Order Now</button>
+                    <!-- Order button hidden as ordering is not available -->
                 </div>
             </div>
         </div>
@@ -119,11 +119,42 @@
         </div>
     </section>
 
-    <!-- Usage Section -->
+    <!-- Usage Section - Enhanced -->
     <section class="usage-section">
         <div class="container">
             <h3 data-i18n="howToUse">How to Use</h3>
-            <p data-i18n="usage_sunscreen">Apply generously 15 minutes before sun exposure.</p>
+            <div class="usage-steps">
+                <div class="usage-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4 data-i18n="sun_step1Title">Prepare</h4>
+                        <p data-i18n="sun_step1Desc">Apply on clean, dry skin as the final step in your skincare
+                            routine.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4 data-i18n="sun_step2Title">Apply</h4>
+                        <p data-i18n="sun_step2Desc">Use a generous amount and spread evenly on face, neck, and exposed
+                            areas.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4 data-i18n="sun_step3Title">Wait</h4>
+                        <p data-i18n="sun_step3Desc">Allow 15 minutes before sun exposure for optimal protection.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4 data-i18n="sun_step4Title">Reapply</h4>
+                        <p data-i18n="sun_step4Desc">Reapply every 2 hours, or after swimming or excessive sweating.</p>
+                    </div>
+                </div>
+            </div>
             <a href="how-to-use.html" class="btn" data-i18n="viewFullProtocol">View Full Protocol <i
                     class="fas fa-arrow-right"></i></a>
         </div>
@@ -155,28 +186,71 @@
         </div>
     </section>
 
-    <!-- Featured Ingredients -->
-    <section class="scientific-section">
+    <!-- Scientific Ingredients - Premium Design -->
+    <section class="scientific-section premium">
         <div class="container">
-            <h3><i class="fas fa-flask"></i> <span data-i18n="featuredIngredients">Featured Ingredients</span></h3>
-            <div class="scientific-grid">
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-star"></i></div>
-                    <h4 data-i18n="ingArbutin">Arbutin</h4>
-                    <p data-i18n="ingArbutinDesc">Brightens skin and inhibits melanin production for even skin tone.</p>
+            <div class="section-header-premium">
+                <span class="section-badge" data-i18n="protectiveActives">Protective Actives</span>
+                <h2 data-i18n="sunscreenFormula">Protection Formula</h2>
+                <p data-i18n="sunscreenFormulaDesc">Advanced UV filters combined with nourishing antioxidants for
+                    complete skin protection</p>
+            </div>
+            <div class="scientific-grid-premium">
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/arbutin.png" alt="Arbutin">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingArbutin">Arbutin</h4>
+                        <p data-i18n="arbutinBrief">Brightening & melanin control</p>
+                        <div class="card-tags">
+                            <span class="tag">Brightening</span>
+                            <span class="tag">Even Tone</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-seedling"></i></div>
-                    <h4 data-i18n="ingVitaminE">Vitamin E</h4>
-                    <p data-i18n="ingVitaminEDesc">Powerful antioxidant that protects against free radicals.</p>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/vitamin-e.png" alt="Vitamin E">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingVitaminE">Vitamin E</h4>
+                        <p data-i18n="vitaminEBrief">Antioxidant protection</p>
+                        <div class="card-tags">
+                            <span class="tag">Antioxidant</span>
+                            <span class="tag">Repair</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-leaf"></i></div>
-                    <h4 data-i18n="ingCassia">Cassia Alata</h4>
-                    <p data-i18n="ingCassiaDesc">Anti-inflammatory and antifungal properties for skin health.</p>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/cassia-alata.png" alt="Cassia Alata">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingCassia">Cassia Alata</h4>
+                        <p data-i18n="cassiaBrief">Anti-inflammatory care</p>
+                        <div class="card-tags">
+                            <span class="tag">Soothing</span>
+                            <span class="tag">Healing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/titanium-dioxide.png" alt="Titanium Dioxide">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingTitanium">Titanium Dioxide</h4>
+                        <p data-i18n="titaniumBrief">Physical UV barrier</p>
+                        <div class="card-tags">
+                            <span class="tag">UVA</span>
+                            <span class="tag">UVB</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <a href="ingredients.html" class="btn btn-outline" data-i18n="viewAllIngredients">View All Ingredients</a>
+            <a href="ingredients.html" class="btn btn-primary" data-i18n="viewAllIngredients">Explore All Ingredients <i
+                    class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 

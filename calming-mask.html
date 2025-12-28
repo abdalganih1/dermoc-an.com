@@ -88,7 +88,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-primary order-btn disabled" disabled data-i18n="orderNow">Order Now</button>
+                    <!-- Order button hidden as ordering is not available -->
                 </div>
             </div>
         </div>
@@ -118,40 +118,142 @@
         </div>
     </section>
 
-    <!-- Usage Section -->
+    <!-- Usage Section - Enhanced -->
     <section class="usage-section">
         <div class="container">
             <h3 data-i18n="howToUse">How to Use</h3>
-            <p data-i18n="usage_mask">Apply after peeling treatment. Leave for 15-20 minutes.</p>
+            <div class="usage-steps">
+                <div class="usage-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4 data-i18n="mask_step1Title">Cleanse</h4>
+                        <p data-i18n="mask_step1Desc">After peeling treatment, gently remove all residue with warm
+                            water.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4 data-i18n="mask_step2Title">Apply</h4>
+                        <p data-i18n="mask_step2Desc">Apply a generous layer of Calming Mask evenly across the treated
+                            area.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4 data-i18n="mask_step3Title">Wait</h4>
+                        <p data-i18n="mask_step3Desc">Leave the mask on for 15-20 minutes to allow deep absorption.</p>
+                    </div>
+                </div>
+                <div class="usage-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4 data-i18n="mask_step4Title">Remove</h4>
+                        <p data-i18n="mask_step4Desc">Gently remove with a damp cloth or rinse with cool water. Follow
+                            with SPF.</p>
+                    </div>
+                </div>
+            </div>
             <a href="how-to-use.html" class="btn" data-i18n="viewFullProtocol">View Full Protocol <i
                     class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
-    <!-- Featured Ingredients -->
-    <section class="scientific-section">
+    <!-- Skin Concerns Treated -->
+    <section class="product-concerns">
         <div class="container">
-            <h3><i class="fas fa-hand-holding-heart"></i> <span data-i18n="featuredIngredients">Featured
-                    Ingredients</span></h3>
-            <div class="scientific-grid">
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-lemon"></i></div>
-                    <h4 data-i18n="ingCucumber">Cucumber Extract</h4>
-                    <p data-i18n="ingCucumberDesc">Rich in vitamins and minerals. Hydrates, refreshes, and reduces
-                        puffiness.</p>
+            <h3><i class="fas fa-heart"></i> <span data-i18n="skinBenefits">Skin Benefits</span></h3>
+            <div class="concerns-chips">
+                <div class="concern-chip" style="cursor: default;">
+                    <i class="fas fa-fire-alt"></i>
+                    <span data-i18n="reducesRedness">Reduces Redness</span>
                 </div>
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                    <h4 data-i18n="ingAloe">Aloe Vera</h4>
-                    <p data-i18n="ingAloeDesc">Calms inflammation, moisturizes, and promotes skin healing.</p>
+                <div class="concern-chip" style="cursor: default;">
+                    <i class="fas fa-tint"></i>
+                    <span data-i18n="restoresMoisture">Restores Moisture</span>
                 </div>
-                <div class="scientific-item">
-                    <div class="sci-icon"><i class="fas fa-gem"></i></div>
-                    <h4 data-i18n="ingHyaluronate">Sodium Hyaluronate</h4>
-                    <p data-i18n="ingHyaluronateDesc">Deeply hydrates, locks in moisture, enhances elasticity.</p>
+                <div class="concern-chip" style="cursor: default;">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span data-i18n="calmsSkin">Calms Irritation</span>
+                </div>
+                <div class="concern-chip" style="cursor: default;">
+                    <i class="fas fa-shield-alt"></i>
+                    <span data-i18n="protectsBarrier">Protects Barrier</span>
+                </div>
+                <div class="concern-chip" style="cursor: default;">
+                    <i class="fas fa-spa"></i>
+                    <span data-i18n="promoteHealing">Promotes Healing</span>
                 </div>
             </div>
-            <a href="ingredients.html" class="btn btn-outline" data-i18n="viewAllIngredients">View All Ingredients</a>
+        </div>
+    </section>
+
+    <!-- Scientific Ingredients - Premium Design -->
+    <section class="scientific-section premium">
+        <div class="container">
+            <div class="section-header-premium">
+                <span class="section-badge" data-i18n="soothingActives">Soothing Actives</span>
+                <h2 data-i18n="calmingFormula">Calming Formula</h2>
+                <p data-i18n="calmingFormulaDesc">Botanical extracts and hydrating compounds designed to restore skin
+                    after intensive treatments</p>
+            </div>
+            <div class="scientific-grid-premium">
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/aloe-vera.png" alt="Aloe Vera">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingAloe">Aloe Vera</h4>
+                        <p data-i18n="aloeBrief">Healing & anti-inflammatory</p>
+                        <div class="card-tags">
+                            <span class="tag">Healing</span>
+                            <span class="tag">Soothing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/cucumber.png" alt="Cucumber">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingCucumber">Cucumber Extract</h4>
+                        <p data-i18n="cucumberBrief">Cooling & refreshing</p>
+                        <div class="card-tags">
+                            <span class="tag">Hydration</span>
+                            <span class="tag">Cooling</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/hyaluronic-acid.png" alt="Sodium Hyaluronate">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingHyaluronate">Sodium Hyaluronate</h4>
+                        <p data-i18n="hyaluronateBrief">Deep moisture retention</p>
+                        <div class="card-tags">
+                            <span class="tag">Plumping</span>
+                            <span class="tag">Moisture</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="scientific-card">
+                    <div class="card-image">
+                        <img src="images/ingredients/chamomile.png" alt="Chamomile">
+                    </div>
+                    <div class="card-content">
+                        <h4 data-i18n="ingChamomile">Chamomile</h4>
+                        <p data-i18n="chamomileBrief">Anti-redness & calming</p>
+                        <div class="card-tags">
+                            <span class="tag">Anti-redness</span>
+                            <span class="tag">Calming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="ingredients.html" class="btn btn-primary" data-i18n="viewAllIngredients">Explore All Ingredients <i
+                    class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
