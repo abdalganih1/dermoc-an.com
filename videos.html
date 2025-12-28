@@ -192,6 +192,8 @@
             justify-content: center;
             gap: 1rem;
             margin-top: 2rem;
+            direction: ltr;
+            /* Always keep Left button on Left, Right on Right */
         }
 
         .carousel-btn {
@@ -384,6 +386,23 @@
         window.hlsInstances = {};
 
         window.playVideo = function (index) {
+            // Stop all other videos to prevent audio overlap
+            if (window.videoData) {
+                window.videoData.forEach((_, i) => {
+                    if (i !== index) {
+                        const otherVideo = document.getElementById(`video-${i}`);
+                        const otherThumb = document.getElementById(`thumb-${i}`);
+                        if (otherVideo) {
+                            otherVideo.pause();
+                            // Optional: Reset time? otherVideo.currentTime = 0;
+                        }
+                        if (otherThumb) {
+                            otherThumb.classList.remove('playing');
+                        }
+                    }
+                });
+            }
+
             const thumb = document.getElementById(`thumb-${index}`);
             const video = document.getElementById(`video-${index}`);
             const badge = document.getElementById(`quality-badge-${index}`);
