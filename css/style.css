@@ -41,10 +41,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Compensate for fixed header */
-body {
-    padding-top: 95px;
-}
+/* Body padding is set dynamically by JS based on header height */
 
 h1,
 h2,
@@ -335,18 +332,25 @@ body.loaded #page-loader {
  * HEADER & NAVIGATION 
  */
 
-/* Sticky Header Wrapper */
+/* Top bar scrolls normally */
 .site-header-wrapper {
-    position: fixed;
-    width: 100%;
-    top: 0;
+    position: relative;
     z-index: 1000;
 }
 
+/* Header starts in normal flow */
 header {
     width: 100%;
     background: var(--white);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+/* Header becomes fixed when scrolled past top-bar */
+header.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .top-bar {
@@ -370,7 +374,36 @@ header {
 
 .lang-selector {
     display: flex;
-    gap: 1rem;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Horizontal scroll on very small screens */
+@media (max-width: 400px) {
+    .lang-selector {
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Hide scrollbar Firefox */
+    }
+
+    .lang-selector::-webkit-scrollbar {
+        display: none;
+        /* Hide scrollbar Chrome/Safari */
+    }
+
+    .lang-selector a {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.4rem;
+        flex-shrink: 0;
+        /* Prevent shrinking */
+    }
+
+    .lang-selector a span {
+        font-size: 1rem;
+    }
 }
 
 nav {

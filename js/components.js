@@ -33,7 +33,37 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Re-initialize mobile menu handlers
     initMobileMenu();
+
+    // Initialize sticky header behavior
+    initStickyHeader();
 });
+
+// Sticky header: top-bar scrolls away, header sticks to top
+function initStickyHeader() {
+    const topBar = document.querySelector('.top-bar');
+    const header = document.querySelector('header');
+
+    if (!topBar || !header) return;
+
+    const topBarHeight = topBar.offsetHeight;
+    const headerHeight = header.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY >= topBarHeight) {
+            // Header becomes fixed
+            if (!header.classList.contains('header-fixed')) {
+                header.classList.add('header-fixed');
+                document.body.style.paddingTop = headerHeight + 'px';
+            }
+        } else {
+            // Header returns to normal flow
+            if (header.classList.contains('header-fixed')) {
+                header.classList.remove('header-fixed');
+                document.body.style.paddingTop = '0';
+            }
+        }
+    });
+}
 
 // Initialize mobile menu event handlers
 function initMobileMenu() {
