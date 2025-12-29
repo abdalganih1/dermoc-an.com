@@ -63,4 +63,17 @@ function initMobileMenu() {
     if (mobileOverlay) {
         mobileOverlay.addEventListener('click', closeMobileMenu);
     }
+
+    // Mobile Submenu Toggle (Resources dropdown)
+    const submenuToggles = document.querySelectorAll('.submenu-toggle');
+    submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const parent = toggle.closest('.mobile-submenu');
+            if (parent) {
+                parent.classList.toggle('active');
+            }
+        });
+    });
 }

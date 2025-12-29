@@ -2342,6 +2342,19 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
+    // Mobile Submenu Toggle (Resources dropdown)
+    const submenuToggles = document.querySelectorAll('.submenu-toggle');
+    submenuToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const parent = toggle.closest('.mobile-submenu');
+            if (parent) {
+                parent.classList.toggle('active');
+            }
+        });
+    });
+
     // Sticky Header
     const header = document.querySelector('header');
     let lastScroll = 0;
