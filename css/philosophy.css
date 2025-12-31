@@ -1,0 +1,808 @@
+/**
+ * Dermocéan - Natural Philosophy Page Styles
+ * Professional animations and premium visual design
+ */
+
+/* ============================================
+   CSS Variables & Base
+   ============================================ */
+:root {
+    --phil-primary: #8f7080;
+    --phil-primary-dark: #5a4a52;
+    --phil-accent: #3a6a6a;
+    --phil-gold: #c4a35a;
+    --phil-glass: rgba(255, 255, 255, 0.1);
+    --phil-glass-border: rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================
+   Keyframe Animations
+   ============================================ */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes floatUp {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes leafGrow {
+    0% {
+        transform: scale(0) rotate(-45deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(5deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes shieldPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(143, 112, 128, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 20px rgba(143, 112, 128, 0);
+    }
+}
+
+@keyframes bubbleRise {
+    0% {
+        transform: translateY(100%) scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100%) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes progressFill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotateY(-90deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotateY(0);
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.philosophy-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #8f7080, #5a4a52, #3a6a6a, #4a5a5a);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+.philosophy-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(143, 112, 128, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+#particles-js {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+    max-width: 900px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content h1 span {
+    background: linear-gradient(135deg, #c4a35a, #e8d5a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-content p {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: floatUp 2s ease-in-out infinite;
+}
+
+.hero-scroll-indicator i {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================
+   Philosophy Sections
+   ============================================ */
+.philosophy-section {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.philosophy-section:nth-child(even) {
+    background: linear-gradient(180deg, #faf8f6 0%, #f0ebe7 100%);
+}
+
+.philosophy-section:nth-child(odd) {
+    background: #fff;
+}
+
+.section-content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--phil-primary-dark);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.15rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   Philosophy Cards
+   ============================================ */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.philosophy-card {
+    background: #fff;
+    border-radius: 24px;
+    padding: 2.5rem;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(143, 112, 128, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.philosophy-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.philosophy-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--phil-primary), var(--phil-accent));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(143, 112, 128, 0.2);
+}
+
+.philosophy-card:hover::before {
+    transform: scaleX(1);
+}
+
+.card-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, var(--phil-primary), var(--phil-accent));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-icon i {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.card-icon::after {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    border: 2px dashed var(--phil-primary);
+    opacity: 0.3;
+    animation: pulse 3s ease infinite;
+}
+
+.philosophy-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--phil-primary-dark);
+    margin-bottom: 1rem;
+}
+
+.philosophy-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* Card Animations */
+.philosophy-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.philosophy-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.philosophy-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.philosophy-card:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+/* Leaf Animation for Botanical */
+.card-botanical .card-icon i {
+    animation: leafGrow 1s ease-out;
+}
+
+/* Shield Animation for Microbiome */
+.card-microbiome .card-icon {
+    animation: shieldPulse 2s ease infinite;
+}
+
+/* Flask Bubbles for No Chemicals */
+.card-chemicals .bubbles {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 40px;
+}
+
+.card-chemicals .bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: bubbleRise 2s ease-in-out infinite;
+}
+
+.card-chemicals .bubble:nth-child(1) {
+    width: 8px;
+    height: 8px;
+    left: 10px;
+    animation-delay: 0s;
+}
+
+.card-chemicals .bubble:nth-child(2) {
+    width: 6px;
+    height: 6px;
+    left: 25px;
+    animation-delay: 0.5s;
+}
+
+.card-chemicals .bubble:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    left: 40px;
+    animation-delay: 1s;
+}
+
+/* ============================================
+   Timeline / Recovery Section
+   ============================================ */
+.recovery-section {
+    background: linear-gradient(135deg, var(--phil-primary-dark), var(--phil-accent));
+    color: #fff;
+    padding: 6rem 0;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%);
+}
+
+.timeline-progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--phil-gold), #e8d5a3);
+    transform: translateY(-50%);
+    width: 0;
+    transition: width 2s ease-out;
+}
+
+.timeline-progress.animate {
+    width: 100%;
+}
+
+.timeline-point {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.timeline-point .day {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 auto 0.5rem;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+}
+
+.timeline-point.active .day {
+    background: var(--phil-gold);
+    border-color: var(--phil-gold);
+    transform: scale(1.1);
+}
+
+.timeline-point span {
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ============================================
+   Ingredient Carousel
+   ============================================ */
+.carousel-section {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #f8f5f2 0%, #e8dfe5 100%);
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-slide {
+    min-width: 100%;
+    padding: 0 2rem;
+}
+
+.ingredient-showcase {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    background: #fff;
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.ingredient-image {
+    flex: 0 0 250px;
+    height: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--phil-primary), var(--phil-accent));
+}
+
+.ingredient-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.ingredient-image i {
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.ingredient-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 50%, rgba(255, 255, 255, 0.1) 100%);
+    pointer-events: none;
+}
+
+.ingredient-details {
+    flex: 1;
+}
+
+.ingredient-details h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--phil-primary-dark);
+    margin-bottom: 1rem;
+}
+
+.ingredient-details p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.ingredient-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.benefit-tag {
+    background: linear-gradient(135deg, rgba(143, 112, 128, 0.1), rgba(143, 112, 128, 0.15));
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    color: var(--phil-primary);
+    font-weight: 600;
+    border: 1px solid rgba(143, 112, 128, 0.2);
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--phil-primary);
+    background: transparent;
+    color: var(--phil-primary);
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background: var(--phil-primary);
+    color: #fff;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(143, 112, 128, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background: var(--phil-primary);
+    transform: scale(1.2);
+}
+
+/* ============================================
+   CTA Section
+   ============================================ */
+.cta-section {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, var(--phil-primary), var(--phil-primary-dark));
+    text-align: center;
+    color: #fff;
+}
+
+.cta-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.15rem;
+    opacity: 0.9;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #fff;
+    color: var(--phil-primary-dark);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   RTL Support
+   ============================================ */
+[dir="rtl"] .ingredient-showcase {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .timeline {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .carousel-btn i {
+    transform: scaleX(-1);
+}
+
+/* ============================================
+   Responsive Design
+   ============================================ */
+@media (max-width: 768px) {
+    .philosophy-hero {
+        min-height: 80vh;
+        padding: 6rem 1rem;
+    }
+
+    .philosophy-card {
+        padding: 2rem;
+    }
+
+    .card-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card-icon i {
+        font-size: 2rem;
+    }
+
+    .timeline {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .timeline::before {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        width: 4px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+
+    .timeline-progress {
+        width: 4px !important;
+        height: 0;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    .timeline-progress.animate {
+        height: 100%;
+    }
+
+    .ingredient-showcase {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ingredient-image {
+        flex: none;
+        width: 180px;
+        height: 180px;
+    }
+
+    .ingredient-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .ingredient-image i {
+        font-size: 3rem;
+    }
+
+    [dir="rtl"] .ingredient-showcase {
+        flex-direction: column;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
