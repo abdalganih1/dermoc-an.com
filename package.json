@@ -1,0 +1,20 @@
+{
+    "name": "dermocean",
+    "version": "1.1.0",
+    "description": "Professional Skincare for Beauty Centers",
+    "main": "index.html",
+    "scripts": {
+        "dev": "npx serve .",
+        "start": "npx serve ."
+    },
+    "keywords": [
+        "skincare",
+        "beauty",
+        "dermocean"
+    ],
+    "author": "Dermocean",
+    "license": "ISC",
+    "devDependencies": {
+        "serve": "^14.2.4"
+    }
+}

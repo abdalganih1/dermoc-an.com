@@ -18,7 +18,7 @@ const translations = {
         protocols: "Protocols",
 
         // Hero Section
-        heroTitle: "Pure Nature, <span>Proven Results.</span>",
+        heroTitle: "Professional <span>Peeling Protocol</span>",
         heroDesc: "Advanced skincare formulations designed effectively for professional beauty centers. Experience the power of marine algae.",
         discoverProducts: "Discover Products",
 
@@ -52,6 +52,7 @@ const translations = {
         paymentMethods: "Payment Methods",
         cashOnDelivery: "Cash on Delivery",
         bankTransfer: "Bank Transfer",
+        footerTagline: "Pure Nature, Proven Results",
 
         // Contact Form
         fullName: "Full Name",
@@ -692,7 +693,7 @@ const translations = {
         protocols: "البروتوكولات",
 
         // Hero Section
-        heroTitle: "طبيعة نقية، <span>نتائج مثبتة.</span>",
+        heroTitle: "بروتوكول <span>تقشير احترافي</span>",
         heroDesc: "تركيبات متقدمة للعناية بالبشرة مصممة بفعالية لمراكز التجميل المهنية. اكتشفي قوة الطحالب البحرية.",
         discoverProducts: "اكتشفي المنتجات",
 
@@ -726,6 +727,7 @@ const translations = {
         paymentMethods: "طرق الدفع",
         cashOnDelivery: "الدفع عند الاستلام",
         bankTransfer: "تحويل بنكي",
+        footerTagline: "طبيعة نقية، نتائج مثبتة",
 
         // Contact Form
         fullName: "الاسم الكامل",
@@ -1359,7 +1361,7 @@ const translations = {
         protocols: "Protocoles",
 
         // Hero Section
-        heroTitle: "Nature Pure, <span>Résultats Prouvés.</span>",
+        heroTitle: "Protocole de <span>Peeling Professionnel</span>",
         heroDesc: "Formulations de soins avancées conçues pour les centres de beauté professionnels.",
         discoverProducts: "Découvrir",
 
@@ -1393,6 +1395,7 @@ const translations = {
         paymentMethods: "Modes de Paiement",
         cashOnDelivery: "Paiement à la livraison",
         bankTransfer: "Virement Bancaire",
+        footerTagline: "Nature Pure, Résultats Prouvés",
 
         // Contact Form
         fullName: "Nom Complet",
@@ -1921,7 +1924,7 @@ const translations = {
         protocols: "Protokoller",
 
         // Hero Section
-        heroTitle: "Saf Doğa, <span>Kanıtlanmış Sonuçlar.</span>",
+        heroTitle: "Profesyonel <span>Peeling Protokolü</span>",
         heroDesc: "Profesyonel güzellik merkezleri için tasarlanmış gelişmiş cilt bakım formülleri.",
         discoverProducts: "Ürünleri Keşfet",
 
@@ -1955,6 +1958,7 @@ const translations = {
         paymentMethods: "Ödeme Yöntemleri",
         cashOnDelivery: "Kapıda Ödeme",
         bankTransfer: "Havale/EFT",
+        footerTagline: "Saf Doğa, Kanıtlanmış Sonuçlar",
 
         // Contact Form
         fullName: "Ad Soyad",
