@@ -2,43 +2,38 @@
   {
     "id": 1,
     "name": "Algae Peeling Powder",
-    "name_ar": "بودر التقشير بالطحالب",
+    "name_ar": "بودرة التقشير بالطحالب",
     "name_fr": "Poudre de Peeling aux Algues",
     "name_tr": "Yosun Peeling Tozu",
     "category": "Peeling",
-    "description": "100% Natural Formula containing microcrystals of marine algae for deep exfoliation.",
-    "description_ar": "تركيبة طبيعية 100% تحتوي على بلورات صغيرة من الطحالب البحرية للتقشير العميق.",
-    "description_fr": "Formule 100% naturelle contenant des microcristaux d'algues marines pour une exfoliation profonde.",
-    "description_tr": "%100 Doğal formül, derin peeling için deniz yosunu mikrokristalleri içerir.",
+    "description": "A special algae extract herbal powder for deep peeling and skin regeneration. Supports skin renewal from inside out and connective tissue structuring. Shortens regeneration from 28 days to just 5 days. Ideal for loss of vitality, enlarged pores, acne, scars, pigmentation, wrinkles, stretch marks, and sagging.",
+    "description_ar": "بودرة تقشير عشبية خاصة من مستخلص الطحالب تمكّن من تجديد البشرة العميق. بروتوكول يدعم تجديد البشرة من الداخل للخارج وهيكلة النسيج الضام. يختصر فترة تجديد البشرة من 28 يوماً إلى 5 أيام فقط.",
+    "description_fr": "Poudre de peeling spéciale à base d'extrait d'algues pour un peeling profond et la régénération cutanée. Réduit la période de régénération de 28 jours à seulement 5 jours.",
+    "description_tr": "Derin peeling ve cilt yenilenmesi için özel yosun özü bitkisel tozu. Yenilenme süresini 28 günden sadece 5 güne düşürür.",
     "ingredients": [
       {
         "name": "Algae Extract",
-        "benefit": "Deep hydration"
-      },
-      {
-        "name": "Calendula",
-        "benefit": "Soothes irritation"
-      },
-      {
-        "name": "Melissa",
-        "benefit": "Boosts collagen"
-      },
-      {
-        "name": "Chamomile",
-        "benefit": "Reduces redness"
+        "benefit": "Deep exfoliation & regeneration"
       }
     ],
+    "activeIngredients": "Algae extract",
     "benefits": [
-      "Exfoliates dead skin",
-      "Cleanses pores",
+      "Deep exfoliation",
+      "Skin regeneration",
+      "Treats acne & scars",
       "Fades pigmentation",
-      "Treats acne"
+      "Reduces wrinkles"
     ],
-    "usage": "Mix 2g with Support Solution. Massage for 4-8 mins based on protocol.",
+    "usage": "Mix 2g with Support Solution. Massage for 4-8 mins based on protocol. Select suitable protocol after skin analysis.",
+    "size": "2 Gram x 5 Sachet",
     "images": {
-      "thumbnail_low": "images/products/peeling-powder.png",
-      "original": "images/products/peeling-powder.png"
-    }
+      "thumbnail_low": "images/products/algae-peeling-powder-ai.png",
+      "original": "images/products/algae-peeling-powder-ai.png",
+      "mockup": "images/products/peeling-powder-mockup.png",
+      "lifestyle": "images/products/lifestyle/peeling-powder-lifestyle.png",
+      "ai_generated": "images/products/algae-peeling-powder-ai.png"
+    },
+    "section": "peeling"
   },
   {
     "id": 2,
@@ -47,14 +42,14 @@
     "name_fr": "Solution Support Peeling",
     "name_tr": "Peeling Destek Solüsyonu",
     "category": "Activator",
-    "description": "Bioactive liquid to activate the peeling powder. Antiseptic and deeply hydrating.",
-    "description_ar": "سائل حيوي لتنشيط بودر التقشير. مطهر ومرطب عميق.",
-    "description_fr": "Liquide bioactif pour activer la poudre de peeling. Antiseptique et hydratant en profondeur.",
-    "description_tr": "Peeling tozunu aktive eden biyoaktif sıvı. Antiseptik ve derin nemlendirici.",
+    "description": "A solution used to prepare the peeling powder for application and ensure strong disinfection. Has anti-inflammatory and antibacterial properties.",
+    "description_ar": "محلول لتحضير بودرة التقشير وضمان تعقيم قوي. له خصائص مضادة للالتهابات ومضادة للبكتيريا.",
+    "description_fr": "Solution utilisée pour préparer la poudre de peeling et assurer une désinfection forte. Propriétés anti-inflammatoires et antibactériennes.",
+    "description_tr": "Peeling tozunu hazırlamak ve güçlü dezenfeksiyon sağlamak için kullanılan çözelti. Anti-inflamatuar ve antibakteriyel özelliklere sahiptir.",
     "ingredients": [
       {
         "name": "Hydrogen Peroxide",
-        "benefit": "Purifies skin"
+        "benefit": "Purifies & disinfects"
       },
       {
         "name": "Glycerin",
@@ -65,52 +60,71 @@
         "benefit": "Evens skin tone"
       }
     ],
+    "activeIngredients": "Hydrogen peroxide, Glycerin, Daisy flower extract",
     "benefits": [
       "Activates peeling",
       "Antiseptic action",
-      "Hydrates"
+      "Anti-inflammatory",
+      "Antibacterial"
     ],
-    "usage": "Combine with Algae Peeling Powder to form paste.",
+    "usage": "Combine with Algae Peeling Powder to form paste. Mix 2g powder with 5 drops of solution.",
+    "size": "150ML (5.07FL.OZ)",
     "images": {
-      "thumbnail_low": "images/products/support-solution.png",
-      "original": "images/products/support-solution.png"
-    }
+      "thumbnail_low": "images/products/support-solution-ai.png",
+      "original": "images/products/support-solution-ai.png",
+      "mockup": "images/products/support-solution-mockup.png",
+      "lifestyle": "images/products/lifestyle/support-solution-lifestyle.png",
+      "ai_generated": "images/products/support-solution-ai.png"
+    },
+    "section": "peeling"
   },
   {
     "id": 3,
-    "name": "Calming Mask",
-    "name_ar": "ماسك التهدئة",
-    "name_fr": "Masque Apaisant",
-    "name_tr": "Yatıştırıcı Maske",
+    "name": "Cucumber Calming Mask",
+    "name_ar": "ماسك التهدئة بالخيار",
+    "name_fr": "Masque Apaisant au Concombre",
+    "name_tr": "Salatalık Yatıştırıcı Maske",
     "category": "Mask",
-    "description": "Soothing post-peel mask to calm and restore skin after treatment.",
-    "description_ar": "ماسك مهدئ ما بعد التقشير لتهدئة واستعادة نضارة البشرة.",
-    "description_fr": "Masque apaisant post-peeling pour calmer et restaurer la peau après le traitement.",
-    "description_tr": "Tedavi sonrası cildi yatıştırmak ve restore etmek için sakinleştirici maske.",
+    "description": "Soothes and renews skin with vitamins C, B1, B2, B5, B6, iron, phosphate, folic acid, zinc, calcium and potassium from cucumbers. Reduces redness and sensitivity, helps skin regenerate quickly. Increases moisture barrier with hyaluronic acid and aloe vera. Removes edema and tightens pores.",
+    "description_ar": "يهدئ ويجدد البشرة بالفيتامينات والمعادن من الخيار (C, B1, B2, B5, B6, حديد, فوسفات, حمض الفوليك, زنك, كالسيوم, بوتاسيوم). يقلل الاحمرار والحساسية ويزيد حاجز الرطوبة. يزيل الوذمة ويشد المسام.",
+    "description_fr": "Apaise et renouvelle la peau avec des vitamines et minéraux du concombre. Réduit les rougeurs et la sensibilité. Augmente la barrière d'hydratation et resserre les pores.",
+    "description_tr": "Salatalıktan gelen vitamin ve minerallerle cildi yatıştırır ve yeniler. Kızarıklığı ve hassasiyeti azaltır. Nem bariyerini artırır ve gözenekleri sıkılaştırır.",
     "ingredients": [
       {
         "name": "Cucumber Fruit Extract",
-        "benefit": "Cooling effect"
+        "benefit": "Cooling & soothing"
       },
       {
-        "name": "Aloe Vera",
-        "benefit": "Soothes skin"
+        "name": "Butylene Glycol",
+        "benefit": "Hydration"
       },
       {
         "name": "Sodium Hyaluronate",
-        "benefit": "Deep moisture"
+        "benefit": "Deep moisture barrier"
+      },
+      {
+        "name": "Aloe Vera",
+        "benefit": "Soothes & heals"
       }
     ],
+    "activeIngredients": "Cucumber fruit extract, Butylene glycol, Sodium hyaluronate, Aloe vera",
     "benefits": [
       "Reduces redness",
       "Replenishes moisture",
-      "Post-peel recovery"
+      "Post-peel recovery",
+      "Tightens pores",
+      "Removes edema"
     ],
-    "usage": "Apply generously after peeling. Leave for 15 minutes.",
+    "usage": "Apply generously after peeling. Leave for 10 minutes, then rinse with water. Suitable for all skin types.",
+    "size": "110ml (3.71fl.oz)",
     "images": {
-      "thumbnail_low": "images/products/calming-mask.png",
-      "original": "images/products/calming-mask.png"
-    }
+      "thumbnail_low": "images/products/calming-mask-ai.png",
+      "original": "images/products/calming-mask-ai.png",
+      "mockup": "images/products/calming-mask-mockup.png",
+      "lifestyle": "images/products/lifestyle/calming-mask-lifestyle.png",
+      "ai_generated": "images/products/calming-mask-ai.png"
+    },
+    "section": "peeling"
   },
   {
     "id": 4,
@@ -119,33 +133,800 @@
     "name_fr": "Écran Solaire SPF 50+",
     "name_tr": "Güneş Koruyucu SPF 50+",
     "category": "Protection",
-    "description": "Water-based, impenetrable UV shield for post-treatment protection.",
-    "description_ar": "واقي شمسي مائي ذو حماية عالية للاستخدام بعد جلسات العناية.",
-    "description_fr": "Protection UV imperméable à base d'eau pour une protection post-traitement.",
-    "description_tr": "Tedavi sonrası koruma için su bazlı, geçirimsiz UV kalkanı.",
+    "description": "Provides excellent protection against UV-A and UV-B rays even when skin's defense is weak. Prevents burns and photoaging. Has anti-blemish and lightening properties. Helps repair skin structure. Slows aging, renews cells faster, and makes skin appear brighter.",
+    "description_ar": "يوفر حماية ممتازة ضد أشعة UV-A وUV-B حتى عندما تكون آلية دفاع البشرة ضعيفة. يمنع الحروق والشيخوخة الضوئية. له خصائص مضادة للتصبغ ومفتحة. يبطئ شيخوخة البشرة ويجدد الخلايا بشكل أسرع.",
+    "description_fr": "Protection excellente contre les UV-A et UV-B. Prévient les brûlures et le photovieillissement. Propriétés anti-taches et éclaircissantes. Ralentit le vieillissement cutané.",
+    "description_tr": "UV-A ve UV-B ışınlarına karşı mükemmel koruma sağlar. Yanıkları ve foto-yaşlanmayı önler. Leke karşıtı ve aydınlatıcı özelliklere sahiptir. Cilt yaşlanmasını yavaşlatır.",
     "ingredients": [
-      {
-        "name": "Cassia Alata",
-        "benefit": "Natural UV filter"
-      },
-      {
-        "name": "Tocopherol",
-        "benefit": "Antioxidant"
-      },
       {
         "name": "Arbutin",
         "benefit": "Prevents pigmentation"
+      },
+      {
+        "name": "Tocopherol",
+        "benefit": "Antioxidant protection"
+      },
+      {
+        "name": "Cassia Alata Extract",
+        "benefit": "Natural UV filter"
       }
     ],
+    "activeIngredients": "Arbutin, Tocopherol, Cassia alata extract",
     "benefits": [
       "UV-A/UV-B protection",
       "Prevents pigmentation",
-      "Lightweight formula"
+      "Anti-aging",
+      "Skin repair",
+      "Brightening"
     ],
-    "usage": "Apply daily, especially after peeling treatments.",
+    "usage": "Apply 30 minutes before sun exposure. Reapply every 3 hours. Use in all seasons.",
+    "size": "50ml (1.69fl.oz) x 5 Pieces",
     "images": {
-      "thumbnail_low": "images/products/sunscreen.png",
-      "original": "images/products/sunscreen.png"
+      "thumbnail_low": "images/products/sunscreen-spf50-ai.png",
+      "original": "images/products/sunscreen-spf50-ai.png",
+      "mockup": "images/products/sunscreen-mockup.png",
+      "lifestyle": "images/products/lifestyle/sunscreen-spf50-lifestyle.png",
+      "ai_generated": "images/products/sunscreen-spf50-ai.png"
+    },
+    "section": "peeling"
+  },
+  {
+    "id": 5,
+    "name": "Power Moisturizer",
+    "name_ar": "مرطب عميق للبشرة",
+    "name_fr": "Hydratant Puissant",
+    "name_tr": "Güçlü Nemlendirici",
+    "category": "Moisturizer",
+    "description": "Replenishes extremely dry, dehydrated skin with intense moisture after aggressive procedures. Calms and relaxes skin, repairs damaged skin with plant extracts and vitamins. Contains ascorbyl glucoside as a powerful antioxidant and natural vitamin C source. Helps skin reach natural pH 5.5 balance. Protects from UV with natural blocking capacity.",
+    "description_ar": "يعيد ترطيب البشرة الجافة والمجففة بعد جميع الإجراءات العدوانية. يهدئ ويريح البشرة ويصلح البشرة التالفة بمستخلصات نباتية وفيتامينات. يحتوي على أسكوربيل غلوكوسيد كمصدر قوي لمضادات الأكسدة وفيتامين C. يساعد البشرة على الوصول لتوازن pH 5.5.",
+    "description_fr": "Réhydrate intensément la peau extrêmement sèche après les procédures agressives. Calme et répare la peau endommagée. Contient de l'ascorbyl glucoside comme antioxydant puissant.",
+    "description_tr": "Agresif prosedürlerden sonra aşırı kuru cildi yoğun nemle doldurur. Cildi yatıştırır ve onarır. Güçlü bir antioksidan olan askorbil glukosit içerir.",
+    "ingredients": [
+      {
+        "name": "Sodium Hyaluronate",
+        "benefit": "Deep hydration"
+      },
+      {
+        "name": "Ascorbyl Glucoside",
+        "benefit": "Antioxidant & Vitamin C"
+      },
+      {
+        "name": "Beta Vulgaris Extract",
+        "benefit": "Nourishment"
+      },
+      {
+        "name": "Brassica Oleracea Acephala Extract",
+        "benefit": "Skin repair"
+      }
+    ],
+    "activeIngredients": "Sodium hyaluronate, Ascorbyl glucoside, Beta vulgaris extract, Brassica oleracea acephala extract",
+    "benefits": [
+      "Intense moisture",
+      "Post-procedure repair",
+      "Antioxidant protection",
+      "pH balancing",
+      "UV protection"
+    ],
+    "usage": "Apply after procedures in circular movements. Provides intense moisturizing for all skin types.",
+    "size": "100ml (3.38fl.oz)",
+    "images": {
+      "thumbnail_low": "images/products/moisturizing-cream-ai.png",
+      "original": "images/products/moisturizing-cream-ai.png",
+      "mockup": "images/products/power-moisturizer-mockup.png",
+      "lifestyle": "images/products/lifestyle/power-moisturizer-lifestyle.png",
+      "ai_generated": "images/products/moisturizing-cream-ai.png"
+    },
+    "section": "peeling"
+  },
+  {
+    "id": 6,
+    "name": "Retinol Boost Anti Aging Cream",
+    "name_ar": "كريم الريتنول لمكافحة الشيخوخة",
+    "name_fr": "Crème Anti-Âge Retinol Boost",
+    "name_tr": "Retinol Boost Anti Aging Krem",
+    "category": "Anti-Aging",
+    "description": "Retinol with tripeptide-1,7 and hexapeptide-12 even skin tone and texture without redness or irritation. Peptides (EGF) act on epidermis and dermis simultaneously, erasing wrinkles, tightening pores, rejuvenating skin, and stimulating collagen production. Accelerates collagen synthesis and prevents early aging signs.",
+    "description_ar": "الريتنول مع الببتيدات يوحد لون وملمس البشرة مع منحها مرونة ومظهراً مشرقاً دون احمرار. الببتيدات تعمل على البشرة والأدمة معاً لمحو التجاعيد وشد المسام وتحفيز إنتاج الكولاجين. تسرّع تخليق الكولاجين وتمنع علامات الشيخوخة المبكرة.",
+    "description_fr": "Le rétinol avec des peptides unifie le teint et la texture sans rougeur. Les peptides agissent simultanément sur l'épiderme et le derme pour effacer les rides et stimuler la production de collagène.",
+    "description_tr": "Retinol ve peptidler cilt tonunu ve dokusunu eşitler. Peptidler kırışıklıkları siler, gözenekleri sıkılaştırır ve kolajen üretimini uyarır.",
+    "ingredients": [
+      {
+        "name": "Retinol 1%",
+        "benefit": "Cell renewal & anti-aging"
+      },
+      {
+        "name": "Palmitoly Tripeptide-1",
+        "benefit": "Collagen stimulation"
+      },
+      {
+        "name": "Palmitoly Tripeptide-7",
+        "benefit": "Anti-wrinkle"
+      },
+      {
+        "name": "Palmitoly Hexapeptide-12",
+        "benefit": "Skin firming"
+      }
+    ],
+    "activeIngredients": "Retinol 1%, Palmitoly tripeptide-1, Palmitoly tripeptide-7, Palmitoly Hexapeptide-12",
+    "benefits": [
+      "Anti-aging",
+      "Wrinkle reduction",
+      "Pore tightening",
+      "Collagen boost",
+      "Skin rejuvenation"
+    ],
+    "usage": "Apply once a day on clean skin with soft circular motion until absorbed.",
+    "size": "100ml (3.38fl.oz)",
+    "images": {
+      "thumbnail_low": "images/products/retinol-serum-ai.png",
+      "original": "images/products/retinol-serum-ai.png",
+      "mockup": "images/products/retinol-mockup.png",
+      "lifestyle": "images/products/lifestyle/retinol-anti-aging-lifestyle.png",
+      "ai_generated": "images/products/retinol-serum-ai.png"
+    },
+    "section": "skincare"
+  },
+  {
+    "id": 7,
+    "name": "Oil Control Mask",
+    "name_ar": "ماسك موازنة الغدد الدهنية",
+    "name_fr": "Masque Contrôle du Sébum",
+    "name_tr": "Yağ Kontrol Maskesi",
+    "category": "Mask",
+    "description": "Oil absorbing clays absorb excess oil and balance skin, preventing oiliness. Prevents acne with anti-inflammatory and antibacterial properties. Helps skin detoxify and cleans clogged pores. Provides hyaluronic acid via betaine amino acid, accelerates absorption of vitamin B12, calcium and iron.",
+    "description_ar": "الطين الماص للزيوت يمتص الزيوت الزائدة ويوازن البشرة. يمنع حب الشباب بخصائصه المضادة للالتهابات والبكتيريا. ينظف المسام المسدودة ويساعد البشرة على التخلص من السموم. يسرّع امتصاص فيتامين B12 والكالسيوم والحديد.",
+    "description_fr": "Les argiles absorbent l'excès de sébum et équilibrent la peau. Prévient l'acné avec ses propriétés anti-inflammatoires. Nettoie les pores obstrués et détoxifie la peau.",
+    "description_tr": "Yağ emici killer fazla yağı emer ve cildi dengeler. Anti-inflamatuar özellikleriyle akneleri önler. Tıkanmış gözenekleri temizler ve cildi detoksifiye eder.",
+    "ingredients": [
+      {
+        "name": "Tocopheryl Acetate",
+        "benefit": "Antioxidant"
+      },
+      {
+        "name": "Kaolin",
+        "benefit": "Oil absorption"
+      },
+      {
+        "name": "Bentonite",
+        "benefit": "Deep cleansing"
+      }
+    ],
+    "activeIngredients": "Tocopheryl acetate, Kaolin, Bentonite",
+    "benefits": [
+      "Oil control",
+      "Acne prevention",
+      "Pore cleansing",
+      "Detoxification",
+      "Skin smoothing"
+    ],
+    "usage": "Apply an even layer to cleansed skin. Leave for 10-15 minutes, then rinse with water.",
+    "size": "250ml (8.45fl.oz)",
+    "images": {
+      "thumbnail_low": "images/products/oil-control-mask-ai.png",
+      "original": "images/products/oil-control-mask-ai.png",
+      "mockup": "images/products/oil-control-mask-mockup.png",
+      "lifestyle": "images/products/lifestyle/oil-control-mask-lifestyle.png",
+      "ai_generated": "images/products/oil-control-mask-ai.png"
+    },
+    "section": "skincare"
+  },
+  {
+    "id": 8,
+    "name": "Glutathione Serum",
+    "name_ar": "سيروم الغلوتاثيون",
+    "name_fr": "Sérum Glutathion",
+    "name_tr": "Glutatyon Serum",
+    "category": "Serum",
+    "description": "Very strong antioxidant that collects free radicals in skin cells and ensures they are removed. Intensely detoxifies skin. Contains glutamine, glycine and cysteine amino acids to repair damaged cells. Restores dull skin to a lively, bright and healthy appearance. Anti-aging effects, reduces pores and fine lines, tightens skin.",
+    "description_ar": "مضاد أكسدة قوي جداً يجمع الجذور الحرة في خلايا البشرة ويزيلها. يزيل السموم بشكل مكثف. يحتوي على أحماض أمينية لإصلاح الخلايا التالفة. يعيد للبشرة الباهتة مظهراً حيوياً ومشرقاً. له تأثيرات مضادة للشيخوخة ويقلل المسام والخطوط الدقيقة.",
+    "description_fr": "Antioxydant très puissant qui collecte les radicaux libres et détoxifie intensément la peau. Répare les cellules endommagées. Effets anti-âge, réduit les pores et les ridules.",
+    "description_tr": "Serbest radikalleri toplayan ve yoğun şekilde detoksifiye eden çok güçlü antioksidan. Hasarlı hücreleri onarır. Yaşlanma karşıtı etkileri, gözenekleri ve ince çizgileri azaltır.",
+    "ingredients": [
+      {
+        "name": "2% Glutathione",
+        "benefit": "Powerful antioxidant & detox"
+      },
+      {
+        "name": "Tranexamic Acid",
+        "benefit": "Brightening"
+      },
+      {
+        "name": "Tartaric Acid",
+        "benefit": "Exfoliation"
+      }
+    ],
+    "activeIngredients": "2% Glutathione, Tranexamic acid, Tartaric acid",
+    "benefits": [
+      "Detoxification",
+      "Anti-aging",
+      "Pore reduction",
+      "Skin brightening",
+      "Cell repair"
+    ],
+    "usage": "Use the dropper to apply a few drops onto skin, then gently massage with fingertips for 15 minutes.",
+    "size": "30ml (1.01fl.oz)",
+    "images": {
+      "thumbnail_low": "images/products/glutathione-serum-ai.png",
+      "original": "images/products/glutathione-serum-ai.png",
+      "lifestyle": "images/products/lifestyle/glutathione-serum-lifestyle.png",
+      "ai_generated": "images/products/glutathione-serum-ai.png"
+    },
+    "section": "skincare"
+  },
+  {
+    "id": 9,
+    "name": "Niacinamide Tiger Grass Serum",
+    "name_ar": "سيروم النياسيناميد",
+    "name_fr": "Sérum Niacinamide Tiger Grass",
+    "name_tr": "Niasinamid Tiger Grass Serum",
+    "category": "Serum",
+    "description": "Stimulates collagen synthesis and reduces wrinkles, heals sun-damaged skin. Strong antioxidant with antibacterial properties. Relieves redness, itching and inflammation. Reaches DNA of damaged cells and helps repair them. Regenerates skin, slowing and combating signs of aging.",
+    "description_ar": "يحفز تخليق الكولاجين ويقلل التجاعيد ويعالج البشرة المتضررة من الشمس. مضاد أكسدة قوي ومضاد للبكتيريا. يخفف احمرار البشرة والحكة والالتهاب. يصل إلى DNA الخلايا التالفة ويساعد على إصلاحها وتجديد البشرة.",
+    "description_fr": "Stimule la synthèse de collagène et réduit les rides. Antioxydant puissant aux propriétés antibactériennes. Soulage les rougeurs et l'inflammation. Régénère la peau.",
+    "description_tr": "Kolajen sentezini uyarır ve kırışıklıkları azaltır. Güçlü antioksidan ve antibakteriyel özelliklere sahiptir. Kızarıklığı ve iltihabı hafifletir. Cildi yeniler.",
+    "ingredients": [
+      {
+        "name": "Niacinamide",
+        "benefit": "Brightening & barrier repair"
+      },
+      {
+        "name": "Centella Asiatica Extract",
+        "benefit": "Healing & soothing"
+      },
+      {
+        "name": "Tiger Grass Extract",
+        "benefit": "Regeneration"
+      }
+    ],
+    "activeIngredients": "Niacinamide, Centella asiatica extract, Tiger grass extract",
+    "benefits": [
+      "Collagen synthesis",
+      "Wrinkle reduction",
+      "Anti-inflammatory",
+      "DNA repair",
+      "Anti-aging"
+    ],
+    "usage": "Use the dropper to apply a few drops onto skin, then gently massage with fingertips for 15 minutes.",
+    "size": "30ml (1.01fl.oz)",
+    "images": {
+      "thumbnail_low": "images/products/niacinamide-tiger-ai.png",
+      "original": "images/products/niacinamide-tiger-ai.png",
+      "lifestyle": "images/products/lifestyle/niacinamide-serum-lifestyle.png",
+      "ai_generated": "images/products/niacinamide-tiger-ai.png"
+    },
+    "section": "skincare"
+  },
+  {
+    "id": 10,
+    "name": "Vitamin C Skin Refiner",
+    "name_ar": "سيروم فيتامين سي لترطيب البشرة",
+    "name_fr": "Sérum Raffineur Vitamine C",
+    "name_tr": "C Vitamini Cilt Arıtıcı",
+    "category": "Serum",
+    "description": "Saves skin cells from free radical damage. Supports rapid recovery of damaged cells, activates hyaluronic acid and collagen production. Eliminates fine lines, uneven skin tone, and slight loss of elasticity, making skin appear bright, healthy and plump.",
+    "description_ar": "ينقذ خلايا البشرة من أضرار الجذور الحرة. يدعم التعافي السريع للخلايا التالفة وينشط إنتاج حمض الهيالورونيك والكولاجين. يزيل الخطوط الدقيقة وتفاوت لون البشرة. يجعل البشرة مشرقة وصحية وممتلئة.",
+    "description_fr": "Protège les cellules cutanées contre les radicaux libres. Active la production d'acide hyaluronique et de collagène. Élimine les ridules et unifie le teint.",
+    "description_tr": "Cilt hücrelerini serbest radikal hasarından korur. Hyalüronik asit ve kolajen üretimini aktive eder. İnce çizgileri ve eşitsiz cilt tonunu ortadan kaldırır.",
+    "ingredients": [
+      {
+        "name": "Ascorbic Acid",
+        "benefit": "Antioxidant & brightening"
+      },
+      {
+        "name": "Camellia Sinensis Leaf Extract",
+        "benefit": "Green tea antioxidant"
+      },
+      {
+        "name": "Tartaric Acid",
+        "benefit": "Gentle exfoliation"
+      },
+      {
+        "name": "Squalene",
+        "benefit": "Deep moisture"
+      }
+    ],
+    "activeIngredients": "Ascorbic acid, Camellia sinensis leaf extract, Tartaric acid, Squalene",
+    "benefits": [
+      "Free radical protection",
+      "Collagen boost",
+      "Brightening",
+      "Fine line reduction",
+      "Elasticity restoration"
+    ],
+    "usage": "Use the dropper to apply a few drops onto skin, then gently massage with fingertips for 15 minutes.",
+    "size": "30ml (1.01fl.oz)",
+    "images": {
+      "thumbnail_low": "images/products/vitamin-c-serum-ai.png",
+      "original": "images/products/vitamin-c-serum-ai.png",
+      "lifestyle": "images/products/lifestyle/vitamin-c-serum-lifestyle.png",
+      "ai_generated": "images/products/vitamin-c-serum-ai.png"
+    },
+    "section": "skincare"
+  },
+  {
+    "id": 11,
+    "name": "Arbutin Serum",
+    "name_ar": "سيروم الأربيوتين",
+    "name_fr": "Sérum Arbutine",
+    "name_tr": "Arbutin Serum",
+    "category": "Serum",
+    "description": "A powerful anti-pigmentation serum with Alpha Arbutin and Kojic Acid. Improves the appearance of pigmentation by fading dark spots, acne scars, and melasma. Effectively brightens skin tone for a radiant, even complexion.",
+    "description_ar": "سيروم قوي مضاد للتصبغات بالأربيوتين وحمض الكوجيك. يحسن مظهر التصبغات من خلال إخفائها، يعمل بفعالية على تفتيح البشرة، إزالة البقع الداكنة، آثار حب الشباب، والكلف.",
+    "description_fr": "Sérum anti-pigmentation puissant à l'Alpha Arbutine et à l'Acide Kojique. Améliore l'apparence des pigmentations en estompant les taches brunes, les cicatrices d'acné et le mélasma.",
+    "description_tr": "Alpha Arbutin ve Kojik Asit içeren güçlü anti-pigmentasyon serumu. Koyu lekeleri, akne izlerini ve melazma görünümünü azaltarak cilt tonunu etkili bir şekilde aydınlatır.",
+    "ingredients": [
+      {
+        "name": "Alpha Arbutin",
+        "benefit": "Melanin inhibition & brightening"
+      },
+      {
+        "name": "Kojic Acid",
+        "benefit": "Spot lightening"
+      },
+      {
+        "name": "Citrus Unshiu Peel Extract",
+        "benefit": "Natural brightening"
+      }
+    ],
+    "activeIngredients": "Alpha Arbutin, Kojic Acid, Citrus Unshiu Peel Extract",
+    "benefits": [
+      "Blemish prevention",
+      "Spot lightening",
+      "Skin brightening",
+      "Tone evening",
+      "Glow restoration"
+    ],
+    "usage": "Use the dropper to apply a few drops onto skin, then gently massage with fingertips for 15 minutes.",
+    "size": "30ml (1.01fl.oz)",
+    "images": {
+      "thumbnail_low": "images/products/anti-pigmentation-serum-ai.png",
+      "original": "images/products/anti-pigmentation-serum-ai.png",
+      "lifestyle": "images/products/lifestyle/arbutin-serum-lifestyle.png",
+      "ai_generated": "images/products/anti-pigmentation-serum-ai.png"
+    },
+    "section": "skincare"
+  },
+  {
+    "id": 12,
+    "name": "Pore Minimizer and Cleaner",
+    "name_ar": "غسول تصغير وتنظيف المسام",
+    "name_fr": "Minimiseur de Pores et Nettoyant",
+    "name_tr": "Gözenek Küçültücü ve Temizleyici",
+    "category": "Cleanser",
+    "description": "Deep cleans the keratinized layer and pores accumulated on skin surface. Opens clogged pores and prevents skin from shining. Cleans all pores and increases oxygenation with a special non-irritating exfoliating cleanser without granules.",
+    "description_ar": "ينظف بعمق الطبقة المتقرنة والمسام المتراكمة على سطح البشرة. يفتح المسام المسدودة ويمنع لمعان البشرة. ينظف جميع المسام ويزيد أكسجة البشرة بمقشر خاص غير مهيج بدون حبيبات.",
+    "description_fr": "Nettoie en profondeur la couche kératinisée et les pores. Ouvre les pores bouchés et augmente l'oxygénation de la peau avec un exfoliant non irritant sans granules.",
+    "description_tr": "Keratinize tabakayı ve gözenekleri derinlemesine temizler. Tıkanmış gözenekleri açar ve granülsüz tahriş etmeyen özel bir peeling temizleyici ile cildin oksijenlenmesini artırır.",
+    "ingredients": [
+      {
+        "name": "Salicylic Acid",
+        "benefit": "Pore cleansing & exfoliation"
+      },
+      {
+        "name": "Zinc Gluconate",
+        "benefit": "Oil control & healing"
+      },
+      {
+        "name": "Tetrapeptide-21",
+        "benefit": "Skin renewal"
+      }
+    ],
+    "activeIngredients": "Salicylic acid, Zinc gluconate, Tetrapeptide-21",
+    "benefits": [
+      "Deep pore cleansing",
+      "Oxygenation",
+      "Anti-shine",
+      "Gentle exfoliation",
+      "Keratinized layer removal"
+    ],
+    "usage": "Apply to clean and dried skin by gently massaging with fingertips. Suitable for daily use.",
+    "size": "150ml (4.22fl.oz)",
+    "images": {
+      "thumbnail_low": "images/products/pore-minimizer-ai.png",
+      "original": "images/products/pore-minimizer-ai.png",
+      "lifestyle": "images/products/lifestyle/pore-minimizer-lifestyle.png",
+      "ai_generated": "images/products/pore-minimizer-ai.png"
+    },
+    "section": "skincare"
+  },
+  {
+    "id": 13,
+    "name": "Super Toner (pH Balancer)",
+    "name_ar": "تونر معادلة البشرة",
+    "name_fr": "Super Toner (Équilibrant pH)",
+    "name_tr": "Süper Tonik (pH Dengeleyici)",
+    "category": "Toner",
+    "description": "pH balancing and disinfecting toner safe for all skin types. Prepares skin for treatment protocols. Contains micro-algae complex with pH stabilizing effect and brown algae extracts with anti-pollution effects. Refreshes, moisturizes, purifies skin from pollution particles, and evens skin tone. Protects from environmental factors and restores natural skin balance.",
+    "description_ar": "تونر موازن للحموضة ومعقم آمن لجميع أنواع البشرة. يحضر البشرة للبروتوكول المطبق. يحتوي على مركب طحالب دقيقة ذو تأثير مثبت لـ pH ومستخلصات طحالب بنية مضادة للتلوث. ينعش ويرطب وينقي البشرة ويوحد لونها.",
+    "description_fr": "Toner équilibrant le pH et désinfectant, sûr pour tous les types de peau. Prépare la peau aux protocoles. Contient un complexe de micro-algues et des extraits d'algues brunes anti-pollution.",
+    "description_tr": "Tüm cilt tipleri için güvenli pH dengeleyici ve dezenfekte edici tonik. Cildi protokollere hazırlar. Mikro-yosun kompleksi ve kirlilik karşıtı kahverengi yosun özleri içerir.",
+    "ingredients": [
+      {
+        "name": "7% Glycolic Acid",
+        "benefit": "Exfoliation & pH balancing"
+      },
+      {
+        "name": "Ginseng",
+        "benefit": "Revitalizing"
+      },
+      {
+        "name": "Aloe Vera",
+        "benefit": "Soothing & moisturizing"
+      },
+      {
+        "name": "Tasmania Pepperberry",
+        "benefit": "Anti-inflammation"
+      }
+    ],
+    "activeIngredients": "7% Glycolic acid, Ginseng, Aloe vera, Tasmania pepperberry",
+    "benefits": [
+      "pH balancing",
+      "Disinfection",
+      "Anti-pollution",
+      "Moisturizing",
+      "Tone evening"
+    ],
+    "usage": "Soak a cotton pad with the Tonic, then swipe over skin. Use twice a day for bright and radiant look.",
+    "size": "400ml (13.52fl.oz)",
+    "images": {
+      "thumbnail_low": "images/products/super-toner-ai.png",
+      "original": "images/products/super-toner-ai.png",
+      "lifestyle": "images/products/lifestyle/super-toner-lifestyle.png",
+      "ai_generated": "images/products/super-toner-ai.png"
+    },
+    "section": "skincare"
+  },
+  {
+    "id": 14,
+    "name": "Pore Perfecting Cleansing Gel",
+    "name_ar": "جل تنظيف وتصغير المسام",
+    "name_fr": "Gel Nettoyant Perfecteur de Pores",
+    "name_tr": "Gözenek Mükemmelleştirici Temizleme Jeli",
+    "category": "Cleanser",
+    "description": "Cleans oil, dirt and make-up residue in skin and pores with active ingredients like mandelic acid and glycolic acid. Enables rapid regeneration of epidermis cells. Increases oxygenation capacity, prevents blackheads and acne formation. Reduces existing blackheads, gives skin a healthy glow. Refreshes skin and controls sebum secretion.",
+    "description_ar": "ينظف الزيوت والأوساخ وبقايا المكياج من البشرة والمسام بمكونات فعالة مثل حمض الماندليك والجليكوليك. يمكّن من التجدد السريع لخلايا البشرة ويزيد قدرة أكسجة الخلايا. يمنع الرؤوس السوداء وحب الشباب. يمنح توهجاً صحياً ويتحكم بإفراز الدهون.",
+    "description_fr": "Nettoie les huiles, saletés et résidus de maquillage avec des acides mandélique et glycolique. Régénère rapidement les cellules de l'épiderme. Prévient les points noirs et l'acné.",
+    "description_tr": "Mandelik asit ve glikolik asit ile yağ, kir ve makyaj kalıntılarını temizler. Epidermis hücrelerinin hızlı yenilenmesini sağlar. Siyah noktaları ve akneyi önler.",
+    "ingredients": [
+      {
+        "name": "Gluconolactone",
+        "benefit": "Gentle exfoliation"
+      },
+      {
+        "name": "Glycolic Acid",
+        "benefit": "Cell renewal"
+      },
+      {
+        "name": "Sodium Hyaluronate",
+        "benefit": "Hydration"
+      },
+      {
+        "name": "Mandelic Acid",
+        "benefit": "Anti-bacterial & brightening"
+      }
+    ],
+    "activeIngredients": "Gluconolactone, Glycolic acid, Sodium hyaluronate, Mandelic acid",
+    "benefits": [
+      "Deep cleansing",
+      "Cell regeneration",
+      "Blackhead prevention",
+      "Sebum control",
+      "Healthy glow"
+    ],
+    "usage": "Apply to damp skin and massage gently. Rinse thoroughly with water.",
+    "size": "150ml",
+    "images": {
+      "thumbnail_low": "images/products/pore-perfecting-gel-ai.png",
+      "original": "images/products/pore-perfecting-gel-ai.png",
+      "ai_generated": "images/products/pore-perfecting-gel-ai.png"
+    },
+    "section": "skincare"
+  },
+  {
+    "id": 15,
+    "name": "BB Cream SPF 30",
+    "name_ar": "كريم بي بي SPF 30",
+    "name_fr": "BB Crème SPF 30",
+    "name_tr": "BB Krem SPF 30",
+    "category": "Protection",
+    "description": "Protects irritated skin after harsh treatments like peeling and microdermabrasion. Guards against UV-A and UV-B rays, prevents burns and photoaging. Ensures skin structuring and increases recovery speed. Protects against all external factors following aggressive procedures.",
+    "description_ar": "يحمي البشرة المتهيجة بعد العلاجات القاسية مثل التقشير والـ microdermabrasion. يحمي من أشعة UV-A وUV-B ويمنع الحروق والشيخوخة الضوئية. يضمن هيكلة البشرة ويزيد سرعة التعافي بعد الإجراءات العدوانية.",
+    "description_fr": "Protège la peau irritée après les traitements agressifs comme le peeling. Protège contre les UV-A/UV-B et accélère la récupération cutanée.",
+    "description_tr": "Peeling gibi sert tedavilerden sonra tahriş olmuş cildi korur. UV-A/UV-B ışınlarına karşı korur ve cilt iyileşme hızını artırır.",
+    "ingredients": [
+      {
+        "name": "Arbutin",
+        "benefit": "Brightening & protection"
+      },
+      {
+        "name": "Macadamia Oil",
+        "benefit": "Nourishment"
+      },
+      {
+        "name": "Sodium Hyaluronate",
+        "benefit": "Hydration"
+      },
+      {
+        "name": "Squalane",
+        "benefit": "Barrier repair"
+      }
+    ],
+    "activeIngredients": "Arbutin, Macadamia oil, Sodium hyaluronate, Squalane",
+    "benefits": [
+      "Post-treatment protection",
+      "UV protection",
+      "Skin structuring",
+      "Recovery acceleration",
+      "Anti-aging"
+    ],
+    "usage": "Apply to clean and dried skin by gently massaging with fingertips. Suitable for daily use.",
+    "size": "50ml (1.69fl.oz)",
+    "images": {
+      "thumbnail_low": "images/products/bb-cream-spf30-ai.png",
+      "original": "images/products/bb-cream-spf30-ai.png",
+      "lifestyle": "images/products/lifestyle/bb-cream-spf30-lifestyle.png",
+      "ai_generated": "images/products/bb-cream-spf30-ai.png"
+    },
+    "section": "skincare"
+  },
+  {
+    "id": 16,
+    "name": "Anti-Pigmentation Meso",
+    "name_ar": "ميزو مضاد التصبغ",
+    "name_fr": "Méso Anti-Pigmentation",
+    "name_tr": "Anti-Pigmentasyon Mezo",
+    "category": "Meso",
+    "description": "Specialized formula to correct skin blemishes, acne scars, and uneven tone. Balances dark spots caused by sun, aging, and hormonal factors. Suppresses melanin production to prevent discoloration and renews epidermis for an even, balanced complexion.",
+    "description_ar": "تركيبة متخصصة لعلاج التصبغات وآثار حب الشباب وتوحيد لون البشرة. يصحح البقع الداكنة الناتجة عن الشمس والشيخوخة والتغيرات الهرمونية. يثبط إنتاج الميلانين ويجدد طبقة البشرة السطحية لتوازن لوني تام.",
+    "description_fr": "Formule spécialisée pour corriger les taches, cicatrices d'acné et le teint irrégulier. Supprime la production de mélanine et renouvelle l'épiderme.",
+    "description_tr": "Cilt lekelerini, akne izlerini ve eşit olmayan tonu düzeltmek için özel formül. Melanin üretimini baskılar ve epidermisi yeniler.",
+    "ingredients": [
+      {
+        "name": "Alpha Arbutin",
+        "benefit": "Melanin suppression"
+      },
+      {
+        "name": "Ascorbic Acid (Vit-C)",
+        "benefit": "Brightening & antioxidant"
+      },
+      {
+        "name": "Pancratium Maritimum",
+        "benefit": "Spot correction"
+      }
+    ],
+    "activeIngredients": "Alpha Arbutin, Ascorbic Acid (Vit-C), Pancratium Maritimum",
+    "benefits": [
+      "Blemish correction",
+      "Melanin suppression",
+      "Tone evening",
+      "Acne scar treatment",
+      "Radiance restoration"
+    ],
+    "usage": "Apply daily to clean skin with gentle circular motions until fully absorbed.",
+    "size": "5 x 5ml",
+    "professional": true,
+    "images": {
+      "thumbnail_low": "images/products/anti-pigmentation-meso-ai.png",
+      "original": "images/products/anti-pigmentation-meso-ai.png",
+      "lifestyle": "images/products/lifestyle/anti-pigmentation-meso-lifestyle.png",
+      "ai_generated": "images/products/anti-pigmentation-meso-ai.png"
+    },
+    "section": "meso"
+  },
+  {
+    "id": 17,
+    "name": "Salmon DNA Meso",
+    "name_ar": "ميزو الحمض النووي للسلمون",
+    "name_fr": "Méso ADN de Saumon",
+    "name_tr": "Somon DNA Mezo",
+    "category": "Meso",
+    "section": "meso",
+    "description": "A powerful cell-regenerating formula designed to revitalize and firm stressed or aging skin. Repairs wrinkles, sagging, dark circles, and acne scars while combating dryness and stretch marks. Boosts collagen and elasticity for a smooth, radiant, and tightened complexion.",
+    "description_ar": "محلول متطور لتجديد الخلايا وتحفيز الكولاجين، يعيد الحيوية للبشرة الباهتة والمتضررة. يشد الترهلات، يعالج التجاعيد والهالات السوداء، ويقضي على الجفاف وآثار الحبوب وعلامات التمدد. بشرة نضرة، مشدودة، وأكثر مرونة بفضل إصلاح الأنسجة التالفة.",
+    "description_fr": "Formule puissante de régénération cellulaire conçue pour revitaliser et raffermir la peau stressée ou vieillissante. Répare les rides, le relâchement, les cernes et les cicatrices d'acné tout en combattant la sécheresse et les vergetures.",
+    "description_tr": "Stresli veya yaşlanan cildi canlandırmak ve sıkılaştırmak için tasarlanmış güçlü hücre yenileyici formül. Kırışıklıkları, sarkmayı, göz altı halkalarını ve akne izlerini onarırken kuruluk ve çatlakları da tedavi eder.",
+    "ingredients": [
+      {
+        "name": "Hyaluronic Acid",
+        "benefit": "Deep hydration & plumping"
+      },
+      {
+        "name": "Polynucleotide",
+        "benefit": "DNA repair & cell regeneration"
+      },
+      {
+        "name": "Niacinamide (B3)",
+        "benefit": "Brightening & barrier repair"
+      }
+    ],
+    "activeIngredients": "Hyaluronic Acid, Polynucleotide, Niacinamide (B3)",
+    "benefits": [
+      "Cell regeneration",
+      "Collagen boost",
+      "Wrinkle repair",
+      "Dark circle treatment",
+      "Stretch mark reduction"
+    ],
+    "usage": "Massage daily onto clean skin until fully absorbed.",
+    "size": "5 x 5ml",
+    "professional": true,
+    "images": {
+      "thumbnail_low": "images/products/salmon-dna-meso-ai.png",
+      "original": "images/products/salmon-dna-meso-ai.png",
+      "ai_generated": "images/products/salmon-dna-meso-ai.png"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Lifting Meso",
+    "name_ar": "ميزو شد البشرة",
+    "name_fr": "Méso Lifting",
+    "name_tr": "Lifting Mezo",
+    "category": "Meso",
+    "section": "meso",
+    "description": "A concentrated anti-aging formula designed to lift and firm sagging skin and soft tissues. Lifts eyebrows, cheeks, and neck areas while restoring radiance to dull, tired complexions. Stimulates collagen/elastin synthesis and the lymphatic system to accelerate metabolism and smooth deep wrinkles.",
+    "description_ar": "محلول مكثف لشد البشرة ومحاربة علامات التقدم في السن. يستهدف الترهلات وفقدان المرونة. يرفع الحاجبين والخدين، ويشد ترهل الرقبة، ويعيد النضارة للبشرة المتعبة والباهتة. يحفز إنتاج الكولاجين والإيلاستين، ينشط الجهاز اللمفاوي، ويسرع عملية تجديد الجلد لتقليل التجاعيد العميقة.",
+    "description_fr": "Formule anti-âge concentrée conçue pour lifter et raffermir la peau relâchée. Lift les sourcils, les joues et le cou tout en restaurant l'éclat des teints ternes et fatigués. Stimule la synthèse de collagène/élastine.",
+    "description_tr": "Sarkan cildi ve yumuşak dokuları sıkılaştırmak için tasarlanmış konsantre anti-aging formülü. Kaşları, yanakları ve boyun bölgesini kaldırırken solgun, yorgun ciltlere parlaklık kazandırır. Kolajen/elastin sentezini uyarır.",
+    "ingredients": [
+      {
+        "name": "Palmitoyl Tripeptide-1",
+        "benefit": "Collagen stimulation"
+      },
+      {
+        "name": "Palmitoyl Tetrapeptide-7",
+        "benefit": "Anti-inflammatory lifting"
+      },
+      {
+        "name": "Phospholipids",
+        "benefit": "Cell membrane repair"
+      }
+    ],
+    "activeIngredients": "Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Phospholipids",
+    "benefits": [
+      "Skin lifting",
+      "Firming",
+      "Deep wrinkle smoothing",
+      "Collagen boost",
+      "Radiance restoration"
+    ],
+    "usage": "Apply daily to clean skin with gentle circular motions until fully absorbed.",
+    "size": "5 x 5ml",
+    "professional": true,
+    "images": {
+      "thumbnail_low": "images/products/lifting-meso-ai.png",
+      "original": "images/products/lifting-meso-ai.png",
+      "ai_generated": "images/products/lifting-meso-ai.png"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Multi-Vitamin Meso",
+    "name_ar": "ميزو متعدد الفيتامينات",
+    "name_fr": "Méso Multi-Vitamines",
+    "name_tr": "Multi-Vitamin Mezo",
+    "category": "Meso",
+    "section": "meso",
+    "description": "A vitamin-rich formula designed to enhance skin quality and achieve a flawless, healthy appearance. Repairs and protects skin damaged by stress, fatigue, sun exposure, and aging. Replenishes essential nutrients and plant extracts to ensure a rested, bright, and rejuvenated complexion.",
+    "description_ar": "مزيج غني بالفيتامينات لتعزيز جودة البشرة ومنحها مظهراً مثالياً وصحياً. يرمم البشرة المتضررة من الإجهاد والشمس والشيخوخة ويحميها من العوامل الخارجية. يغذي الخلايا بالعناصر الحيوية والمستخلصات النباتية لبشرة نضرة، مشرقة، ومفعمة بالحيوية.",
+    "description_fr": "Formule riche en vitamines conçue pour améliorer la qualité de la peau et obtenir un teint impeccable et sain. Répare et protège la peau endommagée par le stress, la fatigue, l'exposition solaire et le vieillissement.",
+    "description_tr": "Cilt kalitesini artırmak ve kusursuz, sağlıklı bir görünüm elde etmek için tasarlanmış vitamin açısından zengin formül. Stres, yorgunluk, güneş maruziyeti ve yaşlanmadan zarar görmüş cildi onarır ve korur.",
+    "ingredients": [
+      {
+        "name": "Retinol (Vit-A)",
+        "benefit": "Cell renewal & anti-aging"
+      },
+      {
+        "name": "Ascorbic Acid (Vit-C)",
+        "benefit": "Brightening & antioxidant"
+      },
+      {
+        "name": "Alpha-Tocopherol (Vit-E)",
+        "benefit": "Protection & repair"
+      }
+    ],
+    "activeIngredients": "Retinol (Vit-A), Ascorbic Acid (Vit-C), Alpha-Tocopherol (Vit-E)",
+    "benefits": [
+      "Skin repair",
+      "Vitamin nourishment",
+      "Anti-aging",
+      "Brightening",
+      "Environmental protection"
+    ],
+    "usage": "Apply daily to clean skin with gentle circular motions until fully absorbed.",
+    "size": "5 x 5ml",
+    "professional": true,
+    "images": {
+      "thumbnail_low": "images/products/multivitamin-meso-ai.png",
+      "original": "images/products/multivitamin-meso-ai.png",
+      "ai_generated": "images/products/multivitamin-meso-ai.png"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Sebo Meso",
+    "name_ar": "ميزو التحكم بالدهون",
+    "name_fr": "Méso Sébo",
+    "name_tr": "Sebo Mezo",
+    "category": "Meso",
+    "section": "meso",
+    "description": "A professional formula engineered to refine enlarged pores and treat acne-prone skin. Effectively shrinks thickened pores, heals acne scars, and detoxifies the skin by removing dead cells and impurities. Its antibacterial and anti-inflammatory properties help dry out acne, regulate sebum production, and prevent blackheads.",
+    "description_ar": "محلول متطور صمم خصيصاً لتنقية المسام الواسعة ومعالجة عيوب البشرة الدهنية. يعمل على تصغير المسام المتوسعة، علاج ندبات حب الشباب، والتخلص من الخلايا الميتة والسموم. بفضل خصائصه المضادة للالتهابات والبكتيريا، يجفف الحبوب النشطة، يقلل الإفرازات الدهنية، ويمنع ظهور الرؤوس السوداء.",
+    "description_fr": "Formule professionnelle conçue pour affiner les pores dilatés et traiter les peaux à tendance acnéique. Réduit efficacement les pores épaissis, guérit les cicatrices d'acné et détoxifie la peau. Ses propriétés antibactériennes et anti-inflammatoires aident à assécher l'acné et réguler la production de sébum.",
+    "description_tr": "Genişlemiş gözenekleri iyileştirmek ve akneye eğilimli cildi tedavi etmek için tasarlanmış profesyonel formül. Kalınlaşmış gözenekleri etkili şekilde küçültür, akne izlerini iyileştirir ve ölü hücreleri temizleyerek cildi detoksifiye eder.",
+    "ingredients": [
+      {
+        "name": "Salicylic Acid",
+        "benefit": "Pore cleansing & anti-acne"
+      },
+      {
+        "name": "Hyaluronic Acid",
+        "benefit": "Hydration balance"
+      },
+      {
+        "name": "Zinc Gluconate",
+        "benefit": "Sebum regulation & healing"
+      }
+    ],
+    "activeIngredients": "Salicylic Acid, Hyaluronic Acid, Zinc Gluconate",
+    "benefits": [
+      "Pore refinement",
+      "Acne treatment",
+      "Sebum control",
+      "Detoxification",
+      "Blackhead prevention"
+    ],
+    "usage": "Apply daily to clean skin using gentle, circular motions until fully absorbed.",
+    "size": "5 x 5ml",
+    "professional": true,
+    "images": {
+      "thumbnail_low": "images/products/sebo-meso-ai.png",
+      "original": "images/products/sebo-meso-ai.png",
+      "ai_generated": "images/products/sebo-meso-ai.png"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Hair Meso",
+    "name_ar": "ميزو الشعر",
+    "name_fr": "Méso Capillaire",
+    "name_tr": "Saç Mezo",
+    "category": "Meso",
+    "section": "meso",
+    "description": "A professional scalp treatment designed to combat hair loss and stimulate follicles damaged by stress, pollution, or genetics. Boosts scalp collagen, nourishes hair at the root, and reduces hair loss by inhibiting the DHT hormone. Enhances growth rate and hair quality through potent vitamins and plant extracts, supporting the formation of new hair without side effects.",
+    "description_ar": "محلول متطور لعلاج تساقط الشعر وتحفيز الفروة، يعالج الأضرار الناتجة عن التلوث، التوتر، والعوامل الوراثية. يحفز بصيلات الشعر، يزيد إنتاج الكولاجين في الفروة، ويقلل من تساقط الشعر الناتج عن هرمون DHT. يسرع معدل نمو الشعر ويحسن جودته بفضل الفيتامينات والمستخلصات النباتية، كما يدعم إنبات شعر جديد دون آثار جانبية.",
+    "description_fr": "Traitement professionnel du cuir chevelu conçu pour combattre la chute de cheveux et stimuler les follicules endommagés par le stress, la pollution ou la génétique. Stimule le collagène du cuir chevelu, nourrit les cheveux à la racine et réduit la chute en inhibant l'hormone DHT.",
+    "description_tr": "Stres, kirlilik veya genetik nedeniyle zarar görmüş folikülleri uyarmak ve saç dökülmesiyle mücadele etmek için tasarlanmış profesyonel saç derisi tedavisi. Saç derisinde kolajen üretimini artırır, saçı kökten besler ve DHT hormonunu inhibe ederek saç dökülmesini azaltır.",
+    "ingredients": [
+      {
+        "name": "Procapil",
+        "benefit": "Hair follicle stimulation"
+      },
+      {
+        "name": "Alpha-Tocopherol (Vit-E)",
+        "benefit": "Scalp nourishment"
+      },
+      {
+        "name": "Anacryn",
+        "benefit": "DHT inhibition & growth support"
+      }
+    ],
+    "activeIngredients": "Procapil, Alpha-Tocopherol (Vit-E), Anacryn",
+    "benefits": [
+      "Hair loss prevention",
+      "Follicle stimulation",
+      "Scalp collagen boost",
+      "DHT inhibition",
+      "New hair growth"
+    ],
+    "usage": "Apply daily to a clean scalp using soft, circular motions until fully absorbed.",
+    "size": "5 x 5ml",
+    "professional": true,
+    "notes": "For maximum results, use in combination with Hair Booster Shampoo.",
+    "images": {
+      "thumbnail_low": "images/products/hair-meso-ai.png",
+      "original": "images/products/hair-meso-ai.png",
+      "ai_generated": "images/products/hair-meso-ai.png"
     }
   }
 ]

@@ -1,6 +1,7 @@
 # Helper folders - not for deployment
 Assets/
-html-preview/
+Tools/
+Deploy/
 Videos/
 
 # IDE
@@ -16,7 +17,6 @@ desktop.ini
 # Dependencies
 node_modules/
 
-
 # Logs
 *.log
 
@@ -26,3 +26,7 @@ media/hls/
 convert*.ps1
 *.tar.xz
 *.zip
+*.py
+catalog_extracted.json
+catalog_comparison.json
+products_backup.json

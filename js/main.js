@@ -2507,17 +2507,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Sticky Header
+    // Sticky Header (with null check for sub-pages where header loads async)
     const header = document.querySelector('header');
     let lastScroll = 0;
 
     window.addEventListener('scroll', () => {
+        const h = header || document.querySelector('header');
+        if (!h) return;
         const currentScroll = window.pageYOffset;
 
         if (currentScroll > 100) {
-            header.classList.add('scrolled');
+            h.classList.add('scrolled');
         } else {
-            header.classList.remove('scrolled');
+            h.classList.remove('scrolled');
         }
 
         lastScroll = currentScroll;
@@ -2771,7 +2773,7 @@ function switchCase(caseId) {
     const caseData = sliderCases[caseId];
     if (!caseData) return;
 
-    // Update Images
+    // Update Images directly - no new slider instance
     const beforeImg = document.getElementById('before-img');
     const afterImg = document.getElementById('after-img');
 
@@ -2783,11 +2785,13 @@ function switchCase(caseId) {
         tab.classList.toggle('active', tab.dataset.case === caseId);
     });
 
-    // Re-init Slider if exists
-    if (typeof ComparisonSlider !== 'undefined') {
-        const container = document.querySelector('.comparison-container');
-        if (container) {
-            new ComparisonSlider(container);
-        }
+    // Reset global slider to center
+    if (window._comparisonSlider) {
+        window._comparisonSlider.updateDimensions();
+        setTimeout(() => {
+            if (window._comparisonSlider) {
+                window._comparisonSlider.slide(window._comparisonSlider.w / 2);
+            }
+        }, 50);
     }
 }

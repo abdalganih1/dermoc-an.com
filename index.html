@@ -131,9 +131,9 @@
                 <p class="text-center mt-2" data-i18n="professionalGrade">Professional Grade Skincare</p>
             </div>
 
-            <!-- Dynamic Grid -->
-            <div class="products-grid">
-                <div class="text-center" style="grid-column: 1/-1;">Loading Products...</div>
+            <!-- Dynamic Sections: Peeling / Skincare / Meso -->
+            <div class="products-section-wrapper">
+                <div class="text-center">Loading Products...</div>
             </div>
         </div>
     </section>
@@ -283,9 +283,9 @@
     <script src="js/main.js?v=1.1"></script>
     <script src="js/components.js?v=1.1"></script>
     <script>
-        // Initialize Comparison Slider
+        // Initialize Comparison Slider and register globally for switchCase
         document.addEventListener('DOMContentLoaded', () => {
-            new ComparisonSlider('.comparison-container');
+            window._comparisonSlider = new ComparisonSlider('.comparison-container');
         });
     </script>
 </body>

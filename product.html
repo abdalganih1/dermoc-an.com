@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DERMOCÉAN | Product Details</title>
+    <meta name="description" content="Discover professional dermocosmetic skincare by Dermocean.">
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&family=Almarai:wght@700&family=Tajawal:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+
+    <style>
+        .product-detail {
+            padding: 4rem 0;
+            min-height: 70vh;
+        }
+
+        .product-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .product-gallery {
+            position: sticky;
+            top: 100px;
+        }
+
+        .product-main-image {
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            overflow: hidden;
+        }
+
+        .product-main-image img {
+            max-height: 380px;
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.5s ease;
+        }
+
+        .product-main-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .product-thumbs {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .product-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid var(--border);
+            transition: all 0.3s;
+            background: var(--cream);
+            padding: 0.3rem;
+        }
+
+        .product-thumb.active,
+        .product-thumb:hover {
+            border-color: var(--primary);
+        }
+
+        .product-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .product-details-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .product-category-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.4rem 1rem;
+            background: rgba(143, 112, 128, 0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-description {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .product-size-display {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            color: var(--dark);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--cream);
+            border-radius: 12px;
+        }
+
+        .product-size-display i {
+            color: var(--primary);
+        }
+
+        /* Ingredients */
+        .ingredients-section {
+            margin: 2rem 0;
+        }
+
+        .ingredients-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .ingredients-section h3 i {
+            color: var(--primary);
+        }
+
+        .ingredient-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .ingredient-tag {
+            padding: 0.5rem 1rem;
+            background: var(--cream);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--dark);
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .ingredient-tag:hover {
+            border-color: var(--primary);
+            background: rgba(143, 112, 128, 0.1);
+        }
+
+        .ingredient-tag .benefit {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            display: block;
+        }
+
+        /* Benefits */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            margin: 1rem 0 2rem;
+        }
+
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .benefits-list li i {
+            color: #10b981;
+            font-size: 0.8rem;
+        }
+
+        /* Usage */
+        .usage-section {
+            background: linear-gradient(135deg, var(--cream), #E8E0E5);
+            padding: 1.5rem;
+            border-radius: 16px;
+            margin: 2rem 0;
+        }
+
+        .usage-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .usage-section p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* CTA */
+        .product-cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .product-cta .btn {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Loading */
+        .product-loading {
+            text-align: center;
+            padding: 6rem 0;
+            color: var(--text-light);
+        }
+
+        .product-loading i {
+            font-size: 3rem;
+            color: var(--primary);
+            animation: pulse 1.5s infinite;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 0;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .breadcrumb a {
+            color: var(--primary);
+        }
+
+        .breadcrumb span {
+            margin: 0 0.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .product-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-gallery {
+                position: static;
+            }
+
+            .product-details-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .benefits-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="index.html" data-i18n="home">Home</a>
+            <span>›</span>
+            <a href="index.html#products" data-i18n="ourCollection">Products</a>
+            <span>›</span>
+            <span id="breadcrumb-name">Loading...</span>
+        </nav>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div id="product-content">
+                <div class="product-loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading product...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/905455336663" target="_blank" class="whatsapp-widget">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js?v=1.2"></script>
+    <script src="js/components.js?v=1.1"></script>
+    <script>
+        class ProductDetailPage {
+            constructor() {
+                this.lang = localStorage.getItem('dermocean_lang') || 'en';
+                this.productId = new URLSearchParams(window.location.search).get('id');
+                this.product = null;
+                this.ready = this.init(); // Save promise for awaiting
+            }
+
+            async init() {
+                if (!this.productId) {
+                    this.showError('Product not found - No product ID specified');
+                    return;
+                }
+
+                try {
+                    // Try relative path first, fallback to root path
+                    let response = await fetch('data/products.json');
+                    if (!response.ok) {
+                        response = await fetch('/data/products.json');
+                    }
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}`);
+                    }
+                    const products = await response.json();
+                    this.product = products.find(p => String(p.id) === String(this.productId));
+
+                    if (!this.product) {
+                        this.showError(`Product ID ${this.productId} not found`);
+                        return;
+                    }
+
+                    this.render();
+                    document.title = `DERMOCÉAN | ${this.getLocalized('name')}`;
+
+                } catch (error) {
+                    console.error('Product load error:', error);
+                    this.showError('Failed to load product data');
+                }
+            }
+
+            getLocalized(field) {
+                const suffixes = { ar: '_ar', fr: '_fr', tr: '_tr' };
+                const suffix = suffixes[this.lang];
+                if (suffix && this.product[field + suffix]) return this.product[field + suffix];
+                return this.product[field];
+            }
+
+            getImages() {
+                const imgs = [];
+                const pi = this.product.images;
+                if (pi.original) imgs.push({ src: pi.original, label: 'Product' });
+                if (pi.mockup) imgs.push({ src: pi.mockup, label: 'Mockup' });
+                if (pi.lifestyle) imgs.push({ src: pi.lifestyle, label: 'Lifestyle' });
+                return imgs;
+            }
+
+            render() {
+                if (!this.product) return; // Guard: don't render if product not loaded yet
+                const p = this.product;
+                const name = this.getLocalized('name');
+                const desc = this.getLocalized('description');
+                const images = this.getImages();
+
+                document.getElementById('breadcrumb-name').textContent = name;
+
+                const benefitsHTML = p.benefits ? p.benefits.map(b =>
+                    `<li><i class="fas fa-check-circle"></i> ${b}</li>`
+                ).join('') : '';
+
+                const ingredientsHTML = p.ingredients ? p.ingredients.map(ing =>
+                    `<div class="ingredient-tag">
+                        <strong>${ing.name}</strong>
+                        <span class="benefit">${ing.benefit}</span>
+                    </div>`
+                ).join('') : '';
+
+                const thumbsHTML = images.map((img, i) =>
+                    `<div class="product-thumb ${i === 0 ? 'active' : ''}" onclick="page.switchImage('${img.src}', this)">
+                        <img src="${img.src}" alt="${img.label}">
+                    </div>`
+                ).join('');
+
+                const i18n = {
+                    en: { ingredients: 'Active Ingredients', benefits: 'Key Benefits', usage: 'How to Use', inquire: 'Inquire via WhatsApp', back: 'Back to Products' },
+                    ar: { ingredients: 'المكونات الفعالة', benefits: 'الفوائد الرئيسية', usage: 'طريقة الاستخدام', inquire: 'استفسر عبر واتساب', back: 'العودة للمنتجات' },
+                    fr: { ingredients: 'Ingrédients Actifs', benefits: 'Avantages Clés', usage: 'Mode d\'Emploi', inquire: 'Demander via WhatsApp', back: 'Retour aux Produits' },
+                    tr: { ingredients: 'Aktif Bileşenler', benefits: 'Temel Faydalar', usage: 'Nasıl Kullanılır', inquire: 'WhatsApp ile Sor', back: 'Ürünlere Dön' }
+                };
+                const t = i18n[this.lang] || i18n.en;
+
+                document.getElementById('product-content').innerHTML = `
+                    <div class="product-detail-grid">
+                        <div class="product-gallery">
+                            <div class="product-main-image">
+                                <img id="main-product-img" src="${images[0]?.src || ''}" alt="${name}">
+                            </div>
+                            <div class="product-thumbs">${thumbsHTML}</div>
+                        </div>
+
+                        <div class="product-details-content">
+                            <div class="product-category-label">
+                                <i class="${this.getCatIcon(p.category)}"></i> ${p.category}
+                                ${p.professional ? '<span style="margin-left:0.5rem;color:#6366f1;font-weight:700;">PRO</span>' : ''}
+                            </div>
+                            <h1>${name}</h1>
+
+                            <div class="product-size-display">
+                                <i class="fas fa-box"></i> ${p.size}
+                            </div>
+
+                            <p class="product-description">${desc}</p>
+
+                            ${ingredientsHTML ? `
+                            <div class="ingredients-section">
+                                <h3><i class="fas fa-flask"></i> ${t.ingredients}</h3>
+                                <div class="ingredient-tags">${ingredientsHTML}</div>
+                            </div>` : ''}
+
+                            ${benefitsHTML ? `
+                            <div class="benefits-section">
+                                <h3 style="font-size:1.3rem;margin-bottom:1rem;"><i class="fas fa-star" style="color:var(--primary)"></i> ${t.benefits}</h3>
+                                <ul class="benefits-list">${benefitsHTML}</ul>
+                            </div>` : ''}
+
+                            ${p.usage ? `
+                            <div class="usage-section">
+                                <h3><i class="fas fa-hand-holding-medical"></i> ${t.usage}</h3>
+                                <p>${p.usage}</p>
+                            </div>` : ''}
+
+                            <div class="product-cta">
+                                <a href="https://wa.me/905455336663?text=Hi, I'm interested in ${encodeURIComponent(p.name)}" target="_blank" class="btn btn-primary">
+                                    <i class="fab fa-whatsapp"></i> ${t.inquire}
+                                </a>
+                                <a href="index.html#products" class="btn btn-outline">
+                                    <i class="fas fa-arrow-left"></i> ${t.back}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            getCatIcon(cat) {
+                const icons = {
+                    Peeling: 'fas fa-mortar-pestle', Activator: 'fas fa-vial', Mask: 'fas fa-mask',
+                    Protection: 'fas fa-shield-alt', Moisturizer: 'fas fa-tint', 'Anti-Aging': 'fas fa-hourglass-half',
+                    Serum: 'fas fa-eye-dropper', Cleanser: 'fas fa-pump-soap', Toner: 'fas fa-spray-can', Meso: 'fas fa-syringe'
+                };
+                return icons[cat] || 'fas fa-box';
+            }
+
+            switchImage(src, thumb) {
+                document.getElementById('main-product-img').src = src;
+                document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            }
+
+            showError(msg) {
+                document.getElementById('product-content').innerHTML = `
+                    <div class="product-loading">
+                        <i class="fas fa-exclamation-triangle" style="animation:none;color:#ef4444;"></i>
+                        <p>${msg}</p>
+                        <a href="index.html#products" class="btn btn-primary" style="margin-top:1rem;">Back to Products</a>
+                    </div>
+                `;
+            }
+        }
+
+        const page = new ProductDetailPage();
+
+        // Listen for language changes - wait for init to complete first
+        document.addEventListener('languageChanged', async (e) => {
+            page.lang = e.detail.lang;
+            await page.ready; // Wait for product data to load
+            page.render();
+        });
+    </script>
+</body>
+
+</html>
