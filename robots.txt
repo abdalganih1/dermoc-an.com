@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /Tools/
+Disallow: /Assets/
+Disallow: /Deploy/
 
-Sitemap: https://www.dermocéan.com/sitemap.xml
+Sitemap: https://xn--dermocan-g1a.com/sitemap.xml

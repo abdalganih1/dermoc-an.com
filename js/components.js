@@ -3,7 +3,23 @@
  * Loads header and footer components dynamically
  */
 
+function showSkeleton(elementId) {
+    const element = document.getElementById(elementId);
+    if (element && !element.innerHTML.trim()) {
+        element.innerHTML = '<div style="padding:1rem;background:#f0f0f0;min-height:60px;border-radius:8px;animation:pulse 1.5s ease-in-out infinite"></div>';
+    }
+}
+
+function removeSkeleton(elementId) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        const skeleton = element.querySelector('[style*="animation:pulse"]');
+        if (skeleton) skeleton.remove();
+    }
+}
+
 async function loadComponent(elementId, componentPath) {
+    showSkeleton(elementId);
     try {
         const response = await fetch(componentPath);
         if (!response.ok) throw new Error(`Failed to load ${componentPath}`);
@@ -13,6 +29,7 @@ async function loadComponent(elementId, componentPath) {
             element.innerHTML = html;
         }
     } catch (error) {
+        removeSkeleton(elementId);
         console.error('Component load error:', error);
     }
 }

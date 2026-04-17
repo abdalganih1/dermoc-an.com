@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,23 +10,24 @@
     <meta name="keywords"
         content="skincare, beauty center, algae peeling, professional skincare, B2B skincare, dermocosmetics">
     <meta name="author" content="Dermocean">
-    <link rel="canonical" href="https://dermocéan.com/">
+    <link rel="canonical" href="https://xn--dermocan-g1a.com/">
+    <link rel="icon" type="image/svg+xml" href="images/logo/dermocean-logo.svg">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dermocéan.com/">
+    <meta property="og:url" content="https://xn--dermocan-g1a.com/">
     <meta property="og:title" content="DERMOCÉAN | Professional Skincare for Beauty Centers">
     <meta property="og:description"
         content="Dermocean offers professional-grade marine algae skincare products for beauty centers. Discover our Algae Peeling Powder and proven treatment protocols.">
-    <meta property="og:image" content="https://dermocéan.com/images/logo/dermocean-logo.svg">
+    <meta property="og:image" content="https://xn--dermocan-g1a.com/images/logo/dermocean-logo.svg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://dermocéan.com/">
+    <meta property="twitter:url" content="https://xn--dermocan-g1a.com/">
     <meta property="twitter:title" content="DERMOCÉAN | Professional Skincare for Beauty Centers">
     <meta property="twitter:description"
         content="Dermocean offers professional-grade marine algae skincare products for beauty centers. Discover our Algae Peeling Powder and proven treatment protocols.">
-    <meta property="twitter:image" content="https://dermocéan.com/images/logo/dermocean-logo.svg">
+    <meta property="twitter:image" content="https://xn--dermocan-g1a.com/images/logo/dermocean-logo.svg">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -34,8 +35,8 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Dermocean",
-      "url": "https://dermocéan.com/",
-      "logo": "https://dermocéan.com/images/logo/dermocean-logo.svg",
+      "url": "https://xn--dermocan-g1a.com/",
+      "logo": "https://xn--dermocan-g1a.com/images/logo/dermocean-logo.svg",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+90-545-533-6663",
@@ -247,24 +248,24 @@
             </div>
 
             <div class="contact-wrapper">
-                <form class="contact-form">
+                <form id="contact-form" class="contact-form">
                     <div class="form-row">
                         <div class="form-group">
                             <label data-i18n="fullName">Full Name</label>
-                            <input type="text" class="form-input" required>
+                            <input type="text" name="name" class="form-input" required>
                         </div>
                         <div class="form-group">
                             <label data-i18n="email">Email Address</label>
-                            <input type="email" class="form-input" required>
+                            <input type="email" name="email" class="form-input" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label data-i18n="phoneNumber">Phone Number</label>
-                        <input type="tel" class="form-input" required>
+                        <input type="tel" name="phone" class="form-input" required>
                     </div>
                     <div class="form-group">
                         <label data-i18n="message">Message</label>
-                        <textarea class="form-input" rows="4" required></textarea>
+                        <textarea name="message" class="form-input" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" data-i18n="sendMessage">Send Message</button>
                 </form>
@@ -282,6 +283,7 @@
     <script src="js/products.js?v=1.1"></script>
     <script src="js/main.js?v=1.1"></script>
     <script src="js/components.js?v=1.1"></script>
+    <script src="js/form-handler.js"></script>
     <script>
         // Initialize Comparison Slider and register globally for switchCase
         document.addEventListener('DOMContentLoaded', () => {

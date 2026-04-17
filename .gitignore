@@ -30,3 +30,12 @@ convert*.ps1
 catalog_extracted.json
 catalog_comparison.json
 products_backup.json
+
+# Secrets
+.env*
+config.local.*
+*.secret
+
+secret/
+.wrangler/
+Agent.md
